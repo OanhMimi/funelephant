@@ -1,0 +1,29 @@
+{
+  "name": "fun_elephant",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OanhMimi/funelephant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OanhMimi/funelephant/issues"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "homepage": "https://github.com/OanhMimi/funelephant#readme",
+  "dependencies": {
+    "g": "^2.0.1",
+    "heroku": "^7.63.0"
+  }
+}
