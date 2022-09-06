@@ -1,0 +1,25 @@
+
+.pink-nav-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6DCFF;
+    color: #4a4a4a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .082rem;
+    line-height: 1.25;
+    padding: 1.2rem 2.6rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    height: 4.5rem;
+
+}
+
+.pink-nav-main:hover{
+    cursor: pointer;
+}

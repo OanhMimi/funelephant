@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "fun_elephant_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,5 +37,8 @@
   },
   "devDependencies": {
     "redux-logger": "^3.0.6"
-  }
+  },
+
+  "proxy": "http://localhost:5000"
+
 }

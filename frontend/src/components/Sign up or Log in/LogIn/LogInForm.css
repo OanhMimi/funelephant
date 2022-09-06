@@ -1,0 +1,10 @@
+.log-in{
+    position: relative;
+    border: 0;
+}
+
+.logging-in{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

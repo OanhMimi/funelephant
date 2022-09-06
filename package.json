@@ -24,6 +24,7 @@
   "homepage": "https://github.com/OanhMimi/funelephant#readme",
   "dependencies": {
     "g": "^2.0.1",
-    "heroku": "^7.63.0"
+    "heroku": "^7.63.0",
+    "react-icons": "^4.4.0"
   }
 }

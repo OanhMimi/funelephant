@@ -1,0 +1,23 @@
+.registration{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: rgb(147, 243, 232);
+}
+
+.sign-up{
+    /* flex: 0 0 100%; */
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.first-time{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
