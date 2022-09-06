@@ -13,11 +13,13 @@ const LogInForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        return dispatch(login({ email, password }));
+        const user = { email, password }
+        debugger
+        return dispatch(login(user));
     }
 
     return(
-        <div className="registration">
+        <div>
             <form className="log-in" onSubmit={handleSubmit}>
                 <label>
                     <h2 className="logging-in">Already one of Us?</h2>

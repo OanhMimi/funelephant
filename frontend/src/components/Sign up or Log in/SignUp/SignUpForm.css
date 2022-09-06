@@ -1,9 +1,4 @@
-.registration{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    background-color: rgb(147, 243, 232);
-}
+
 
 .sign-up{
     /* flex: 0 0 100%; */

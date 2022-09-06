@@ -1,4 +1,5 @@
 import './pinkNav.css';
+import '../../../src/fonts/yugothic.ttf'
 
 const pinkNav = () => {
     return(
