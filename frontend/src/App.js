@@ -4,9 +4,9 @@ import NavBar from './components/Navbar';
 import SplashIndex from './components/SplashIndex'
 // import SignUpForm from './components/Sign up or Log in/SignUp/SignUpForm';
 // import LogInForm from './components/Sign up or Log in/LogIn/LogInForm';
-import Profile from './components/Sign up or Log in/Profile';
 import PinkNav from './components/Pink Nav Bar/pinkNav'
 import MashForm from "./components/Sign up or Log in/mashSignUpLogIn";
+import Profile from "./components/Profile/Profile";
 
 const App = () => (
     <>

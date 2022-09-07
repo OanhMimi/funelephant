@@ -1,10 +1,12 @@
 .log-in{
     position: relative;
     border: 0;
+    font-family: 'yu-gothic-bold', sans-serif;
+    color: #4a4a4a;
 }
 
 .logging-in{
     font-size: 30px;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'yu-gothic-bold', sans-serif;
 }

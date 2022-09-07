@@ -1,9 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { useState } from "react";
 // import SubmitButton from "../../Buttons/SubmitButton";
 import './LogInForm.css';
-import { login } from '../../../store/session';
+import * as sessionActions from "../../../store/session";
+import { Redirect } from "react-router-dom";
+
+
 
 const LogInForm = () => {
 
@@ -11,11 +14,14 @@ const LogInForm = () => {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
 
+    const sessionUser = useSelector(state => state.session.user);
+
+    if (sessionUser) return <Redirect to="/profile" />;
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const user = { email, password }
-        debugger
-        return dispatch(login(user));
+        return dispatch(sessionActions.login(user));
     }
 
     return(

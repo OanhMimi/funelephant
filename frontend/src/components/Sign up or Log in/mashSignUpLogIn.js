@@ -1,12 +1,17 @@
 import SignUpForm from "./SignUp/SignUpForm";
 import LogInForm from "./LogIn/LogInForm";
+import SignUpHover from "../SignUpHover/SignUpHover";
 
 const mashForm = () => {
     return (
-        <div id="registration">
-            <LogInForm/>
-            <SignUpForm/>
+        <div>
+            <SignUpHover/>
+            <div id="registration">
+                <LogInForm/>
+                <SignUpForm/>
+            </div>
         </div>
+       
     )
 }
 

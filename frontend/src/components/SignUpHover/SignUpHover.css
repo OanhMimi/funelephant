@@ -1,0 +1,39 @@
+.signup-hover-slow{
+    animation: marquee 15s linear;  
+    color: #4a4a4a; 
+  
+}
+
+@keyframes marquee {
+    from {transform: translateX(100%); }
+    to {transform: translateX(-100%); }
+  }
+
+.signup-hover span{
+    padding: 0 5rem;
+    white-space: nowrap;
+    animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65);
+    overflow: hidden;
+    font-size: 14.814rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-family: 'yu-gothic-bold', sans-serif;
+    background-color: #aafbff;
+}
+
+@media (max-width: 1024px) and (min-width: 581px){
+    .signup-hover {
+        font-size: 7.2rem;
+    }
+}
+
+
+@media (max-width: 580px){
+    .signup-hover{
+        padding-top: 3.1rem;
+        padding-bottom: 4rem;
+    }
+}
+
+
+

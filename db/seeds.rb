@@ -17,8 +17,8 @@
   
     puts "Creating users..."
     User.create!(
-      firstName: 'Sunny', 
-      lastName: 'Ly',
+      first_name: 'Sunny', 
+      last_name: 'Ly',
       email: 'sunny@mail.com', 
       password: 'password'
     )

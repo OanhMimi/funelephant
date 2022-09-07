@@ -1,17 +1,18 @@
 .nav-bar{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(117, 113, 113);
+    background-color: #6e6e6e;
 }
 
 
 .menu-icon{
     color: white;
     z-index:100;
+    font-size: 1.4em;
 }
 .right-nav-bar{
    width: 20%;
-   background-color: rgb(117, 113, 113);
+   background-color: #6e6e6e;
    position: relative;
    
 }
@@ -20,4 +21,5 @@
     color: white;
     padding-left: 20px;
     z-index: 100;
+    font-size: 1.2em;
 }

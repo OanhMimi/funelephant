@@ -23,10 +23,10 @@ const storeCurrentUser = user => {
   else sessionStorage.removeItem("currentUser");
 }
 
-export const login = ({ credential, password }) => async dispatch => {
+export const login = ({ email, password }) => async dispatch => {
   const response = await csrfFetch("/api/session", {
     method: "POST",
-    body: JSON.stringify({ credential, password })
+    body: JSON.stringify({ email, password })
   });
   const data = await response.json();
   storeCurrentUser(data.user);
@@ -45,15 +45,12 @@ export const restoreSession = () => async dispatch => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  const { firstName, lastName, email, password } = user;
+  // const { firstName, lastName, email, password } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
-    body: JSON.stringify({
-      firstName,
-      lastName,
-      email,
-      password
-    })
+    body: JSON.stringify(
+      user
+    )
   });
   const data = await response.json();
   storeCurrentUser(data.user);
@@ -61,13 +58,13 @@ export const signup = (user) => async (dispatch) => {
   return response;
 };
 
-export const logout = (user) => async (dispatch) => {
+export const logout = () => async (dispatch) => {
   console.log("thunk logout action")
   const response = await csrfFetch("/api/session", {
     method: "DELETE"
   });
   storeCurrentUser(null);
-  dispatch(removeCurrentUser(user));
+  dispatch(removeCurrentUser());
   return response;
 };
 

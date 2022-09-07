@@ -2,14 +2,13 @@ class Api::SessionsController < ApplicationController
   def show
     if current_user
       @user = current_user
-      render 'api/user/show'
+      render 'api/users/show'
     else
       render json: { user: nil }
     end
   end
 
   def create
-    debugger
     @user = User.find_by_credentials(params[:email], params[:password])
 
     if @user

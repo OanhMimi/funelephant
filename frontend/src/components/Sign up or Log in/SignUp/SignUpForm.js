@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import * as sessionActions from "../../../store/session";
 import { Redirect } from "react-router-dom";
-import SubmitButton from "../../Buttons/SubmitButton";
+// import SubmitButton from "../../Buttons/SubmitButton";
 import './SignUpForm.css';
 
 
@@ -22,14 +22,14 @@ const SignUpForm = () => {
     const [errors, setErrors] = useState([]);
 
 
-    if (sessionUser) return <Redirect to="/" />;
+    if (sessionUser) return <Redirect to="/profile" />;
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password === confirmPassword) {
             setErrors([]);
-            return dispatch(sessionActions.signup({ firstName, lastName, email, password }))
+            return dispatch(sessionActions.signup({user:{ firstName, lastName, email, password }}))
     //     .catch(async (res) => {
     //     let data;
     //     try {
@@ -80,7 +80,7 @@ const SignUpForm = () => {
                     <br/>
                     <input type="text" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} required/>
                     <br/>
-                    <button type='submit'>Register</button>
+                    <button type='submit' on>Register</button>
                 </label>
         </form>
     </div>

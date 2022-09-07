@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
     with: :invalid_authenticity_token
   
   protect_from_forgery with: :exception
-  before_action :snake_case_params, :attach_authenticity_token
+  before_action :snake_case_params,:attach_authenticity_token
 
 
   def current_user

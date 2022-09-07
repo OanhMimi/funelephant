@@ -2,8 +2,8 @@
 .pink-nav-main{
     
     background-color: #F6DCFF;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     width: 100%;
     font-size: 11px;
     text-align: center;
@@ -13,22 +13,29 @@
     padding: 1.2rem 2.6rem;
     box-sizing: border-box;
     height: 4.5rem;
-    display: -ms-flexbox;
+    /* display: -ms-flexbox; */
     display: flex;
-    -ms-flex-align: center;
+    /* -ms-flex-align: center; */
     align-items: center;
-    -ms-flex-pack: center;
+    /* -ms-flex-pack: center; */
     justify-content: center;
-    font-family:YuGothic;
+    font-family: 'yu-gothic-bold', sans-serif;
+    font-weight: 700;
+    color: #4a4a4a;
+    
 }
 
 
-
-@font-face {
+/* @font-face {
     font-family: YuGothic;
     src: url('../../../src/fonts/yugothic.ttf');
-}
+} */
 
 .pink-nav-main:hover{
     cursor: pointer;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
