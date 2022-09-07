@@ -1,11 +1,12 @@
 .signup-hover-slow{
-    animation: marquee 15s linear;  
+    animation: marquee 25s linear;  
     color: #4a4a4a; 
+
   
 }
 
 @keyframes marquee {
-    from {transform: translateX(100%); }
+    from {transform: translateX(0%); }
     to {transform: translateX(-100%); }
   }
 
@@ -14,11 +15,12 @@
     white-space: nowrap;
     animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65);
     overflow: hidden;
-    font-size: 14.814rem;
+    font-size: 9rem;
     font-weight: 300;
     letter-spacing: 0;
     font-family: 'yu-gothic-bold', sans-serif;
     background-color: #aafbff;
+  
 }
 
 @media (max-width: 1024px) and (min-width: 581px){

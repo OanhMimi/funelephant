@@ -31,11 +31,16 @@ export const login = ({ email, password }) => async dispatch => {
   const data = await response.json();
   storeCurrentUser(data.user);
   dispatch(setCurrentUser(data.user));
-  return response;
+  const validateLogin = document.getElementById("emailPasswordValidation");
+  if (response.status === 401){
+    validateLogin.classList.remove("hidden")
+  }else{
+    validateLogin.classList.add("hidden")
+    return response;
+  }
 };
 
 export const restoreSession = () => async dispatch => {
-  console.log("testing")
   const response = await csrfFetch("/api/session");
   storeCSRFToken(response);
   const data = await response.json();
@@ -59,7 +64,6 @@ export const signup = (user) => async (dispatch) => {
 };
 
 export const logout = () => async (dispatch) => {
-  console.log("thunk logout action")
   const response = await csrfFetch("/api/session", {
     method: "DELETE"
   });
@@ -77,7 +81,6 @@ const sessionReducer = (state = initialState, action) => {
     case SET_CURRENT_USER:
       return { ...state, user: action.payload };
     case REMOVE_CURRENT_USER:
-      console.log("in session reducer, remove_current_user")
       return { ...state, user: null };
     default:
       return state;

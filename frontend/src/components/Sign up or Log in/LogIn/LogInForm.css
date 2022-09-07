@@ -1,6 +1,12 @@
 .log-in{
-    position: relative;
+    max-width: 100%;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
     border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    position: relative;
     font-family: 'yu-gothic-bold', sans-serif;
     color: #4a4a4a;
 }
@@ -9,4 +15,26 @@
     font-size: 30px;
     font-weight: bold;
     font-family: 'yu-gothic-bold', sans-serif;
+}
+
+
+#emailPasswordValidation{
+    font-size: 15.70px;
+    font-family: 'yu-gothic-bold', sans-serif;;
+    color: #e32c2b;
+    z-index: 100;
+}
+
+.email-address{
+    padding-bottom: 2vh;
+}
+
+.pw{
+    padding-bottom: 2vh;
+}
+
+.log-in span{
+    font-size: 15.69px;
+    letter-spacing: .18em;
+    font-weight: 400;
 }

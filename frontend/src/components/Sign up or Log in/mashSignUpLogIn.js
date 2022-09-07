@@ -4,7 +4,7 @@ import SignUpHover from "../SignUpHover/SignUpHover";
 
 const mashForm = () => {
     return (
-        <div>
+        <div id="background">
             <SignUpHover/>
             <div id="registration">
                 <LogInForm/>

@@ -22,6 +22,7 @@ const LogInForm = () => {
         e.preventDefault();
         const user = { email, password }
         return dispatch(sessionActions.login(user));
+
     }
 
     return(
@@ -30,13 +31,19 @@ const LogInForm = () => {
                 <label>
                     <h2 className="logging-in">Already one of Us?</h2>
                     <br/>
-                    <label/>EMAIL ADDRESS
-                    <br/>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <br/>
-                    <label/>PASSWORD
-                    <br/>
-                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <div className="email-address">
+                        <span>EMAIL ADDRESS</span>
+                        <br/>
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <br/>
+                    </div>
+                    <div className="pw">
+                        <span>PASSWORD</span>
+                        <br/>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <br/>
+                    </div>
+                    <span class="hidden" id="emailPasswordValidation">Email address/ Password combination not recognized</span>
                     <br/>
                     <button>Submit</button>
                 </label>
