@@ -38,3 +38,62 @@
     letter-spacing: .18em;
     font-weight: 400;
 }
+
+.input{
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #4a4a4a;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'yu-gothic-bold', sans-serif;
+    font-size: 15.67px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: 3px;
+}
+
+.input:hover{
+    background-color: #4a4a4a;
+    color: white; 
+}
+
+.demo-user{
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #4a4a4a;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'yu-gothic-bold', sans-serif;
+    font-size: 15.67px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: 3px;
+}
+
+.demo-user:hover{
+    background-color: #4a4a4a;
+    color: white; 
+}
+

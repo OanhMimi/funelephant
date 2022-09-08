@@ -11,12 +11,20 @@ const NavBar = () => {
         <div>
             <div className="nav-bar">
                 <ul className="left-nav-bar">  
-                    <NavLink className="menu-icon" exact to="/signUpOrLogIn"><HiOutlineMenu/></NavLink>
+                    <div className="menu">
+                        <NavLink className="menu-icon" exact to="/signUpOrLogIn"><HiOutlineMenu/></NavLink>
+                    </div>
                 </ul>
                 <ul className="right-nav-bar">
-                    <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineSearch/></NavLink>
-                    <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineShoppingBag/></NavLink>
-                    <NavLink className="user-icon" exact to="/signUpOrLogIn"><AiOutlineUser/></NavLink>
+                    <div className="search">
+                        <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineSearch/></NavLink>
+                    </div>
+                    <div className="bag">
+                        <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineShoppingBag/></NavLink>
+                    </div>
+                    <div className="prof">
+                        <NavLink className="user-icon" exact to="/signUpOrLogIn"><AiOutlineUser/></NavLink>
+                    </div>
                 </ul>
             </div>
             

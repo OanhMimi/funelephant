@@ -5,12 +5,15 @@
 }
 
 
+
 .menu-icon{
     color: white;
     z-index:100;
     font-size: 1.4em;
 }
+
 .right-nav-bar{
+    display: inline-flex;
    width: 20%;
    background-color: #6e6e6e;
    position: relative;
@@ -23,3 +26,24 @@
     z-index: 100;
     font-size: 1.2em;
 }
+
+.menu:hover{
+    transform: translateY(2.3px);
+    transition:  transform .4s ease-in-out;
+}
+
+.search:hover{
+    transform: translateY(2.3px);
+    transition: transform .4s ease-in-out;
+}
+
+.bag:hover{
+    transform: translateY(2.3px);
+    transition: transform .4s ease-in-out;
+}
+
+.prof:hover{
+    transform: translateY(2.3px);
+    transition: transform .4s ease-in-out;
+}
+

@@ -119,7 +119,7 @@ const SignUpForm = () => {
 
     
     return(
-        <div>
+        
             <form className="sign-up" onSubmit={handleSubmit}>
                
                 <label className="sign-up-registration">
@@ -173,11 +173,17 @@ const SignUpForm = () => {
                         <span  class = "hidden" id="confirmPasswordHidden">Passwords do not match</span>
                         <br/>
                     </div>
+                    <br/>
+                    <button className="input" type='submit' on>REGISTER</button>
+                    <br/>
+                    <div id="subscription-wrapper">
+                        <input type="checkbox" id="subscription-signup"/>
+                    </div>
+                    <span id="privacy">Click the box at left to get the good stuff straight to your email inbox, including info about exclusive offers, product launches, and events. Unsubscribe anytime. Privacy Policy.</span>
                     
-                    <button className="input" type='submit' on>Register</button>
                 </label>
         </form>
-    </div>
+
 
     )
 }

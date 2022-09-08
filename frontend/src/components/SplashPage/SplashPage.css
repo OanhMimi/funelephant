@@ -1,0 +1,52 @@
+.splash-hover-slow{
+    animation: marquee 25s linear;  
+    color: #4a4a4a; 
+}
+
+
+@keyframes marquee {
+    from {transform: translateX(0%); }
+    to {transform: translateX(-100%); }
+  }
+
+
+  .splash-hover span{
+    padding: 0 5rem;
+    white-space: nowrap;
+    animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65);
+    overflow: hidden;
+    font-size: 9rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-family: 'yu-gothic-bold', sans-serif;
+    background-color: transparent;
+  
+}
+
+.splashImage1 img{
+    width: 33vw;
+    height: 48vh;;
+}
+
+.splashImage1{
+    animation-name:splashImage1;
+    animation-duration:2s;
+    height:100px;
+    width:100px;  
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes splashImage1{
+    from { transform: translateX(1300%); }
+    to { transform: translateX(500%); }
+}
+
+.block{
+    width: 1vw;
+    height: 40vh;
+    background-color: #fac2d3;
+    transform: scaleX(6);
+    transition: transform 330ms ease-in-out;
+
+}

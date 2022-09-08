@@ -24,6 +24,13 @@ const LogInForm = () => {
         return dispatch(sessionActions.login(user));
 
     }
+    const demoUser = (e) => {
+        e.preventDefault();
+        dispatch(sessionActions.login({
+          email: "test@test.com",
+          password: "test1234"
+        }))
+      }
 
     return(
         <div>
@@ -45,7 +52,9 @@ const LogInForm = () => {
                     </div>
                     <span class="hidden" id="emailPasswordValidation">Email address/ Password combination not recognized</span>
                     <br/>
-                    <button>Submit</button>
+    
+                    <button className="input" type="Submit">Sign In</button>
+                    <button className="demo-user" onClick={demoUser}>Demo User</button>
                 </label>
             </form>
         </div>

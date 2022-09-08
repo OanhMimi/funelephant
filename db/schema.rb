@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_213738) do
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.string "category", null: false
+    t.string "desc", null: false
     t.float "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -11,8 +11,7 @@
 #
 class Product < ApplicationRecord
     validates :name, uniqueness: true, presence: true 
-    validates :category, :price, presence: true
-
+    validates :category, :price, :desc, presence: true
 
     has_one_attached :photo 
     
