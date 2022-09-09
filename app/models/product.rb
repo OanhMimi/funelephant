@@ -5,6 +5,7 @@
 #  id         :bigint           not null, primary key
 #  name       :string           not null
 #  category   :string           not null
+#  desc       :string           not null
 #  price      :float            not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -14,5 +15,8 @@ class Product < ApplicationRecord
     validates :category, :price, :desc, presence: true
 
     has_one_attached :photo 
+    # has_many_attached :photos
+    has_many :reviews,
+    dependent: :destroy
     
 end

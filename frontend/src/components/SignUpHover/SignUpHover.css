@@ -1,9 +1,13 @@
 .signup-hover-slow{
     animation: marquee 25s linear;  
     color: #4a4a4a; 
-
-  
 }
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../fonts/Poppins/Poppins-Regular.ttf);
+  }
 
 @keyframes marquee {
     from {transform: translateX(0%); }
@@ -18,8 +22,8 @@
     font-size: 9rem;
     font-weight: 300;
     letter-spacing: 0;
-    font-family: 'yu-gothic-bold', sans-serif;
     background-color: #aafbff;
+    font-family:myFirstFont;
   
 }
 

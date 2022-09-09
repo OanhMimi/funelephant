@@ -1,0 +1,9 @@
+#registration{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    background-color: #aafbff;
+    margin-bottom: 20%;
+    top: 10vh;
+}

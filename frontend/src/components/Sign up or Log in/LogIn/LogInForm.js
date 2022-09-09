@@ -54,7 +54,9 @@ const LogInForm = () => {
                     <br/>
     
                     <button className="input" type="Submit">Sign In</button>
-                    <button className="demo-user" onClick={demoUser}>Demo User</button>
+                    <br/>
+                    <br/>
+                    <button className="input" onClick={demoUser}>Demo User</button>
                 </label>
             </form>
         </div>

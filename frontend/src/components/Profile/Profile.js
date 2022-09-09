@@ -19,9 +19,12 @@ const Profile = () => {
 
     return (
 
-        <div className="profile-page">
-            <button onClick={logOut}>LogOut</button>
+        <div className="profile">
+            <div className="profile-page">
+                <button className="logout-button" onClick={logOut}>LogOut</button>  
+            </div>
         </div>
+        
     )
 }
 

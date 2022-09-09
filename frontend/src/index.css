@@ -1,14 +1,10 @@
 /* TODO Add site wide styles */
 
-#registration{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    background-color: #aafbff;
-}
+
 
 
 #background{
     background-color:#aafbff;
     overflow:hidden;
+    
 }

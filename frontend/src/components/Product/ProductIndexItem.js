@@ -1,12 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import './products.css'
+
 
 
 const ProductIndexItem = ({product}) => {
     return(
-        <>
-            <Link to={`/products/${product.id}`}>{product.name}</Link>
-        </>
+        <div id="outer-product-index-item">
+            <NavLink class="nav-link-products" to={`/products/${product.id}`}>
+                <img id="individual-img" src={product.photoUrl}/>
+                <div id="individual-item-name">
+                    <ul id="product-info">{product.name}</ul>
+                    <ul id="product-info">${product.price}.00</ul>
+                </div>
+            </NavLink>
+            
+        </div>
     )
 }
 

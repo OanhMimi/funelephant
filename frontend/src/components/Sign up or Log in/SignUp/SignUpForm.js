@@ -119,12 +119,10 @@ const SignUpForm = () => {
 
     
     return(
-        
+        <div id="outer-sign-up">
+            <h2 id="first-time">First time here?</h2>
             <form className="sign-up" onSubmit={handleSubmit}>
-               
-                <label className="sign-up-registration">
-                    <h2 className="first-time">First time here?</h2>
-                    <br/>
+                        <br/>
                     <div class="firstName">
                         <span > FIRST NAME</span>               
                         <br/>
@@ -177,12 +175,11 @@ const SignUpForm = () => {
                     <button className="input" type='submit' on>REGISTER</button>
                     <br/>
                     <div id="subscription-wrapper">
-                        <input type="checkbox" id="subscription-signup"/>
+                        <input id="checkbox-sub" type="checkbox" />
+                        <span id="privacy">Click the box at left to get the good stuff straight to your email inbox, including info about exclusive offers, product launches, and events. Unsubscribe anytime. Privacy Policy.</span>       
                     </div>
-                    <span id="privacy">Click the box at left to get the good stuff straight to your email inbox, including info about exclusive offers, product launches, and events. Unsubscribe anytime. Privacy Policy.</span>
-                    
-                </label>
-        </form>
+            </form>
+        </div>
 
 
     )

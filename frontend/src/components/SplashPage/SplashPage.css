@@ -1,52 +1,109 @@
+
+#splashPage-outer-div{
+    margin:0;
+}
 .splash-hover-slow{
     animation: marquee 25s linear;  
     color: #4a4a4a; 
 }
 
+.threeSplashImg{
+    z-index: -1000;
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    background-color: transparent;
+}
+.center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #fac2d3;
+    width: .1vw;
+    height: 34vh;
+    transform-origin: left;
+    animation: center-animate 4s ease 1, color-animate 5s infinite;
+    animation-fill-mode: forwards;
+    z-index: -100;
+}
+
+@keyframes center-animate {
+    from {transform: scaleX(0);background-color: #fae7c2;}
+    to {transform: scaleX(6000);background-color: #fac2d3}
+}
 
 @keyframes marquee {
     from {transform: translateX(0%); }
     to {transform: translateX(-100%); }
   }
 
+@font-face {
+    font-family: poppinsLight;
+    src: url(../../fonts/Poppins/Poppins-Light.ttf);
+}
 
-  .splash-hover span{
+.splash-hover span{
     padding: 0 5rem;
     white-space: nowrap;
-    animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65);
-    overflow: hidden;
+    /* animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65); */
+    /* overflow: hidden; */
     font-size: 9rem;
     font-weight: 300;
     letter-spacing: 0;
-    font-family: 'yu-gothic-bold', sans-serif;
+    z-index: 100;
     background-color: transparent;
-  
+    overflow: hidden;
+    font-family: poppinsLight;
 }
 
-.splashImage1 img{
-    width: 33vw;
-    height: 48vh;;
+#splash-2 {
+    position: absolute;
+    right: 27vw;
+    bottom: 10vh;
+    width: 17vw;
+    height: 30vh;;
+    z-index: 5;
+    
 }
-
-.splashImage1{
-    animation-name:splashImage1;
+#free-shipping{
+    position: absolute;
+    font-size: .7vw;
+    font-family: poppinsLight;
+    right: 35vw;
+    top: 3vh;
+}
+/* #splash-2{
+    animation-name:splashImage2;
     animation-duration:2s;
     height:100px;
-    width:100px;  
+    width:100px; 
     animation-fill-mode: forwards;
-
 }
 
-@keyframes splashImage1{
+@keyframes splashImage2{
     from { transform: translateX(1300%); }
-    to { transform: translateX(500%); }
+    to { transform: translateX(900%); }
+} */
+
+#splash-1{
+    position: absolute;
+    width: 37vw;
+    height: 44vh;
+    left: 23vw;
+    bottom: 5vh;
+    transform: scale(1.1);
 }
 
-.block{
-    width: 1vw;
-    height: 40vh;
-    background-color: #fac2d3;
-    transform: scaleX(6);
-    transition: transform 330ms ease-in-out;
-
+#splash-1{
+    animation-duration:2s;
+    z-index: 3; 
 }
+
+
+
+
+
+
+
+
+

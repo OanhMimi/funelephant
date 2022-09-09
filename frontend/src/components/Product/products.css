@@ -1,0 +1,206 @@
+@font-face {
+    font-family: poppinsReg;
+    src: url(../../fonts/Poppins/Poppins-Regular.ttf);
+  }
+
+ #outer-index-div{
+    width: 100vw;
+    height: 100vh;
+ } 
+
+#fun-elephant-banner{
+    width: 100vw;
+    height: 35vh;
+    position: relative;
+}
+
+#Skincare-collectionHeader{
+    font-size: 3.2vw;
+    color: #4a4a4a;
+    font-weight: bold;
+    font-family: poppinsReg;  
+    position: absolute;
+    top: 24vh;
+    right: 42vw;
+    letter-spacing: .3vw;
+}
+
+#banner2-bg{
+    position: relative;
+    background-color: #f6dcff;
+    width: 100vw;
+    height: 8vh;
+    padding: 0;
+    top:-1vh;
+}
+
+#skin-care-drop-down{
+    position: absolute;
+    margin: 0;
+    font-family: poppinsReg;
+    color: #4a4a4a;
+    font-size: 1.2vw;
+    letter-spacing: .2vw;
+    bottom: 43.4vh;
+    right: 47.3vw;
+}
+
+#display-all-products{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    gap: 0;
+}
+
+#outer-product-index-item:hover{
+    background-color:#fff204;
+}
+
+.nav-link-products{
+    text-decoration: none;
+    margin:0;
+}
+
+#individual-item-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppinsReg;
+    color: #4a4a4a;
+    font-size: .7vw;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#product-info{
+    margin:0;
+    padding: 0;
+}
+
+#show-outer-div{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#pink-bar-display{
+    display: flex;
+    background-color: #f6dcff;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 8vh;
+    color: #4a4a4a;
+    font-family: 'yu-gothic-bold', sans-serif;
+}
+
+#pink-nav-display-show2{
+    padding-left: 1vw;
+}
+
+#first-pink-bar-display{
+    display: flex;
+    font-size: .8vw;
+    font-weight: 600;
+    color: #4a4a4a;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-right: 1vw;
+    letter-spacing: .09vw;
+}
+
+#second-pink-bar-display{
+    display: flex;
+    margin: 0;
+    align-items: center;}
+
+#buy-button{
+    background-color: transparent;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #4a4a4a;
+    cursor: pointer;
+    font-family: 'yu-gothic-bold', sans-serif;
+    font-size: 2vh;
+    font-weight: 600;
+    outline: 0;
+    padding: 0 1vw;
+    height: 5vh;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: .1vw;
+}
+
+#buy-button:hover{
+    background-color: #4a4a4a;
+    color: white; 
+}
+
+#likes-icon{
+    display: flex;
+    padding-right: 3vw;
+    padding-left: .5vw;
+    padding-top: 0;
+    padding-bottom: none;
+    align-items: center;
+    margin: 0;
+    width: 8vw;
+    height: 12vh;
+}
+
+#second-container{
+    width: 100vw;
+    height:78.5vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#show-desc-display{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#product-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+#product-information{
+    font-size: 250%;
+    color: #4a4a4a;
+    font-family: 'yu-gothic-bold', sans-serif;
+    letter-spacing: .4vw;
+}
+
+#product-description{
+    display: flex;
+    justify-content: space-around;  
+    font-family: poppinsReg;
+}
+
+#what-it-does{
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    font-family: 'yu-gothic-bold', sans-serif;
+}
+
+#showImgBg{
+    background-color: yellow;
+    width: 50%;
+}
+#img-direct{
+    margin-top: 26%;
+    margin-right: 10%;
+}
+
+
