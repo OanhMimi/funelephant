@@ -12,7 +12,12 @@ const NavBar = () => {
             <div className="nav-bar">
                 <ul className="left-nav-bar">  
                     <div className="menu">
-                        <NavLink className="menu-icon" exact to="/signUpOrLogIn"><HiOutlineMenu/></NavLink>
+                        <div class="button-menu">
+                             <span class="menu-icon-bar"></span>
+                             <span class="menu-icon-bar"></span>
+                             <span class="menu-icon-bar"></span>
+                        </div>
+                        {/* <NavLink className="menu-icon" exact to="/signUpOrLogIn"><HiOutlineMenu/></NavLink> */}
                     </div>
                 </ul>
                 <ul className="right-nav-bar">

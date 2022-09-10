@@ -6,7 +6,7 @@ import './Review.css'
 
 const ReviewIndex  = () => {
     const reviews = useSelector(getReviews)
-
+    
     return(
         <div>
             {reviews.map(review=> (
