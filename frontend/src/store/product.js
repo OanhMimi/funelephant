@@ -1,15 +1,17 @@
 
+import { receiveReviews } from "./review"
+
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 
-export const receiveProducts = (payload) => ({
+export const receiveProducts = (products) => ({
     type: RECEIVE_PRODUCTS,
-    payload
+    payload: products
 })
 
-export const receiveProduct = (payload) => ({
+export const receiveProduct = (product) => ({
     type: RECEIVE_PRODUCT,
-    payload
+    payload: product
 })
 
 export const getProducts = state => {
@@ -21,7 +23,7 @@ export const getProduct = productId => state => {
 }
 
 export const fetchProducts = ()=> async(dispatch) => {
-    const response = await fetch('/api/products')
+    const response = await fetch('/api/products') //get request
     if (response.ok){
         const products = await response.json()
         dispatch(receiveProducts(products))
@@ -33,6 +35,7 @@ export const fetchProduct = (productId)=> async(dispatch) => {
     if (response.ok){
         const product = await response.json()
         dispatch(receiveProduct(product))
+        dispatch(receiveReviews(product))
     }
 }
 
@@ -48,7 +51,6 @@ const productsReducer = (state={},action) => {
         default:
             return state;
     }
-
 }
 
 export default productsReducer;

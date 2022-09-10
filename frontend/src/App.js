@@ -22,7 +22,7 @@ const App = () => (
             </Route>
             <Route exact path="/profile" component={Profile}/>
             <Route exact path="/products" component={ProductIndex}/>
-            <Route exact path="/products/:productId" component={ProductShow} />
+            <Route exact path="/products/:productId" component={ProductShow}  />
         </Switch>
     </>
 );

@@ -331,4 +331,15 @@ ApplicationRecord.transaction do
     })
     file32 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Wonderwild_AngledProductShot.png')
     product_img32.photo.attach(io: file32, filename: 'Wonderwild_AngledProductShot.png') 
+
+
+  #-----------------
+  Review.create!(
+    first_name: 'Sunny', 
+    last_name: 'Ly',
+    email: 'sunny@mail.com', 
+    password: 'password'
+  )
+
+
   end
