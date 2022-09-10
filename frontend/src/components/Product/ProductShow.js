@@ -60,7 +60,7 @@ const ProductShow = () => {
         </div>
         </div>
         <ReviewIndex/> 
-        <ReviewFormModal/>
+        <button onClick={()=>}><ReviewFormModal/></button>
     </>
   );
 };
