@@ -4,12 +4,14 @@ class Api::ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
-        @review.user_id = current_user.id
+        @review.user_id = current_user.id 
+        #assigning a review_id that matches the current_user
         if @review.save!
-            render :show #save to json database //why not render show? //renderjson = no formatted get apply, render:show, jbuilder format gets applied because show is a jbuilder template
-    
+            render :show #  //renderjson = no formatted get apply,
+            # render:show, jbuilder format gets applied because show is a jbuilder template
+            #example: user_id --> userId (in our api/views)
         else
-            render json: {errors: @review.errors.full_messages}, status: :unprocessable_entity
+            render json: {errors: @review.errors.full_messages}, status: :unprocessable_entity #when you render error, you want to render it in json
         end
     end
 
@@ -24,13 +26,16 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy 
-        @review = current_user.reviews.find(params[:id])
-        unless @review
-            render json: { message: 'Unauthorized' }, status: :unauthorized
-            return
+        @review = current_user.reviews.find_by(id: params[:id])
+        # unless @review
+        #     render json: { message: 'Unauthorized' }, status: :unauthorized
+        #     return
+        # end
+        # @review.destroy
+        # render :show #send backend(object)-->frontend
+        if @review && @review.destroy
+            render :show
         end
-        @review.destroy
-        render :show #send backend(object)-->frontend
     end
 
     private

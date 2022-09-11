@@ -25,13 +25,13 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
     const [rating,setRating] = useState(selectedReview.rating)
 
     const handleSubmit = (e) => {   
-        console.log(editReview)    
         e.preventDefault();
         if (editReview){
             dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
         }else{
             dispatch(createReview({title,body,rating,product_id:productId}))
         }
+        setShowModal(false)
     }
 
     return(
@@ -63,8 +63,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 onChange={(e)=>setRating(e.target.value)}
                                 />
                         </label>
-                        
-                        <button type="submit">Post Review</button>
+                        <button type="submit" >Post Review</button>
                  </form>
             </div>
          </>
