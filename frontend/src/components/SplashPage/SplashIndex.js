@@ -6,6 +6,7 @@ const SplashIndex = () => {
 
 
     return(
+        
         <div id="splashPage-outer-div">
             <div className="block">
                 <div className="threeSplashImg">
@@ -13,12 +14,13 @@ const SplashIndex = () => {
                     </div>
                     <h2 id="free-shipping">ENJOY FREE GROUND SHIPPING ON ALL ORDERS! PLUS, ORDERS $200+ GET 2-DAY SHIPPING - ON US!</h2>
                     <div>
-                        {/* <div className="splashImage2"> */}
-                            <img  class="splash2" id="splash-2" src={splashImage2}/>
-                        {/* </div> */}
-                        {/* <div className="splashImage1"> */}
-                            <img class="splash1" id="splash-1" src={splashImage1}/>
-                        {/* </div> */}
+                        <div class="splash2">
+                            <img  id="splash-2" src={splashImage2}/>
+                        </div>
+                        <div class="splash1">
+                            <img id="splash-1" src={splashImage1}/>
+                        </div>
+                      
                     </div>
                 </div>
                
@@ -30,6 +32,9 @@ const SplashIndex = () => {
                         <span aria-hidden="true">The Best-Case Scenario</span>
                     </div>
                 </div>
+            </div>
+            <div className="sideBar">
+                <span>Keep your friends close, and your moisturizer closer.</span>
             </div>
         </div>
    

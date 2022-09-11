@@ -3,49 +3,72 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { createReview } from '../../store/review';
+import { createReview,updateReview } from '../../store/review';
 
-const ReviewFormModal = () => {
+const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
+    const {productId} = useParams();
+    let editReview = true;
+
+    if (!selectedReview){
+       selectedReview = {
+        title: "",
+        body: "",
+        rating: 0 
+        }
+        editReview = false;
+    }
     const dispatch = useDispatch();
 
-    const [title,setTitle] = useState("")
-    const [body,setBody] = useState("")
-    const [rating,setRating] = useState("")
+    const [title,setTitle] = useState(selectedReview.title)
+    const [body,setBody] = useState(selectedReview.body)
+    const [rating,setRating] = useState(selectedReview.rating)
 
-    const handleSubmit = (e) => {       
+    const handleSubmit = (e) => {   
+        console.log(editReview)    
         e.preventDefault();
-        dispatch(createReview({title,body,rating}))
+        if (editReview){
+            dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
+        }else{
+            dispatch(createReview({title,body,rating,product_id:productId}))
+        }
     }
-    
-    return(
-        <form onSubmit={handleSubmit}>
-            <label>Review Title
-                <input 
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                />
-            </label>
-            <label>Review 
-                <input 
-                    type="text"
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                <input
-                    type="number"
-                    value={rating}
-                    onChange={(e)=>setRating(e.target.value)}
-                />
-            </label>
-            
 
-        </form>
+    return(
+        <>
+            <div onClick={()=>setShowModal(false)} className="bg-modal">
+            </div>
+                <div className='review-modal'>
+                    <form onSubmit={handleSubmit}>
+                        <label>Review Title
+                            <input 
+                                type="text"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                required
+                                />
+                        </label>
+                        <label>Review 
+                            <input 
+                                type="text"
+                                value={body}
+                                onChange={(e) => setBody(e.target.value)}
+                                required
+                                />
+                        </label>
+                        <label>Rating
+                            <input
+                                type="number"
+                                value={rating}
+                                onChange={(e)=>setRating(e.target.value)}
+                                />
+                        </label>
+                        
+                        <button type="submit">Post Review</button>
+                 </form>
+            </div>
+         </>
+      
     )
 
 }

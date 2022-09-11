@@ -1,13 +1,11 @@
 import React from "react";
-import { useEffect,useState } from "react";
+import { useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct, getProduct } from "../../store/product";
 import "./products.css";
 import { FaHeart } from "react-icons/fa";
 import ReviewIndex from "../Review/ReviewIndex";
-import ReviewFormModal from "../Review/ReviewFormModal";
-import { Modal } from "../../context/Modal";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -18,7 +16,7 @@ const ProductShow = () => {
     dispatch(fetchProduct(productId));
   }, [productId]);
 
-  const [showModal, setShowModal] = useState(false);
+ 
 
   if (!product) return null;
 
@@ -35,9 +33,9 @@ const ProductShow = () => {
             <ul>
                 <button id="buy-button">Buy</button>
             </ul>
-            <ul id="likes-icon">
-                <FaHeart />
-            </ul>
+            <div id="likes-icon">
+                < FaHeart className="fa-heart"/>
+            </div>
             </div>
         </div>
         <div id="second-container">
@@ -61,13 +59,8 @@ const ProductShow = () => {
             </div>
         </div>
         </div>
-        <ReviewIndex/> 
-        <button onClick={()=>setShowModal(true)}>Wite a Review</button>
-        {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <ReviewFormModal />
-        </Modal>
-      )}
+        <ReviewIndex /> 
+
     </>
   );
 };

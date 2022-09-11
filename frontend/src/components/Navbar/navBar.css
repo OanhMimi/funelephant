@@ -1,49 +1,73 @@
-.nav-bar{
+
+
+#main-nav-bar{
     display: flex;
+    width: 100%;
+    height: 7vh;
+    background-color: #6e6e6e ;
     justify-content: space-between;
-    background-color: #6e6e6e;
 }
 
-
+.left-nav-bar{
+    display: flex;
+    align-items: center;
+}
 
 .menu-icon{
     color: white;
-    z-index:100;
-    font-size: 1.4em;
+    padding: none;
+    transform: scale(1.5);
 }
 
 .right-nav-bar{
-    display: inline-flex;
-   width: 20%;
-   background-color: #6e6e6e;
-   position: relative;
-   
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .user-icon{
     color: white;
-    padding-left: 20px;
-    z-index: 100;
-    font-size: 1.2em;
 }
 
-.menu:hover{
-    transform: translateY(2.3px);
-    transition:  transform .4s ease-in-out;
+#search-icon{
+    transform: scale(1.2);
+    padding-right: 1.5vw;
+}
+#bag-icon{
+    transform: scale(1.2);
+    padding-right: 1.5vw;
+}
+#prof-icon{
+    transform: scale(1.2);
+    padding-right: 3vw;
 }
 
-.search:hover{
-    transform: translateY(2.3px);
+#search-icon:hover{
+    cursor: pointer;
+    transform: translateY(1px);
+    transition: transform .4s ease-in-out;
+}
+#bag-icon:hover{
+    cursor: pointer;
+    transform: translateY(1px);
+    transition: transform .4s ease-in-out;
+
+}
+#prof-icon:hover{
+    cursor: pointer;
+    transform: translateY(1px);
     transition: transform .4s ease-in-out;
 }
 
-.bag:hover{
-    transform: translateY(2.3px);
-    transition: transform .4s ease-in-out;
+#menuButton {
+  background: none;
+	color: inherit;
+	border: none;
+	padding-left: 3vw;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
-.prof:hover{
-    transform: translateY(2.3px);
-    transition: transform .4s ease-in-out;
-}
+
 

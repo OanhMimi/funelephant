@@ -22,6 +22,13 @@ const Profile = () => {
         <div className="profile">
             <div className="profile-page">
                 <button className="logout-button" onClick={logOut}>LogOut</button>  
+                <h1 id="profile-h1">we all need our own space</h1>
+                <h2 id="profile-h2">That’s what this page is for! This is the place for you and only you. Organize, explore, make
+a wish list, click around, and get rewards. Trust us: Getting personal is a good thing.</h2>
+            </div>
+            <div>
+                <h1>Hello,</h1>
+                
             </div>
         </div>
         

@@ -1,10 +1,12 @@
 
 #splashPage-outer-div{
     margin:0;
+    overflow: hidden;
 }
 .splash-hover-slow{
     animation: marquee 25s linear;  
     color: #4a4a4a; 
+    padding-top: 10vh;
 }
 
 .threeSplashImg{
@@ -20,9 +22,9 @@
     bottom: 0;
     background-color: #fac2d3;
     width: .1vw;
-    height: 34vh;
+    height: 38vh;
     transform-origin: left;
-    animation: center-animate 4s ease 1, color-animate 5s infinite;
+    animation: center-animate 6s ease 1, color-animate 5s infinite;
     animation-fill-mode: forwards;
     z-index: -100;
 }
@@ -60,44 +62,58 @@
     position: absolute;
     right: 27vw;
     bottom: 10vh;
-    width: 17vw;
-    height: 30vh;;
+    width: 19vw;
+    height: 35vh;;
     z-index: 5;
     
 }
 #free-shipping{
     position: absolute;
-    font-size: .7vw;
+    font-size: .8vw;
     font-family: poppinsLight;
-    right: 35vw;
-    top: 3vh;
+    right: 23vw;
+    top: 5.5vh;
+    letter-spacing: .2vw;
 }
-/* #splash-2{
+
+.splash2{
     animation-name:splashImage2;
-    animation-duration:2s;
-    height:100px;
+    animation-duration:1s;
+    height: 260px;
     width:100px; 
+    position: absolute;
     animation-fill-mode: forwards;
 }
 
 @keyframes splashImage2{
-    from { transform: translateX(1300%); }
-    to { transform: translateX(900%); }
-} */
+    from {top: 50%; right: -30%;}
+    to {top: 50%; right: -5%;}
+} 
 
 #splash-1{
     position: absolute;
-    width: 37vw;
-    height: 44vh;
+    width: 40vw;
+    height: 49vh;
     left: 23vw;
-    bottom: 5vh;
+    top: 12vh;
     transform: scale(1.1);
 }
 
-#splash-1{
-    animation-duration:2s;
-    z-index: 3; 
+.splash1{
+    animation-name:splashImage1;
+    animation-duration:1s;
+    height: 500px;
+    width:500px; 
+    position: absolute;
+    animation-fill-mode: forwards;
 }
+
+@keyframes splashImage1{
+    from {bottom:-50%; left: 0%;}
+    to {bottom: -15%; left: 0%;}
+} 
+
+
 
 
 

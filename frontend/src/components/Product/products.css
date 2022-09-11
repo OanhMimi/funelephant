@@ -20,7 +20,7 @@
     font-weight: bold;
     font-family: poppinsReg;  
     position: absolute;
-    top: 24vh;
+    top: 20vh;
     right: 42vw;
     letter-spacing: .3vw;
 }
@@ -41,7 +41,7 @@
     color: #4a4a4a;
     font-size: 1.2vw;
     letter-spacing: .2vw;
-    bottom: 43.4vh;
+    top: 44.4vh;
     right: 47.3vw;
 }
 
@@ -140,7 +140,7 @@
     color: white; 
 }
 
-#likes-icon{
+.fa-heart{
     display: flex;
     padding-right: 3vw;
     padding-left: .5vw;
@@ -148,8 +148,8 @@
     padding-bottom: none;
     align-items: center;
     margin: 0;
-    width: 8vw;
-    height: 12vh;
+    width: 2.5vw;
+    height: 4vh;
 }
 
 #second-container{

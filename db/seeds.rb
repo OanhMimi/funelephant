@@ -11,6 +11,7 @@ require 'open-uri'
 ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
+    Review.destroy_all
     Product.destroy_all
     User.destroy_all
 
@@ -27,16 +28,94 @@ ApplicationRecord.transaction do
       email: 'sunny@mail.com', 
       password: 'password'
     )
+
+    User.create!(
+      first_name: 'Darren', 
+      last_name: 'Eid',
+      email: 'darreneidDOTA@gmail.com', 
+      password: 'imtoosmartFormyOwnGood1'
+    )
   
-    # More users
-    # 10.times do 
-    #   User.create!({
-    #     firstName: Faker.name.firstName(),
-    #     lastName: Faker.name.lastName(),
-    #     email: Faker::Internet.unique.email,
-    #     password: 'password'
-    #   }) 
-    # end
+    User.create!(
+      first_name: 'Zuzu', 
+      last_name: 'Chaoi',
+      email: 'zuzuchaoi@gmail.com', 
+      password: 'chocolatelover123!'
+    )
+  
+    User.create!(
+      first_name: 'sdfdsfs', 
+      last_name: 'Lsdfdsfy',
+      email: 'sunsdfdsfdsfny@mail.com', 
+      password: 'padsfsdfdfsssword'
+    )
+  
+    User.create!(
+      first_name: 'Ssdfdsfsdunny', 
+      last_name: 'Ldsfsdfdsfy',
+      email: 'sunsdfdsfdsfsfny@mail.com', 
+      password: 'psdfdsfdassword'
+    )
+  
+    User.create!(
+      first_name: 'Susdfsadfsdfnny', 
+      last_name: 'Lsafsfdfsy',
+      email: 'sudsfdsfsdfnny@mail.com', 
+      password: 'psdfsdfdsfdsfassword'
+    )
+  
+    User.create!(
+      first_name: 'Susdfsdfdsffdfnny', 
+      last_name: 'sdfdsffsdLy',
+      email: 'sdfsdfdsfdsfsfsdsunny@mail.com', 
+      password: 'sdfasdfdsfsdpassword'
+    )
+  
+    User.create!(
+      first_name: 'Ssdfdsfdfdfsadfunny', 
+      last_name: 'sdfsafsfasdfLy',
+      email: 'sunnsdfdsafsdfy@mail.com', 
+      password: 'pasdfasfdsfdsfssword'
+    )
+  
+    User.create!(
+      first_name: 'Ssafdsfsdfasfdsunny', 
+      last_name: 'sdfsdfewrwsLy',
+      email: 'sunadfdsfdfafny@mail.com', 
+      password: 'psdafdsfafdsassword'
+    )
+  
+    User.create!(
+      first_name: 'Su234324sdf234rwnny', 
+      last_name: 'sdfdsafsfdsafLy',
+      email: 'sunndsfsfasfdsfy@mail.com', 
+      password: 'pasdfdsfsdfdfasdfsdassword'
+    )
+
+    User.create!(
+      first_name: 'sadfsdfdsf', 
+      last_name: 'sdfdsafsdfsdfdfsfdsafLy',
+      email: 'sunndsfsfasdfdssfdsfy@mail.com', 
+      password: 'pasdfdsdfsfdfssfsdfdfasdfsdassword'
+    )
+
+    User.create!(
+      first_name: 'Su234324sdf234rwnny213', 
+      last_name: 'sdfdsafsfdsafLy213',
+      email: 'sunndsfsfasfdsfy@mail.com231', 
+      password: 'pasdfdsfsdfdfasdfsdassword23'
+    )
+  
+
+  
+    10.times do 
+      User.create!({
+        first_name: Faker::Name.first_name(),
+        last_name: Faker::Name.last_name(),
+        email: Faker::Internet.unique.email,
+        password: 'password132!'
+      }) 
+    end
   
     
     puts "Done!"
@@ -335,11 +414,165 @@ ApplicationRecord.transaction do
 
   #-----------------
   Review.create!(
-    first_name: 'Sunny', 
-    last_name: 'Ly',
-    email: 'sunny@mail.com', 
-    password: 'password'
+    title: 'love it!', 
+    body: 'I’m so incredible happy with my purchase! I have completely fallen in love with everything Fun Elephant. I have noticed such such a positive change in my skin.',
+    rating: 5, 
+    user_id: 1,
+    product_id: 1,
   )
 
+  Review.create!(
+    title: 'fewer products than prior The Littles', 
+    body: 'I paid less than $50 for Littles 4.0 and received more items than is included in the current Littles Kit. very disappointing....',
+    rating: 2, 
+    user_id: 2,
+    product_id: 1,
+  )
+
+
+  Review.create!(
+    title: 'Love everything!', 
+    body: 'I got the Littles in hopes to find better products for my needs and this did not disappoint! My skin hasnt been better or clearer! I cant wait for the long term results!',
+    rating: 5, 
+    user_id: 3,
+    product_id: 1,
+  )
+
+
+  Review.create!(
+    title: 'BE CAREFUL!', 
+    body: 'I received a deluxe sample of this in a squeeze tube. When I went to put it on my face, I noticed what seemed like sharp chunks of plastic in my product! I emailed Fun Elephant and they acted like this is a completely normal occurrence due to the salicylic acid crystallizing. That has never happened to me before with any form of SA. SO BE CAREFUL when applying this to your face! I understand that acids can be a delicate balance, but the formation of painful crystals in product is not normal to me! I cant find any information about this product crystallizing anywhere so please be aware that it can happen and it can scratch your face.',
+    rating: 1, 
+    user_id: 4,
+    product_id: 3,
+  )
+
+  Review.create!(
+    title: 'Bummed', 
+    body: 'I really REALLY wanted to enjoy this product. I have been using an $8 store bought facewash for the past 10 years and never had any issues/acne. I decided this year I wanted to up my "face product game" and take care of my face with natural healthy products....and unfortunately it was not ready for a change. After using this product I broke out all over my cheeks and jaw line! To double check it was the product and not something with my diet/hormones, I switched back to the $8 cleanser and my face cleared right up...then I switched back to the Beste Cleanser and the acne came back in the same spots. UGH. Aside from the product giving me acne, it smells great, its super smooth and it even gives your face a little glow.',
+    rating: 2, 
+    user_id: 5,
+    product_id: 3,
+  )
+
+  Review.create!(
+    title: 'Lives up to the hype', 
+    body: 'I have been reading about Babyfacial for a few years now. All comments are stellar reviews. Instead I have bought and tried so many other similar and cheaper products. Trying to make my sensitive acne prone skin happy. Turns out I should have saved the money spent on other products and just bought this one. One use of the kit I recieved with the Babyfacial ald the luxury Marula Oil and my skin was soothed and happy. Instructions say use is once a week. Cant wait to use it next week. Im hooked. Just love it.',
+    rating: 5, 
+    user_id: 6,
+    product_id: 2,
+  )
+
+  Review.create!(
+    title: 'Unsure...', 
+    body: 'I am unsure how I feel about this product. The first time I used it was last week and I woke up with amazingly smooth skin (something I haven‚Äôt had in quite some time). I used this product again last night and woke up with small pimples all over my face (my cheeks, chin, and forehead). I never get pimples on my cheeks so I am really disappointed that this is something directly related to this product. I am going to continue using for a couple of weeks in hopes that this improves.',
+    rating: 3, 
+    user_id: 7,
+    product_id: 2,
+  )
+
+  Review.create!(
+    title: 'Protini sample is too small', 
+    body: 'Protini sample needs to be bigger for this much money. I bought these for a 10 day vacation and had to take a second pot of protini',
+    rating: 3, 
+    user_id: 8,
+    product_id: 4,
+  )
+
+
+  Review.create!(
+    title: 'Didnt realize how much I loved this until I finished it', 
+    body: 'Ive tried many hydrating serums and gels over the last few year - ranging from chanel to korean products and this is easily my favourite one and the only one I can say is worth its price. This is a clear gel that sinks in quickly and leaves such a wonderful natural finish to the skin. I used this alone as a moisturizer in the summer and will repurchase for the winter to use either as a mixer or moisturizer under the umbra tinte. This leaves a really lovely finish on the skin that wears great under makeup (no primer needed for me) I cant think of any cons to this one if anything I feel like I finished mine too fast',
+    rating: 5, 
+    user_id: 9,
+    product_id: 5,
+  )
+
+  Review.create!(
+    title: 'The nourishment I craved', 
+    body: 'I cannot love the B-hydra serum enough! Its a perfect daytime serum and the best part is I can layer it with any of Drunk Elephants other products. It absorbs in to the skin and does not leave any sticky residue like most other serums. Ive noticed a huge difference in my skin after about 3 months of using this product and this is my second purchase. My skin is smoother, more luminous, and I dont break out as much anymore. I have relatively sensitive skin so other serums and moisturizers irritated my skin and caused breakouts but I dont have this problem with Drunk Elephant. Love it! Cant recommend it enough.',
+    rating: 5, 
+    user_id: 10,
+    product_id: 5,
+  )
+
+
+  Review.create!(
+    title: 'Miracle oil', 
+    body: 'I have noticed that my sun spots are getting lighter and my skin tone looks even. This is a miracle product that my skin drinks up!!',
+    rating: 5, 
+    user_id: 11,
+    product_id: 6,
+  )
+
+
+  Review.create!(
+    title: 'Convert', 
+    body: 'I love the C-Tango eye serum. Living through CO winters is hard on the skin. My eyelids have been known to start flaking when I use any anti-aging serum that can sometimes dry you out. This is a great combination of restoration and moisture. My only complaint is the packaging‚Äîwhich goes for all Drunk Elephant products. I love how well it seals for travel BUT you can‚Äôt tell it‚Äôs gonna be gone till BAM it‚Äôs gone. Then, it takes a while to deliver. Don‚Äôt create a product I can‚Äôt live without that you then make me live without ;)',
+    rating: 4, 
+    user_id: 12,
+    product_id: 7,
+  )
+
+
+  Review.create!(
+    title: 'Good Stuff', 
+    body: 'I like the ingredients and the way it feels on application. I have faith it is brightening, but no empirical evidence. I plan to do a side by side with the Sheba eye serum and will update upon completion. I love the airtight packaging. Really the only reason for one star off is the price and the amount pumped. It is hard to master how to pump the right amount of product since one pump is way too much -- it pumps as much product (a bit more than pea size) as they recommend to cover an entire face with a different product.',
+    rating: 5, 
+    user_id: 13,
+    product_id: 7,
+  )
+
+  Review.create!(
+    title: 'Wonderful Eye Cream with a Unique, Lovely Texture!', 
+    body: 'C-Tango is probably my favorite product from Drunk Elephant (apart from Lippe). The product has a unique, beautiful texture, almost like a gel-cream. It sinks quickly into my skin, but still leaves it hydrated. Best of all, it seems to have helped with my hereditary dark circles! I havent experienced any irritation with this product, even when using it twice a day. As an added bonus, the packaging is SUPER sanitary (and cute!) compared to other eye creams. Two thumbs way up for this DE product!',
+    rating: 5, 
+    user_id: 14,
+    product_id: 7,
+  )
+
+  Review.create!(
+    title: 'Returned', 
+    body: 'I liked the fact that the LaLa cream is rich in ceramides, but I really don‚Äôt like the smell of it. I will stick to the Protini Cream and use a ceramide serum from another brand.',
+    rating: 1, 
+    user_id: 15,
+    product_id: 8,
+  )
+
+  Review.create!(
+    title: 'Extremely Small product for price', 
+    body: 'I knew it was sample size but these are so small I would not have spent over $40 on them. Also not a fan of the cream it leaves a white residue',
+    rating: 2, 
+    user_id: 16,
+    product_id: 8,
+  )
+  Review.create!(
+    title: 'One for my me and one for my sister', 
+    body: 'My sister tried mine when were on vacation. She LOVED it I bought it for her. She is too funny, she only uses it on her lip wrinkles, because that what drives her crazy.',
+    rating: 5, 
+    user_id: 17,
+    product_id: 9,
+  )
+  Review.create!(
+    title: 'Use it as a booster!', 
+    body: 'I don’t use Ceramighty as an eye cream. Instead, I mix a pump of it into the skincare product smoothie I apply to my entire face and neck, and the result is a skin barrier so fortified that it feels like there’s an invisible, weightless veil of protection sealing in my skin’s moisture. I LOVE it. And at nighttime, I also mix a dab of Wonderwild into the smoothie along with Ceramighty to really seal everything in!',
+    rating: 5, 
+    user_id: 18,
+    product_id: 10,
+  )
+  Review.create!(
+    title: 'Burns my eyes', 
+    body: 'The lotion is itself great, but the directions say you can put this not only under your eyes, but also on your eyelids. This would be cool if not for the fact that if you get it in your eyes, they sting like hell. Then your eyes water from the stinging which just increases the stinging as youre wiping away your tears. Ill stick to my C-Tango and Shaba that dont sting.',
+    rating: 3, 
+    user_id: 19,
+    product_id: 10,
+  )
+  Review.create!(
+    title: 'Not bad but wouldnt purchase again', 
+    body: 'I bought your new eye cream. It goes on nicely and looks moisturizing. I have never had so much trouble with a pump dispenser before, though. It is all in pieces, now. This dispenser needs some improvement.',
+    rating: 3, 
+    user_id: 20,
+    product_id: 10,
+  )
 
   end

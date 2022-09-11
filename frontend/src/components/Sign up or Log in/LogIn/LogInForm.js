@@ -27,8 +27,8 @@ const LogInForm = () => {
     const demoUser = (e) => {
         e.preventDefault();
         dispatch(sessionActions.login({
-          email: "test@test.com",
-          password: "test1234"
+          email: "darreneidDOTA@gmail.com",
+          password: "imtoosmartFormyOwnGood1"
         }))
       }
 

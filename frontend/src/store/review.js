@@ -11,7 +11,7 @@ export const receiveReviews = reviews => ({
 })
 export const receiveReview = review => ({
     type: RECEIVE_REVIEW,
-    payload: review
+    review
 })
 export const removeReview = reviewId => ({
     type: REMOVE_REVIEW,
@@ -69,7 +69,7 @@ const ReviewsReducer = (state={},action) => {
         case RECEIVE_REVIEWS:
             return action.payload.reviews
         case RECEIVE_REVIEW:
-            newState[action.payload.review.id] = action.payload.review
+            newState[action.review.id] = action.review
             return newState
         case REMOVE_REVIEW:
             delete newState[action.reviewId]
