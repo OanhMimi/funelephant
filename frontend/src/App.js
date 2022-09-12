@@ -8,12 +8,11 @@ import MashForm from "./components/mashedPage/mashSignUpLogIn";
 import Profile from "./components/Profile/Profile";
 import ProductIndex from "./components/Product/ProductIndex";
 import ProductShow from "./components/Product/ProductShow";
-import SlideOutMenu from "./components/SlideOutMenu/SlideOutMenu";
 
 const App = () => (
     <>
       <NavBar/>
-      <SlideOutMenu/>
+      
           <Switch>
             <Route exact path="/" component={SplashIndex}/>
             <Route exact path="/signUpOrLogIn">

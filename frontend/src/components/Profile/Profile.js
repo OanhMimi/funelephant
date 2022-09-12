@@ -14,6 +14,8 @@ const Profile = () => {
         dispatch(sessionActions.logout())
     }
 
+    const firstName = useSelector(state=> state.session.user.firstName)
+
     const sessionUser = useSelector(state => state.session.user);
     if (!sessionUser) return <Redirect to="/signUpOrLogIn" />;
 
@@ -28,6 +30,7 @@ a wish list, click around, and get rewards. Trust us: Getting personal is a good
             </div>
             <div>
                 <h1>Hello,</h1>
+                <h2>{firstName}</h2>
                 
             </div>
         </div>

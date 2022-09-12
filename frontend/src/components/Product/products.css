@@ -12,6 +12,7 @@
     width: 100vw;
     height: 35vh;
     position: relative;
+    z-index: -1;
 }
 
 #Skincare-collectionHeader{
@@ -26,7 +27,9 @@
 }
 
 #banner2-bg{
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f6dcff;
     width: 100vw;
     height: 8vh;
@@ -34,16 +37,6 @@
     top:-1vh;
 }
 
-#skin-care-drop-down{
-    position: absolute;
-    margin: 0;
-    font-family: poppinsReg;
-    color: #4a4a4a;
-    font-size: 1.2vw;
-    letter-spacing: .2vw;
-    top: 44.4vh;
-    right: 47.3vw;
-}
 
 #display-all-products{
     display: grid;
@@ -81,80 +74,14 @@
 #show-outer-div{
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* position: relative  */
+    /* overflow: hidden; */
 }
 
-#pink-bar-display{
-    display: flex;
-    background-color: #f6dcff;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 8vh;
-    color: #4a4a4a;
-    font-family: 'yu-gothic-bold', sans-serif;
-}
-
-#pink-nav-display-show2{
-    padding-left: 1vw;
-}
-
-#first-pink-bar-display{
-    display: flex;
-    font-size: .8vw;
-    font-weight: 600;
-    color: #4a4a4a;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0;
-    padding-right: 1vw;
-    letter-spacing: .09vw;
-}
-
-#second-pink-bar-display{
-    display: flex;
-    margin: 0;
-    align-items: center;}
-
-#buy-button{
-    background-color: transparent;
-    border: 2px solid #000;
-    box-sizing: border-box;
-    color: #4a4a4a;
-    cursor: pointer;
-    font-family: 'yu-gothic-bold', sans-serif;
-    font-size: 2vh;
-    font-weight: 600;
-    outline: 0;
-    padding: 0 1vw;
-    height: 5vh;
-    text-align: center;
-    text-decoration: none;
-    transition: all .3s;
-    touch-action: manipulation;
-    letter-spacing: .1vw;
-}
-
-#buy-button:hover{
-    background-color: #4a4a4a;
-    color: white; 
-}
-
-.fa-heart{
-    display: flex;
-    padding-right: 3vw;
-    padding-left: .5vw;
-    padding-top: 0;
-    padding-bottom: none;
-    align-items: center;
-    margin: 0;
-    width: 2.5vw;
-    height: 4vh;
-}
 
 #second-container{
     width: 100vw;
-    height:78.5vh;
+    height:100vh;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -162,6 +89,7 @@
 
 #show-desc-display{
     display: flex;
+    /* position: absolute; */
     flex-direction: column;
 }
 
@@ -201,6 +129,43 @@
 #img-direct{
     margin-top: 26%;
     margin-right: 10%;
+}
+
+#slide-down{
+    background: none;
+	color: inherit;
+	border: none;
+	padding-left: 3vw;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.slide-down-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.press-to-slide-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#skin-care-drop-down{
+    font-family: poppinsReg;
+    color: #4a4a4a;
+    font-size: 1.2vw;
+    letter-spacing: .2vw;
+  
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -1,11 +1,14 @@
 import './Review.css'
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { createReview,updateReview } from '../../store/review';
+// import StarRating from '../StarRating';
+import { FaStar } from 'react-icons/fa';
 
-const ReviewFormModal = ({setShowModal,selectedReview}) => {
+
+const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
 
     const {productId} = useParams();
     let editReview = true;
@@ -34,12 +37,43 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
         setShowModal(false)
     }
 
+   
+
+   
     return(
         <>
-            <div onClick={()=>setShowModal(false)} className="bg-modal">
-            </div>
+            <div onClick={()=>setShowModal(false)} id="blur-background"></div>
+            <div  className="bg-modal">
                 <div className='review-modal'>
-                    <form onSubmit={handleSubmit}>
+                    <div id="modal-product-title">
+                        <div>{product.name}</div>
+                    </div>
+                    <form className ="review-form-modal" onSubmit={handleSubmit}>
+                        
+                        <label>Rating
+                            <div>
+                                {[...Array(5)].map((star, i) => {
+                                    const ratingValue = i + 1;
+                                    return (
+                                        <label>
+                                        <input 
+                                            type="radio" 
+                                            name="rating" 
+                                            value={ratingValue} 
+                                            onClick={(e)=>setRating(e.target.value)}
+
+                                        />
+                                        <FaStar 
+                                            className="star" 
+                                            color={ratingValue <= (rating) ? "#f6dcff" : "#e4e5e9"} 
+                                            size={40}
+                                   
+                                        />
+                                        </label>
+                                        )
+                                        })}                                         
+                            </div>
+                        </label>
                         <label>Review Title
                             <input 
                                 type="text"
@@ -56,18 +90,24 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 required
                                 />
                         </label>
-                        <label>Rating
-                            <input
-                                type="number"
-                                value={rating}
-                                onChange={(e)=>setRating(e.target.value)}
-                                />
-                        </label>
                         <button type="submit" >Post Review</button>
-                 </form>
-            </div>
+                    </form>
+                </div>
+            </div >
+            
          </>
-      
+
+        // <div className="review-outmost-modal-box">
+        //     <div onClick={()=>setShowModal(false)} className="review-form-modal">
+
+
+
+        //     </div>
+        // </div>
+
+
+         
+
     )
 
 }

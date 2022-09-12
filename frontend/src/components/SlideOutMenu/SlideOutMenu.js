@@ -3,12 +3,14 @@ import { GrClose } from "react-icons/gr";
 import { NavLink } from 'react-router-dom';
 
 
-const SlideOutMenu = () => {
+const SlideOutMenu = ({setShowSlideOut}) => {
 
     const handleCloseSideBar = (e) => {
-        e.preventDefault();
-        let modal = document.getElementById("menu-slide-out")
-        modal.style.display="none"
+        // e.preventDefault();
+        // let modal = document.getElementById("menu-slide-out")
+        // modal.style.display="none"
+        setShowSlideOut(false)
+
     }
 
     return(

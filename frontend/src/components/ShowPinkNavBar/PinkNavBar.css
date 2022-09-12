@@ -1,0 +1,77 @@
+
+.pink-nav-sticky{
+    position: fixed;
+
+}
+#pink-bar-display{
+    display: flex;
+    background-color: #f6dcff;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 8vh;
+    color: #4a4a4a;
+    font-family: 'yu-gothic-bold', sans-serif;
+}
+
+#pink-nav-display-show2{
+    padding-left: 1vw;
+}
+
+#first-pink-bar-display{
+    display: flex;
+    font-size: .8vw;
+    font-weight: 600;
+    color: #4a4a4a;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-left: 3vw;
+    padding-right: 1vw;
+    letter-spacing: .09vw;
+}
+
+#second-pink-bar-display{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding-right: 3vw;
+}
+    
+
+#buy-button{
+    background-color: transparent;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #4a4a4a;
+    cursor: pointer;
+    font-family: 'yu-gothic-bold', sans-serif;
+    font-size: 2vh;
+    font-weight: 600;
+    outline: 0;
+    padding: 0 1vw;
+    margin-right: 1vw;
+    height: 5vh;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: .1vw;
+}
+
+#buy-button:hover{
+    background-color: #4a4a4a;
+    color: white; 
+}
+
+.fa-heart{
+    display: flex;
+    padding-right: 3vw;
+    padding-left: .5vw;
+    padding-top: 0;
+    padding-bottom: none;
+    align-items: center;
+    margin: 0;
+    width: 2.5vw;
+    height: 4vh;
+}

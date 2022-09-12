@@ -34,7 +34,7 @@ const SplashIndex = () => {
                 </div>
             </div>
             <div className="sideBar">
-                <span>Keep your friends close, and your moisturizer closer.</span>
+                <div id="vertical-side">Keep your friends close, and your moisturizer closer.</div>
             </div>
         </div>
    

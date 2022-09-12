@@ -27,6 +27,7 @@
     transition: all .3s;
     touch-action: manipulation;
     letter-spacing: 3px;
+    
 }
     
 .logout-button:hover{

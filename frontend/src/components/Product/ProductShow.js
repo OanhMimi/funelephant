@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct, getProduct } from "../../store/product";
 import "./products.css";
-import { FaHeart } from "react-icons/fa";
+// import { FaHeart } from "react-icons/fa";
 import ReviewIndex from "../Review/ReviewIndex";
+import PinkNavBar from "../ShowPinkNavBar/PinkNavBar";
 
 const ProductShow = () => {
   const dispatch = useDispatch();
@@ -16,33 +17,18 @@ const ProductShow = () => {
     dispatch(fetchProduct(productId));
   }, [productId]);
 
- 
-
   if (!product) return null;
 
   return (
 
     <>
         <div id="show-outer-div">
-        <div id="pink-bar-display">
-            <div id="first-pink-bar-display">
-            <ul id="pink-nav-display-show1">{product.name}</ul>
-            <ul id="pink-nav-display-show2">${product.price}.00</ul>
-            </div>
-            <div id="second-pink-bar-display">
-            <ul>
-                <button id="buy-button">Buy</button>
-            </ul>
-            <div id="likes-icon">
-                < FaHeart className="fa-heart"/>
-            </div>
-            </div>
-        </div>
+        <PinkNavBar product={product}/>
         <div id="second-container">
             <div id="show-desc-display">
-            <div id="product-info">
-                <p id="product-information">Product Information</p>
-            </div>
+                <div id="product-info">
+                    <p id="product-information">Product Information</p>
+                </div>
             <div id="product-description">
                 <div id="what-it-does">
                 <span>What it does</span>
@@ -59,7 +45,7 @@ const ProductShow = () => {
             </div>
         </div>
         </div>
-        <ReviewIndex /> 
+        <ReviewIndex product={product}/>
 
     </>
   );

@@ -1,3 +1,12 @@
+.outmost-nav-bar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    display: block;
+    margin-bottom: .03vw;
+}
 
 
 #main-nav-bar{
@@ -6,6 +15,7 @@
     height: 7vh;
     background-color: #6e6e6e ;
     justify-content: space-between;
+
 }
 
 .left-nav-bar{
@@ -23,6 +33,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     margin-right: 3vw;
 }
 
 .user-icon{
@@ -69,5 +80,12 @@
 	outline: inherit;
 }
 
+#fun-elephant-logo{
+    position: absolute;
+    top: 0;
+    width: 5vw;
+    height: 7vh;
+    right: 50%;
+}
 
 
