@@ -1,6 +1,7 @@
 
 .pink-nav-sticky{
     position: fixed;
+    overflow: hidden;
 
 }
 #pink-bar-display{

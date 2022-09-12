@@ -18,6 +18,9 @@ class Product < ApplicationRecord
     # has_many_attached :photos
     has_many :reviews,
     dependent: :destroy
+
+    has_many :cart_items,
+    dependent: :destroy
     
     def average_rating
         (self.reviews.pluck(:rating).sum * 1.0)/self.reviews.length

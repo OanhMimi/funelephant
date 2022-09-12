@@ -18,7 +18,7 @@ class Api::ReviewsController < ApplicationController
     def update
         @review = Review.find(params[:id])
         if @review.user_id == current_user.id && @review.update!(review_params)
-            (review_params)  && @review
+            (review_params) && @review
             render :show #customize information about the particular object we're returning, allows us to extract certain info
         else 
             render json: { message: "You can only edit your own reviews!"}, status: :unauthorized

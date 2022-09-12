@@ -69,26 +69,6 @@
 
 
 
- /* .review-outmost-modal-box{
-    display: absolute;
-    align-items: center;
-    justify-content: center;
- }
- .review-form-modal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: beige;
-    width: 45vw;
-    height: 75vh;
- }
- */
-
-
-
- 
-
  input[type="radio"] {
     display: none;
   }
@@ -103,4 +83,8 @@
     display: flex;
     flex-direction: column;
 
+  }
+
+  #star-value{
+    color: #f6dcff;
   }

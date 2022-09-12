@@ -21,47 +21,46 @@ const ReviewIndex  = ({product}) => {
 
     const showStar = (rating)=>{
        if (rating===1){
-            return <FaStar/>
+            return <FaStar id="star-value"/>
         } 
        if (rating===2){
         return (
             <div>
-                <FaStar/>
-                <FaStar/>
+                < FaStar id="star-value"/>
+                <FaStar id="star-value"/>
              </div>
         )
         } 
         if (rating===3){
                  return (
             <div>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
              </div>
         )
         } 
         if (rating===4){
                  return (
             <div>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
+                <FaStar  id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
              </div>
         )
         } 
         if (rating===5){
                  return (
             <div>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
-                <FaStar/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
              </div>
         )
         } 
-       
     }
     return(
         <>
