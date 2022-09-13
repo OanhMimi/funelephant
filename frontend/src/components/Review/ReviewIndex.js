@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useSelector,useDispatch } from "react-redux";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { getReviews } from "../../store/review";
 import './Review.css'
 import ReviewFormModal from './ReviewFormModal'
@@ -17,6 +17,21 @@ const ReviewIndex  = ({product}) => {
     const currentUserId = useSelector(state=> state.session.user?.id)
     const [showModal, setShowModal] = useState(false);
     const [selectedReview,setSelectedReview] = useState();
+    const [createdReview,setCreatedReview] = useState(false);
+
+    useEffect(()=>{
+
+        let eachReview = Object.values(reviews)
+
+        for (let index = 0; index < eachReview.length; index++) {
+            if (currentUserId === eachReview[index].userId) {
+                setCreatedReview(true)
+                return
+            } 
+        setCreatedReview(false)
+        }
+     },[reviews])
+    
     //selectedReview = the review we select
 
     const showStar = (rating)=>{
@@ -79,7 +94,9 @@ const ReviewIndex  = ({product}) => {
                                 <div id="review-body">{review.body}</div> 
                                 <br/>
                                 <br/>
-                                {currentUserId === review.userId && (
+
+                                {currentUserId === review.userId && 
+                                    (
                                     <>
                                         <button>
                                             <div onClick={() => dispatch(deleteReview(review.id))}>Delete Review
@@ -99,7 +116,7 @@ const ReviewIndex  = ({product}) => {
                 </div>
             
             </div>
-            <button onClick={()=>setShowModal(true)}>Write a Review</button>
+            { createdReview ? <h1></h1> : <button onClick={()=>setShowModal(true)}>Write a Review</button>}
             {showModal && <ReviewFormModal 
             product={product}
             setShowModal={setShowModal}

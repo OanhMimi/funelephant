@@ -1,8 +1,28 @@
 
+@font-face {
+    font-family: poppinsReg;
+    src: url(../../fonts/Poppins/Poppins-Regular.ttf);
+  }
+
+@font-face {
+    font-family: mustica;
+    src: url(../../fonts/mustica_pro/MusticaPro-SemiBold.otf);
+ }
+
+ @font-face {
+    font-family: zabalBold;
+    src: url(../../fonts/zabal/ZabalDEMO-SemiBold.otf);
+ }
+
+ @font-face {
+    font-family: linux;
+    src: url(../../fonts/linux_libertine/LinLibertine_DR.ttf);
+ }
+
+
 .pink-nav-sticky{
     position: fixed;
     overflow: hidden;
-
 }
 #pink-bar-display{
     display: flex;
@@ -12,22 +32,27 @@
     width: 100vw;
     height: 8vh;
     color: #4a4a4a;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabalBold;
+
 }
 
 #pink-nav-display-show2{
     padding-left: 1vw;
+    font-size: 1vw;
+}
+#pink-nav-display-show1{
+    font-size: 1vw;
 }
 
 #first-pink-bar-display{
     display: flex;
-    font-size: .8vw;
+    font-size: .9vw;
     font-weight: 600;
     color: #4a4a4a;
     align-items: center;
     justify-content: space-evenly;
     margin: 0;
-    padding-left: 3vw;
+    padding-left: 6.2vw;
     padding-right: 1vw;
     letter-spacing: .09vw;
 }
@@ -37,22 +62,23 @@
     margin: 0;
     align-items: center;
     padding-right: 3vw;
+    justify-content: center;
 }
     
 
 #buy-button{
     background-color: transparent;
-    border: 2px solid #000;
+    border: 2px solid #4a4a4a;
     box-sizing: border-box;
     color: #4a4a4a;
     cursor: pointer;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabalBold;
     font-size: 2vh;
     font-weight: 600;
     outline: 0;
     padding: 0 1vw;
     margin-right: 1vw;
-    height: 5vh;
+    height: 4vh;
     text-align: center;
     text-decoration: none;
     transition: all .3s;
@@ -76,3 +102,31 @@
     width: 2.5vw;
     height: 4vh;
 }
+
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity{
+    outline: none;
+    color: #4a4a4a;
+    border:1.5px solid #4a4a4a;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    padding-left: .8vw;
+    padding: .1vw;
+    box-shadow: none;  
+    margin-right: 2vw;
+    transform: scale(1.4);
+}
+
+#qty-text{
+    color: #4a4a4a;
+    font-family: zabalBold;
+    margin-right: 2vw;
+}
+

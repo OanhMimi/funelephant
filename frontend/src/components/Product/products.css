@@ -3,6 +3,27 @@
     src: url(../../fonts/Poppins/Poppins-Regular.ttf);
   }
 
+@font-face {
+    font-family: mustica;
+    src: url(../../fonts/mustica_pro/MusticaPro-SemiBold.otf);
+ }
+
+ @font-face {
+    font-family: zabal;
+    src: url(../../fonts/zabal/ZabalDEMO-Regular.otf);
+ }
+
+ @font-face {
+    font-family: linux;
+    src: url(../../fonts/linux_libertine/LinLibertine_DR.ttf);
+ }
+
+
+ 
+
+
+
+
  #outer-index-div{
     width: 100vw;
     height: 100vh;
@@ -19,7 +40,7 @@
     font-size: 3.2vw;
     color: #4a4a4a;
     font-weight: bold;
-    font-family: poppinsReg;  
+    font-family: mustica;  
     position: absolute;
     top: 20vh;
     right: 42vw;
@@ -58,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: poppinsReg;
+    font-family: mustica;
     color: #4a4a4a;
     font-size: .7vw;
     align-items: center;
@@ -91,35 +112,75 @@
     display: flex;
     /* position: absolute; */
     flex-direction: column;
+    margin-top: 10%;
 }
 
 
 #product-info{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 40%;
+    margin-left: 6vw;
 }
 
 #product-information{
-    font-size: 250%;
+    font-size: 6vh;
     color: #4a4a4a;
-    font-family: 'yu-gothic-bold', sans-serif;
-    letter-spacing: .4vw;
+    font-family: linux;
+    letter-spacing: .1vw;
+    margin-bottom: 3vh;
 }
 
 #product-description{
     display: flex;
-    justify-content: space-around;  
-    font-family: poppinsReg;
+    justify-content: space-evenly;  
+    font-family: zabal;
+    color: #7d7d7d;
+
 }
 
 #what-it-does{
-    min-width: 50%;
+    font-size: 2.5vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    color: #393838;
+    margin-left: 6vw;
+    margin-top: 5vh;
+    max-width: 16vw;
+}
+
+#what{
+    border-top: 1px solid #4a4a4a;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #4a4a4a;
+    font-family: zabal;
+}
+#how{
+    border-top: 1px solid #4a4a4a;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #4a4a4a;
+    font-family: zabal;
+}
+#ingredients{
+    border-top: 1px solid #4a4a4a;
+    padding: 1vw;
+    font-size: 1vw;
+    color: #4a4a4a;
+    font-family: zabal;
+    margin-bottom: 5vh;
+}
+
+#product-desc{
+    margin-top: 4vh;
+    max-width: 35vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    line-height: 3vh;
 }
 
 #showImgBg{
@@ -156,7 +217,7 @@
 
 
 #skin-care-drop-down{
-    font-family: poppinsReg;
+    font-family: mustica;
     color: #4a4a4a;
     font-size: 1.2vw;
     letter-spacing: .2vw;
@@ -168,4 +229,9 @@
     flex-direction: column;
 }
 
+
+#skincare-awards{
+    width: 17vw;
+    height: 12.5vh;
+}
 

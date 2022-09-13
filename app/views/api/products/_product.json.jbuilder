@@ -7,4 +7,6 @@ json.extract! product,
 # json.id product.id
 # json.name product.name
 json.photo_url product.photo.url
+# json.photoUrls @product.photos.map { |photo| url_for(photo) }
+json.avg_review product.average_rating
 

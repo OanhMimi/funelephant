@@ -3,8 +3,8 @@ class Api::CartItemsController < ApplicationController
     before_action :require_logged_in
 
     def index 
-        @cart_items = CartItem.all 
-        render :show
+        @cart_items = current_user.cart_items
+        render :index
     end 
 
     def create
@@ -17,19 +17,21 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
+
     def update
         @cart_item = CartItem.find(params[:id])
-        if @cart_item && @cart_item.update!(cart_item_params)
+        if @cart_item && @cart_item.update(cart_item_params)
             render :show
-        else{
+        else
             render json: { message: "Cannot update cart"}, status: :unauthorized
-        }
+        end
     end
 
     def destroy 
         @cart_item = CartItem.find(params[:id])
-        @cart_item.destroy
+        if @cart_item && @cart_item.destroy
             render :show 
+        end
     end
 
     private

@@ -11,4 +11,8 @@ class Api::ProductsController < ApplicationController
         render :show
     end
  
+    # private
+    # def product_params
+    #     require(:product).permit(:name,:category,:desc,:price,:photos:[])
+    # end
 end

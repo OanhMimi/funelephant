@@ -1,6 +1,6 @@
 import './Review.css'
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { createReview,updateReview } from '../../store/review';
@@ -27,6 +27,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
     const [body,setBody] = useState(selectedReview.body)
     const [rating,setRating] = useState(selectedReview.rating)
 
+    
     const handleSubmit = (e) => {   
         e.preventDefault();
         if (editReview){
@@ -34,6 +35,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
         }else{
             dispatch(createReview({title,body,rating,product_id:productId}))
         }
+    
         setShowModal(false)
     }
 
