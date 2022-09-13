@@ -14,16 +14,28 @@ const SlideOutMenu = ({setShowSlideOut}) => {
     }
 
     return(
-        <div id="menu-slide-out">
-            <button id="x-closeSideBar" onClick={handleCloseSideBar}><GrClose/></button>
-            <div id="menu-slide-content">
-                <ul id="slide-content">    
-                    <NavLink id="slide-home" exact to="/">HOME</NavLink>
-                    <NavLink id="slide-skincare" exact to="/products">SKIN CARE</NavLink>
-                </ul>
-            </div>
-   
-        </div>
+        
+        <>
+            <div id="bg-menu-slide-out"></div>
+                <div id="menu-slide-out">
+                    <button id="x-closeSideBar" onClick={handleCloseSideBar}>
+                        <div class="close-container">
+                            <div class="leftright"></div>
+                            <div class="rightleft"></div>
+                        </div>
+                    </button>
+                    <div id="menu-slide-content">
+                        <ul id="slide-content">    
+                            <NavLink id="slide-home" exact to="/">HOME</NavLink>
+                            <NavLink id="slide-skincare" exact to="/products">SKIN CARE</NavLink>
+                            <NavLink id="slide-haircare" exact to="/products">HAIR CARE</NavLink>
+                            <NavLink id="slide-gifts" exact to="/products">GIFTS</NavLink>
+
+                        </ul>
+                    </div>
+                </div>
+        </>
+        
     )
 }
 

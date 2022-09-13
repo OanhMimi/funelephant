@@ -23,6 +23,7 @@
 .pink-nav-sticky{
     position: fixed;
     overflow: hidden;
+    z-index: 2;
 }
 #pink-bar-display{
     display: flex;

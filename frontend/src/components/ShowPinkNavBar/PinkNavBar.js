@@ -3,11 +3,21 @@ import './PinkNavBar.css'
 import { FaHeart } from "react-icons/fa";
 import { useState } from 'react';
 import CartItemIndex from '../CartItems/CartItemsIndex';
+import { useDispatch ,useSelector} from 'react-redux';
+import { getCartItem,createCartItem } from '../../store/cartItem';
+import { useParams } from 'react-router-dom';
 
 const PinkNavBar = ({product}) => {
     
-
+    const {cartItemId} = useParams();
+    const cartItem = useSelector(getCartItem(cartItemId));
     const [showCartItems, setShowCartItems ] = useState(false)
+    const dispatch = useDispatch();
+    const handleClick = (e) => {
+        e.preventDefault();
+        setShowCartItems(true)
+        dispatch(createCartItem(cartItem))
+    }
  
     return (
         <div className="pink-nav-sticky">
@@ -26,7 +36,7 @@ const PinkNavBar = ({product}) => {
                                 <option value="2" >3</option>
                                 <option value="2" >4</option>
                                 <option value="2" >5</option>
-                            <option value="2" >6</option>
+                                <option value="2" >6</option>
                                 <option value="2" >7</option>
                                 <option value="2" >8</option>
                                 <option value="2" >9</option>
@@ -35,7 +45,7 @@ const PinkNavBar = ({product}) => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={()=>setShowCartItems(true)}id="buy-button">Buy</button>
+                        <button onClick={handleClick} id="buy-button">Buy</button>
                     </div>
                     <div id="likes-icon">
                         < FaHeart className="fa-heart"/>

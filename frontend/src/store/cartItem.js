@@ -40,7 +40,7 @@ export const fetchCartItems = () => async(dispatch) => {
     }
 }
 
-export const createCartItems = (cartItem) => async(dispatch)=>{
+export const createCartItem = (cartItem) => async(dispatch)=>{
     const response = await fetch('/api/session',{
         method: 'POST',
         headers: {

@@ -7,6 +7,8 @@ import './Review.css'
 import ReviewFormModal from './ReviewFormModal'
 import { deleteReview } from "../../store/review";
 import { FaStar } from 'react-icons/fa';
+import { GrEdit } from "react-icons/gr";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 
 
@@ -36,13 +38,24 @@ const ReviewIndex  = ({product}) => {
 
     const showStar = (rating)=>{
        if (rating===1){
-            return <FaStar id="star-value"/>
+            return (
+                <div>
+                    <FaStar id="star-value" />
+                    <FaStar id="non-star-value"/>
+                    <FaStar id="non-star-value"/>
+                    <FaStar id="non-star-value"/>
+                    <FaStar id="non-star-value"/>
+                </div>
+            )
         } 
        if (rating===2){
         return (
             <div>
-                < FaStar id="star-value"/>
                 <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="non-star-value"/>
+                <FaStar id="non-star-value"/>
+                <FaStar id="non-star-value"/>
              </div>
         )
         } 
@@ -52,16 +65,19 @@ const ReviewIndex  = ({product}) => {
                 <FaStar id="star-value"/>
                 <FaStar id="star-value"/>
                 <FaStar id="star-value"/>
+                <FaStar id="non-star-value"/>
+                <FaStar id="non-star-value"/>
              </div>
         )
         } 
         if (rating===4){
                  return (
             <div>
-                <FaStar  id="star-value"/>
                 <FaStar id="star-value"/>
                 <FaStar id="star-value"/>
                 <FaStar id="star-value"/>
+                <FaStar id="star-value"/>
+                <FaStar id="non-star-value"/>
              </div>
         )
         } 
@@ -88,40 +104,46 @@ const ReviewIndex  = ({product}) => {
                 <div className="all-review-container">
                     {reviews.map(review=> (
                             <div className="display-reviews-info">
-                                <div>{showStar(review.rating)}</div>
-                                <div id="review-title">{review.title}</div> 
-                                <br/>
-                                <div id="review-body">{review.body}</div> 
-                                <br/>
-                                <br/>
-
+                                <div id="review-rating">{showStar(review.rating)}</div>
+                                <div>
+                                    <div id="review-title">{review.title}</div> 
                                 {currentUserId === review.userId && 
                                     (
                                     <>
-                                        <button>
-                                            <div onClick={() => dispatch(deleteReview(review.id))}>Delete Review
-                                            </div> 
-                                        </button>
-                                        <button>
-                                            <div onClick={()=>{
-                                                setSelectedReview(review) //<--- 
-                                                setShowModal(true)
-                                            }}>Update Review
-                                            </div> 
-                                        </button>
+                                        <div className="delete-update-btns">
+                                            <button id="delete-review-button">
+                                                <div id="delete-review" onClick={() => dispatch(deleteReview(review.id))}><RiDeleteBin6Line/>
+                                                </div> 
+                                            </button>
+                                            <button id="update-review-button">
+                                                <div id="update-review" onClick={()=>{
+                                                    setSelectedReview(review) //<--- 
+                                                    setShowModal(true)
+                                                }}><GrEdit/>
+                                                </div> 
+                                            </button>
+                                        </div>
                                     </>
                                 )}
+
+                                </div>
+
+                                <br/>
+                                <div id="review-body">{review.body}</div> 
+                                <br/>
+
                             </div>  
                     ))}
                 </div>
-            
             </div>
-            { createdReview ? <h1></h1> : <button onClick={()=>setShowModal(true)}>Write a Review</button>}
-            {showModal && <ReviewFormModal 
-            product={product}
-            setShowModal={setShowModal}
-            selectedReview={selectedReview} />}
-        </>
+            <div id="div-write-review">
+                { createdReview ? <h1></h1> : <button id="write-review" onClick={()=>setShowModal(true)}>Write a Review</button>}
+                {showModal && <ReviewFormModal 
+                product={product}
+                setShowModal={setShowModal}
+                selectedReview={selectedReview} />}
+            </div>
+    </>
 
     )
 }

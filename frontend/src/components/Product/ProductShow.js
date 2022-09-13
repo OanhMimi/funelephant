@@ -8,6 +8,8 @@ import "./products.css";
 import ReviewIndex from "../Review/ReviewIndex";
 import PinkNavBar from "../ShowPinkNavBar/PinkNavBar";
 import skincare_reward from './skincare_rewards.png'
+import { MdChevronRight } from "react-icons/md";
+
 
 
 
@@ -34,9 +36,9 @@ const ProductShow = () => {
                   </div>
                   <div id="product-description">
                     <div id="what-it-does">
-                      <div id="what">WHAT IT DOES</div>
-                      <div id="how">HOW TO USE</div>
-                      <div id="ingredients">INGREDIENTS</div>
+                      <div id="what">WHAT IT DOES <MdChevronRight/></div>
+                      <div id="how">HOW TO USE <MdChevronRight/></div>
+                      <div id="ingredients">INGREDIENTS <MdChevronRight/></div>
                       <div>
                         <img id="skincare-awards" src={skincare_reward}/>
                       </div>

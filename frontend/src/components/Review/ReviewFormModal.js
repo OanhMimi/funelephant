@@ -47,8 +47,13 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
             <div onClick={()=>setShowModal(false)} id="blur-background"></div>
             <div  className="bg-modal">
                 <div className='review-modal'>
-                    <div id="modal-product-title">
-                        <div>{product.name}</div>
+                    <div className="product-img-title">
+                        <div className="review-product">
+                            <img id="review-product-img" src={product.photoUrl} />
+                        </div>
+                        <div id="modal-product-title">
+                            <div>{product.name}</div>
+                        </div>
                     </div>
                     <form className ="review-form-modal" onSubmit={handleSubmit}>
                         
@@ -67,7 +72,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
                                         />
                                         <FaStar 
                                             className="star" 
-                                            color={ratingValue <= (rating) ? "#f6dcff" : "#e4e5e9"} 
+                                            color={ratingValue <= (rating) ? "#ecc8f8" : "#e4e5e9"} 
                                             size={40}
                                    
                                         />

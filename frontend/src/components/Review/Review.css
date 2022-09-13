@@ -1,10 +1,36 @@
 
+@font-face {
+    font-family: poppinsReg;
+    src: url(../../fonts/Poppins/Poppins-Regular.ttf);
+  }
+
+@font-face {
+    font-family: mustica;
+    src: url(../../fonts/mustica_pro/MusticaPro-SemiBold.otf);
+ }
+
+ @font-face {
+    font-family: zabal;
+    src: url(../../fonts/zabal/ZabalDEMO-Regular.otf);
+ }
+
+ @font-face {
+    font-family: zabalBold;
+    src: url(../../fonts/zabal/ZabalDEMO-SemiBold.otf);
+ }
+
+
+ @font-face {
+    font-family: linux;
+    src: url(../../fonts/linux_libertine/LinLibertine_DR.ttf);
+ }
+
+
 .bg-modal{
     display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     top: 7vh;
     left: 20vw;
     height: 100vh;
@@ -18,55 +44,93 @@
     /* position: sticky; */
     position: fixed;
     top: 0;
-    background-color:#e4e5e9;
-    z-index: 4;
-    opacity: .7;
+    background-color:#d1d2d4;
+    opacity: .5;
     width: 100vw;
     height: 100vh;
     overflow: auto;
 }
 
 .review-modal{
-    top: 0vh;
-    height: 92.3vh;
-    border: 3px solid black;
+    border-radius: 0.5em;
+    top: 10vh;
+    height: 70vh;
+    left: 20%;
+    border: .5px solid black;
+    box-shadow: 3px black;
     position: absolute;
     /* top: 10%; */
     /* left: 50vw; */
-    z-index: 5;
     background-color: white;
     overflow: hidden;
 }
 
 
+review-form-modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img-title{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.review-product{
+    margin: 0;
+    padding: 0;
+}
+#review-product-img{
+    transform: scale(.5);
+    padding: 0;
+    margin: 0;
+}
 .review-container{
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
-    
+    background-color: white;
+    border-top: #eeddf5 4vh solid;
+    line-height: 1.6;
 }
 
+#review-rating{
+    margin-bottom: .4vw;
+}
 #review-title{
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
     font-weight: bold;
     font-size: 2vw;
     color: #4a4a4a;
 }
 
-#review-title{
-    font-family: 'yu-gothic-bold', sans-serif;
-    font-size: 1vw;
+#review-body{
+    font-family: zabal;
+    font-size: .9vw;
     color: #4a4a4a;
 }
 
+.reviewer-info{
+    margin-left: 5vw;
+    margin-top: 2vw;
+    margin-right: 5vw;
+}
 .reviewer-name {
     height: 30vh;
+    font-family: zabalBold;
+    color: #4a4a4a;
+
 }
 
 .display-reviews-info {
     height: 30vh;
+    margin-right: 10vw;
 }
 
+.all-review-container{
+    margin-top: 2vw;
+}
 
 
  input[type="radio"] {
@@ -86,5 +150,56 @@
   }
 
   #star-value{
-    color: #f6dcff;
+    color: #ecc8f8;
+    transform: scale(1);
   }
+
+  #non-star-value{
+    color: #d3d3d6; 
+    transform: scale(1);
+  }
+
+  #delete-review-button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  }
+
+  #update-review-button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding-right: 1.5vw;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  }
+
+  
+#write-review{
+    font-family: zabalBold;
+    color: #4a4a4a;
+    background: none;
+	border: none;
+	padding: 0;
+	outline: inherit;
+}
+
+#div-write-review{
+    position: absolute;
+    bottom: -10vh;
+
+}
+#write-review:hover{
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    text-decoration: none;
+    padding-bottom: 2vh;
+}
