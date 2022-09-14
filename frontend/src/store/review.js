@@ -66,7 +66,11 @@ const ReviewsReducer = (state={},action) => {
     const newState = {...state}
     switch(action.type){
         case RECEIVE_REVIEWS:
-            return action.payload.reviews
+            if (action.payload.reviews) {
+                return action.payload.reviews
+            } else {
+                return newState;
+            }
         case RECEIVE_REVIEW:
             newState[action.review.id] = action.review
             return newState

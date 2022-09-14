@@ -1,4 +1,4 @@
-
+import csrfFetch from "./csrf";
 //action creator
 export const RECEIVE_CART_ITEMS = 'cart_items/RECEIVE_CART_ITEMS'
 export const RECEIVE_CART_ITEM = 'cart_items/RECEIVE_CART_ITEM'
@@ -33,15 +33,15 @@ export const getCartItem = cartItemId => state => {
 //thunk action creator 
 
 export const fetchCartItems = () => async(dispatch) => {
-    const response = await fetch('/api/cart_items')
+    const response = await csrfFetch('/api/cart_items')
     if (response.ok){
-        const cartItems = response.json()
+        const cartItems = await response.json()
         dispatch(receiveCartItems(cartItems))
     }
 }
 
 export const createCartItem = (cartItem) => async(dispatch)=>{
-    const response = await fetch('/api/session',{
+    const response = await csrfFetch('/api/cart_items',{
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -49,27 +49,27 @@ export const createCartItem = (cartItem) => async(dispatch)=>{
         body: JSON.stringify(cartItem)
     })
     if (response.ok){
-        const cartItem = response.json()
+        const cartItem = await response.json()
         dispatch(receiveCartItem(cartItem))
     }
 }
 
-export const updateCartItem = (cartItemId) => async(dispatch) => {
-    const response = await fetch(`/api/cart_items/${cartItemId}`,{
+export const updateCartItem = (cartItemId, item) => async(dispatch) => {
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`,{
         method: 'PATCH',
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.stringify(cartItemId)
+        body: JSON.stringify(item)
     })
     if (response.ok){
-        const cartItem = response.json()
+        const cartItem = await response.json()
         dispatch(receiveCartItem(cartItem)) 
     }
 }
 
 export const deleteCartItem = (cartItemId) => async(dispatch) => {
-    const response = await fetch(`/api/cart_items/${cartItemId}`,{
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`,{
         method: 'DELETE'
     })
     if (response.ok){
@@ -79,7 +79,7 @@ export const deleteCartItem = (cartItemId) => async(dispatch) => {
 
 //reducer
 
-const CartItemReducer = (state ={},action) => {
+const cartItemsReducer = (state ={},action) => {
     Object.freeze(state);
     const newState = {...state};
     switch(action.type){
@@ -96,6 +96,6 @@ const CartItemReducer = (state ={},action) => {
     }
 }
 
-export default CartItemReducer;
+export default cartItemsReducer;
 
 

@@ -6,6 +6,7 @@ json.set! :products do
       json.partial! 'api/products/product', product: product
       json.num_reviews product.reviews.length
       json.avg_review product.average_rating
+      json
     end
   end
 end

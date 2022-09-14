@@ -3,17 +3,59 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: 6;
     background-color: gray;
     opacity: .4;
     top: 0;
 }
-.cartItemIndex-container{
+.container-for-cart-box{
     position: fixed;
     height: 100%;
     margin: 0;
-    z-index: 101;
+    z-index: 150;
+    top: 0;
+    right: 0;
+    width: 33%;
+    background-color: pink;
+}
+
+.cartItemIndex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    z-index: 150;
     top: 0;
     right: 0;
     width: 33%;
     background-color: white;
+}
+
+.container-2-bottom{
+    background-color: red;
+}
+
+
+.items-in-my-cart{
+    display: flex;
+}
+
+#img-in-cart{
+    width:10vw;
+    height: 14vh;
+}
+#cart-item-img{
+    width: 10vw;
+    height: 14vh;
+}
+#subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
 }

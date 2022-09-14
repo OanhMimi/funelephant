@@ -3,7 +3,9 @@ json.extract! product,
   :name,
   :category, 
   :price, 
-  :desc
+  :desc,
+  :usage,
+  :ingredients
 # json.id product.id
 # json.name product.name
 json.photo_url product.photo.url

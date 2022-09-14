@@ -2,20 +2,22 @@
 #
 # Table name: products
 #
-#  id         :bigint           not null, primary key
-#  name       :string           not null
-#  category   :string           not null
-#  desc       :string           not null
-#  price      :float            not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint           not null, primary key
+#  name        :string           not null
+#  category    :string           not null
+#  desc        :string           not null
+#  price       :float            not null
+#  usage       :string           not null
+#  ingredients :string           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 class Product < ApplicationRecord
     validates :name, uniqueness: true, presence: true 
-    validates :category, :price, :desc, presence: true
+    validates :category, :price, :desc, :usage, :ingredients, presence: true
 
-    has_one_attached :photo 
-    # has_many_attached :photos
+    # has_one_attached :photo 
+    has_many_attached :photos
 
     has_many :reviews,
     dependent: :destroy

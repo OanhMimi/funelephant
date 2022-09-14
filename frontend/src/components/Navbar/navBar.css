@@ -2,7 +2,6 @@
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 110;
     overflow: hidden;
     display: block;
     margin-bottom: .03vw;
@@ -33,7 +32,6 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     margin-right: ;
 }
 
 .user-icon{
@@ -88,4 +86,6 @@
     right: 50%;
 }
 
-
+#display-slide-out{
+    z-index:100;
+}

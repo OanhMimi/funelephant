@@ -57,6 +57,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_212214) do
     t.string "category", null: false
     t.string "desc", null: false
     t.float "price", null: false
+    t.string "usage", null: false
+    t.string "ingredients", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name", unique: true

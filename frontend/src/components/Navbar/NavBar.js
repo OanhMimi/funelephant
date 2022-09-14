@@ -7,6 +7,7 @@ import { RiMenuFill } from "react-icons/ri";
 import SlideOutMenu from "../SlideOutMenu/SlideOutMenu";
 import FunElephantLogo from './fun-elephant-logo.png'
 import { useState } from "react";
+import CartItemIndex from "../CartItems/CartItemsIndex";
 
 
 
@@ -20,6 +21,9 @@ const NavBar = () => {
         // modal.style.display = "block"
         setShowSlideOut(true)
     }
+
+    const [showCartItems, setShowCartItems] = useState(false);
+
 
 
  
@@ -41,15 +45,17 @@ const NavBar = () => {
                             <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineSearch id="search-icon"/></NavLink>
                         </div>
                         <div className="bag">
-                            <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineShoppingBag id="bag-icon"/></NavLink>
+                            <div onClick={()=>setShowCartItems(true)} className="user-icon"><HiOutlineShoppingBag id="bag-icon"/></div>
                         </div>
                         <div className="prof">
                             <NavLink className="user-icon" exact to="/signUpOrLogIn"><AiOutlineUser id="prof-icon" /></NavLink>
                         </div>
                     </div>   
                 </div>
-                {showSlideOut && <SlideOutMenu setShowSlideOut={setShowSlideOut}/>}
             </div>
+                {showSlideOut && <SlideOutMenu id="display-slide-out" setShowSlideOut={setShowSlideOut}/>}
+                {showCartItems && <CartItemIndex setShowCartItems={setShowCartItems} />}
+
         </>
     )
 }

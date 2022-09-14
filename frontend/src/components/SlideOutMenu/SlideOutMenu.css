@@ -17,7 +17,7 @@
     position: fixed;
     background: #faebf5;
     margin: 0;
-    z-index: 101;
+    z-index: 100;
     top: 0;
     height: 100%;
     width: 25%;
@@ -127,7 +127,6 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 100;
     background-color: #615f5f;
     opacity: .4;
 }
@@ -167,4 +166,3 @@
   }
   
  
-  

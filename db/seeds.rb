@@ -26,7 +26,7 @@ ApplicationRecord.transaction do
       first_name: 'Sunny', 
       last_name: 'Ly',
       email: 'sunny@mail.com', 
-      password: 'password'
+      password: 'password123@'
     )
 
     User.create!(
@@ -44,327 +44,617 @@ ApplicationRecord.transaction do
     )
   
     User.create!(
-      first_name: 'sdfdsfs', 
-      last_name: 'Lsdfdsfy',
-      email: 'sunsdfdsfdsfny@mail.com', 
-      password: 'padsfsdfdfsssword'
+      first_name: 'Matthew', 
+      last_name: 'Teh',
+      email: 'matthewteh@gmail.com', 
+      password: 'masshew.slice14'
     )
   
     User.create!(
-      first_name: 'Ssdfdsfsdunny', 
-      last_name: 'Ldsfsdfdsfy',
-      email: 'sunsdfdsfdsfsfny@mail.com', 
-      password: 'psdfdsfdassword'
+      first_name: 'Daniel', 
+      last_name: 'Lien',
+      email: 'daniel@gmail.com', 
+      password: 'alwaysleeping123!'
     )
   
     User.create!(
-      first_name: 'Susdfsadfsdfnny', 
-      last_name: 'Lsafsfdfsy',
-      email: 'sudsfdsfsdfnny@mail.com', 
-      password: 'psdfsdfdsfdsfassword'
+      first_name: 'Cameron', 
+      last_name: 'Sanders',
+      email: 'leisurellama@mail.com', 
+      password: 'llamal0v3r$'
     )
   
     User.create!(
-      first_name: 'Susdfsdfdsffdfnny', 
-      last_name: 'sdfdsffsdLy',
-      email: 'sdfsdfdsfdsfsfsdsunny@mail.com', 
-      password: 'sdfasdfdsfsdpassword'
+      first_name: 'Diego', 
+      last_name: 'Gucci',
+      email: 'Gucci4lyfe@mail.com', 
+      password: 'sassyButFashional123!'
     )
   
     User.create!(
-      first_name: 'Ssdfdsfdfdfsadfunny', 
-      last_name: 'sdfsafsfasdfLy',
-      email: 'sunnsdfdsafsdfy@mail.com', 
-      password: 'pasdfasfdsfdsfssword'
+      first_name: 'Disnee', 
+      last_name: 'Tamang',
+      email: 'disneeland@hotmail.com', 
+      password: 'mikewenttodisneeland123!'
     )
   
     User.create!(
-      first_name: 'Ssafdsfsdfasfdsunny', 
-      last_name: 'sdfsdfewrwsLy',
-      email: 'sunadfdsfdfafny@mail.com', 
-      password: 'psdafdsfafdsassword'
+      first_name: 'Taylor', 
+      last_name: 'Musolf',
+      email: 'itrytobenice@mail.com', 
+      password: 'stripes&hats4life'
     )
   
     User.create!(
-      first_name: 'Su234324sdf234rwnny', 
-      last_name: 'sdfdsafsfdsafLy',
-      email: 'sunndsfsfasfdsfy@mail.com', 
-      password: 'pasdfdsfsdfdfasdfsdassword'
+      first_name: 'Kathy', 
+      last_name: 'Ly',
+      email: 'sunny4ever@gmail.com', 
+      password: 'took00l4sch00l@'
     )
 
     User.create!(
-      first_name: 'sadfsdfdsf', 
-      last_name: 'sdfdsafsdfsdfdfsfdsafLy',
-      email: 'sunndsfsfasdfdssfdsfy@mail.com', 
-      password: 'pasdfdsdfsfdfssfsdfdfasdfsdassword'
+      first_name: 'Mimi', 
+      last_name: 'Ly',
+      email: 'bestPersonever@mail.com', 
+      password: 'toocool4you123!'
     )
 
     User.create!(
-      first_name: 'Su234324sdf234rwnny213', 
-      last_name: 'sdfdsafsfdsafLy213',
-      email: 'sunndsfsfasfdsfy@mail.com231', 
-      password: 'pasdfdsfsdfdfasdfsdassword23'
+      first_name: 'Jeffrey', 
+      last_name: 'Li',
+      email: 'jeffrey2@mail.com', 
+      password: 'motorcycleexpert1!'
     )
   
-
+    # 10.times do 
+    #   User.create!({
+    #     first_name: Faker::Name.first_name(),
+    #     last_name: Faker::Name.last_name(),
+    #     email: Faker::Internet.unique.email,
+    #     password: 'password132!'
+    #   }) 
+    # end
   
-    10.times do 
-      User.create!({
-        first_name: Faker::Name.first_name(),
-        last_name: Faker::Name.last_name(),
-        email: Faker::Internet.unique.email,
-        password: 'password132!'
-      }) 
-    end
-  
-    
     puts "Done!"
 
     #SKIN CARE PRODUCTS --------------
 
-    product_img1 = Product.create!({
-      name: "The Littles 6.0", 
+    skincare_1 = Product.create!({
+      name: "The Littles™ 6.0 ($108 value)", 
       category: "SKIN CARE", 
       price: 74.00,
-      desc:"Using them is simple; pick products for your a.m. and p.m. routine based on what your skin needs—that changes every day."
+      desc:"Using them is simple; pick products for your a.m. and p.m. routine based on what your skin needs—that changes every day.",
+      usage:"In the morning, try a C for Yourself Smoothie. Mix 1 pump of C-Firma™ Fresh, 1-2 drops of Virgin Marula Oil, and 1 swipe of Protini™ in the palm of your hand and apply to your face for brighter, firmer, healthy-looking skin. Top it all off with Umbra Sheer™ for broad-spectrum UVA/UVB protection.
+
+      In the evening, start by cleansing with Beste™ No. 9 to wash away grime from the day. Then mix and apply a Beauty Call Smoothie—1 pump of T.L.C. Framboos™, 1-2 drops of Virgin Marula Oil, and 1 swipe of Protini™—for smoother, firmer, more radiant skin.",
+      ingredients: "C-Firma™ Fresh Day Serum, 9 ml/.3 fl oz (Liquid Serum Base, 8.5 ml/.28 fl oz; Powder, 1.6 g poids net/net wt .05 oz): Water/Aqua/Eau, Dimethyl Isosorbide, Ascorbic Acid, Laureth-23, Glycerin, Tocopherol, Lactobacillus/Pumpkin Ferment Extract, Sclerocarya Birrea Seed Oil, Dipotassium Glycyrrhizate, Glycyrrhiza Glabra (Licorice) Root Extract, Vitis Vinifera (Grape) Juice Extract, Ferulic Acid, Phyllanthus Emblica Fruit Extract, Camellia Sinensis Leaf Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Propanediol, Gluconolactone, Sodium Hyaluronate Crosspolymer, Sodium Hyaluronate, Oryza Sativa (Rice) Bran Extract, Glutamylamidoethyl Imidazole, Tetrahydrobisdemethoxydiferuloylmethane, Tetrahydrodemethoxydiferuloylmethane, Tetrahydrodiferuloylmethane, Pentylene Glycol, Caprylhydroxamic Acid, Leuconostoc/Radish Root Ferment Filtrate, Sorbic Acid, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Chondrus Crispus (Carrageenan) Extract, Ethylhexylglycerin."
     })
-    file1 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/the_littles.png')
-    product_img1.photo.attach(io: file1, filename: 'the_littles.png')
-    #---------------
-    product_img2 = Product.create!({
-      name: "T.L.C. Sukari Babyfacial", 
+    skincare_1a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/the_littles.png'),
+      filename: 'the_littles.png' 
+    } 
+    skincare_1b = {
+      io: URI.open("https://funelephant-seed.s3.us-west-1.amazonaws.com/1_Littles_6.0_Motion_Sprite.png"),
+      filename: '1_Littles_6.0_Motion_Sprite.png'
+    }
+    skincare_1.photos.attach([skincare_1a,skincare_1b])
+    #---------------------
+    skincare_2 = Product.create!({
+      name: "T.L.C. Sukari Babyfacial™", 
       category: "SKIN CARE", 
       price: 80.00,
-      desc:"This next-generation mask is an at-home “facial” that effectively yet gently exfoliates the pore lining and resurfaces by getting rid of built-up dead skin cells. With a whopping 25% AHA / 2% BHA blend of our dream team glycolic, tartaric, lactic, citric, and salicylic acids, this pro-quality formula dramatically smooths texture while minimizing the look of pores, fine lines, and wrinkles. Uniquely formulated with chickpea flour, pumpkin ferment, and a soothing antioxidant blend of matcha tea, milk thistle, and apple, Babyfacial™ delivers incredible brightening and enzymatic action, improves skin’s elastic feel, and reveals the look of a more even, radiant, baby-soft complexion. Think of it as an extra nudge for stubborn dull skin."
+      desc:"This next-generation mask is an at-home “facial” that effectively yet gently exfoliates the pore lining and resurfaces by getting rid of built-up dead skin cells. With a whopping 25% AHA / 2% BHA blend of our dream team glycolic, tartaric, lactic, citric, and salicylic acids, this pro-quality formula dramatically smooths texture while minimizing the look of pores, fine lines, and wrinkles. Uniquely formulated with chickpea flour, pumpkin ferment, and a soothing antioxidant blend of matcha tea, milk thistle, and apple, Babyfacial™ delivers incredible brightening and enzymatic action, improves skin’s elastic feel, and reveals the look of a more even, radiant, baby-soft complexion. Think of it as an extra nudge for stubborn dull skin.",
+      usage:"Use once weekly. Apply an even layer to clean, dry skin. Leave on for 20 minutes. Rinse thoroughly with warm water and pat dry. Follow immediately with Virgin Marula Luxury Facial Oil for best results. Slight tingling may be experienced.",
+      ingredients:"Ingredients: Water (Aqua), Glycolic Acid, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Sodium Hydroxide, Salicylic Acid, Aloe Barbadensis Leaf Extract, Camellia Oleifera Leaf Extract, Lactobacillus/Pumpkin Ferment Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Opuntia Ficus-Indica Extract, Pyrus Malus (Apple) Fruit Extract, Silybum Marianum Seed Extract, Saccharomyces Cerevisiae Extract, Vitis Vinifera (Grape) Juice Extract, Camellia Sinensis Leaf Powder, Cicer Arietinum Seed Powder, Sclerocarya Birrea Seed Oil, Passiflora Edulis Seed Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Hyaluronate Crosspolymer, Sodium PCA, Allantoin, Dipotassium Glycyrrhizate, Dextrin, Polydextrose, Sorbitan Isostearate, Amylopectin, Niacinamide, Phytosphingosine, Lactic Acid, Propanediol, Citric Acid, Titanium Dioxide, Trisodium Ethylenediamine Disuccinate, Polysorbate 60, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol"
     })
-    file2 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Babyfacial_AngledProductShot.png')
-    product_img2.photo.attach(io: file2, filename: 'Babyfacial_AngledProductShot.png')
-    #--------------
-    product_img3 = Product.create!({
-      name: "Beste No 9 Jelly Cleanser", 
+    skincare_2a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Babyfacial_AngledProductShot.png'),
+      filename: "Babyfacial_AngledProductShot.png"
+    }
+
+    skincare_2b ={
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/2_Babyfacial_MotionSprite.png'),
+      filename: "2_Babyfacial_MotionSprite.png"
+    }
+    skincare_2.photos.attach([skincare_2a,skincare_2b])
+    #---------------------
+    skincare_3 = Product.create!({
+      name: "Beste™ No. 9 Jelly Cleanse", 
       category: "SKIN CARE", 
       price: 16.00,
-      desc:"With a unique blend of mild surfactants and makeup-dissolving emollients, this gentle formula rinses away without an ounce of residue, leaving skin clean and soft."
+      desc:"With a unique blend of mild surfactants and makeup-dissolving emollients, this gentle formula rinses away without an ounce of residue, leaving skin clean and soft.",
+      usage: "Squeeze Beste™ No. 9 into palm and gently massage over wet or dry skin. Add water to lather. Rinse well and pat dry. Use nightly or in alternation with the other Drunk Elephant cleansers.",
+      ingredients:"Ingredients: Water/Aqua/Eau, Glycerin, Cocamidopropyl Betaine, Coco-Glucoside, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Hydroxysultaine, Sodium Methyl Oleoyl Taurate, Propanediol, Aloe Barbadensis Leaf Extract, Glycolipids, Linoleic Acid, Linolenic Acid, Lauryl Glucoside, Cucumis Melo Cantalupensis Fruit Extract, Sclerocarya Birrea Seed Oil, Dipotassium Glycyrrhizate, Tocopherol, Citric Acid, Phenoxyethanol, Sodium Hydroxide, Sodium Benzoate, Sodium Chloride, Polylysine"
     })
-    file3 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Beste_Cleanser_Angled_Shot.png')
-    product_img3.photo.attach(io: file3, filename: 'Beste_Cleanser_Angled_Shot.png')
-    #--------------
-    product_img4 = Product.create!({
+    
+    skincare_3a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Beste_Cleanser_Angled_Shot.png'),
+      filename: 'Beste_Cleanser_Angled_Shot.png'
+    }
+
+    skincare_3b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/3_Beste_MotionSprite.jpeg'),
+      filename: '3_Beste_MotionSprite.jpeg'
+    }
+
+    skincare_3.photos.attach([skincare_3a,skincare_3b])
+    #-----------------
+    skincare_4 = Product.create!({
       name: "Anytime Anyface", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"Protini™ Serum improves the appearance of skin’s texture, tone, radiance, and bounce, while Protini™ Cream moisturizes and replenishes to restore your skin to a strong, healthy state."
+      desc:"Protini™ Serum improves the appearance of skin’s texture, tone, radiance, and bounce, while Protini™ Cream moisturizes and replenishes to restore your skin to a strong, healthy state.",
+      usage: "Mix Protini™ Serum and Protini™ Cream in the palm of your hand and apply to a clean, dry face, avoiding the eye area.",
+      ingredients: "Water/Aqua/Eau, Dicaprylyl Carbonate, Glycerin, Cetearyl Alcohol, Cetearyl Olivate, Sorbitan Olivate, Sclerocarya Birrea Seed Oil, Bacillus/Folic Acid Ferment Extract, Nymphaea Alba Root Extract, sh-Oligopeptide-1, sh-Oligopeptide-2, sh-Polypeptide-1, sh-Polypeptide-9, sh-Polypeptide-11, Copper Palmitoyl Heptapeptide-14, Heptapeptide-15 Palmitate, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Acetyl Glutamine, Coconut Alkanes, Coco-Caprylate/Caprate, Sodium Hyaluronate, Aspartic Acid, Linoleic Acid, Linolenic Acid, Lecithin, Butylene Glycol, Polyvinyl Alcohol, Sodium Lactate, Sodium PCA, PCA, Sorbitan Isostearate, Carbomer, Polysorbate 20, Polysorbate 60, Lactic Acid/Glycolic Acid Copolymer, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Xanthan Gum, Isomalt, 1,2-Hexanediol, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol, Tocopherol, Sodium Benzoate, Phenylpropanol, Glyceryl Caprylate, Symphytum Officinale Callus Culture Extract"
     })
-    file4 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/anytime_anyface.png')
-    product_img4.photo.attach(io: file4, filename: 'anytime_anyface.png')
-    #--------------
 
-    product_img5 = Product.create!({
-      name: "B-Hydra Intensive Hydration Serum", 
+    skincare_4a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/anytime_anyface.png'),
+      filename: "anytime_anyface.png"
+    }
+
+    skincare_4b = {
+      io: URI.open("https://funelephant-seed.s3.us-west-1.amazonaws.com/4_ATAF_Motion_Sprite.png"),
+      filename: '4_ATAF_Motion_Sprite.png'
+    }
+
+    skincare_4.photos.attach([skincare_4a,skincare_4b])
+    #-----------------
+
+    skincare_5 = Product.create!({
+      name: "B-Hydra™ Intensive Hydration Serum", 
       category: "SKIN CARE", 
       price: 48.00,
-      desc:"Formulated with pro-vitamin B5 and pineapple ceramide, B-Hydra™ delivers steady hydration throughout the day, leaving the skin looking healthy and more illuminated. Blended with a unique lentil-apple-and-watermelon complex, B-Hydra™ helps diminish drabness, dryness, and the appearance of fine lines. Your complexion will appear brighter and more youthful upon every application."
+      desc:"Formulated with pro-vitamin B5 and pineapple ceramide, B-Hydra™ delivers steady hydration throughout the day, leaving the skin looking healthy and more illuminated. Blended with a unique lentil-apple-and-watermelon complex, B-Hydra™ helps diminish drabness, dryness, and the appearance of fine lines. Your complexion will appear brighter and more youthful upon every application.",
+      usage: "Apply B-Hydra™ to face, neck, chest, hands, or any place on your body needing increased hydration. Mix with any Drunk Elephant serum, oil, or cream to lock it in.",
+      ingredients: "Water/Aqua/Eau, Coconut Alkanes, Ammonium Acryloyldimethyltaurate/VP Copolymer, Glycerin, Pentylene Glycol, Sclerocarya Birrea Seed Oil, Wheat Amino Acids, Ananas Sativus (Pineapple) Fruit Extract, Berberis Vulgaris Root Extract, Citrullus Lanatus (Watermelon) Fruit Extract, Lens Esculenta (Lentil) Fruit Extract, Pyrus Malus (Apple) Fruit Extract, Coco-Caprylate/Caprate, Panthenol, Sodium PCA, Sodium Hyaluronate Crosspolymer, Dipotassium Glycyrrhizate, Niacinamide, Cyclodextrin, Sodium Hyaluronate, Sodium Lactate, Phenoxyethanol, Hydroxyproline, Trisodium Ethylenediamine Disuccinate, Citric Acid, Caprylyl Glycol, Chlorphenesin, Ethylhexylglycerin"
     })
-    file5 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/BHydra_AngledShot.png')
-    product_img5.photo.attach(io: file5, filename: 'BHydra_AngledShot.png')
-    #---------------
-    product_img6 = Product.create!({
+
+    skincare_5a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/BHydra_AngledShot.png'),
+      filename: 'BHydra_AngledShot.png'
+    }
+
+    skincare_5b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/5_BHydra_MotionSprite.jpeg'),
+      filename: '5_BHydra_MotionSprite.jpeg'
+    }
+    skincare_5.photos.attach([skincare_5a,skincare_5b])
+    #----------------------
+    skincare_6 = Product.create!({
       name: "A-Gloei Maretinol Oil", 
       category: "SKIN CARE", 
       price: 72.00,
-      desc:"A gentle dose of retinol clarifies, refines, and smooths uneven, blemished, textured, or aging skin. It also evens out tone, reducing discoloration and boosting skin’s natural glow, while ceramides replenish the skin barrier and improve elasticity. Antioxidant- and omega-rich virgin marula oil (which makes up 95% of the formula!) replenishes essential moisture and reduces the appearance of redness, bringing skin back to its healthiest, most youthful state."
+      desc:"A gentle dose of retinol clarifies, refines, and smooths uneven, blemished, textured, or aging skin. It also evens out tone, reducing discoloration and boosting skin’s natural glow, while ceramides replenish the skin barrier and improve elasticity. Antioxidant- and omega-rich virgin marula oil (which makes up 95% of the formula!) replenishes essential moisture and reduces the appearance of redness, bringing skin back to its healthiest, most youthful state.",
+      usage: "Morning or night, apply 2-3 drops to a clean, dry face. May be mixed with any Drunk Elephant moisturizer or serum. Always use a broad-spectrum sunscreen.",
+      ingredients: "Sclerocarya Birrea Seed Oil, Glycine Soja (Soybean) Oil, Retinol, Tocopherol, Ceramide AP, Ceramide NP."
     })
-    file6 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/A-Gloei_Angled_Product_Shot.png')
-    product_img6.photo.attach(io: file6, filename: 'A-Gloei_Angled_Product_Shot.png')
+
+    skincare_6a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/A-Gloei_Angled_Product_Shot.png'),
+      filename: 'A-Gloei_Angled_Product_Shot.png' 
+    }
+    skincare_6b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/6_A-Gloei_Motion_Sprite.jpeg'),
+      filename: '6_A-Gloei_Motion_Sprite.jpeg'
+    }
+    skincare_6.photos.attach([skincare_6a,skincare_6b])
     #--------------
-    product_img7 = Product.create!({
+    skincare_7 = Product.create!({
       name: "C-Tango™ Multivitamin Eye Cream", 
       category: "SKIN CARE", 
       price: 64.00,
-      desc:"C-Tango™ is a dance of potent antioxidants, replenishing ceramides and plant oils, and soothing actives, all designed to refresh skin and restore a radiant appearance. Gentle enough for a.m. and p.m. use and powerful enough to improve even stubborn signs of damage."
+      desc:"C-Tango™ is a dance of potent antioxidants, replenishing ceramides and plant oils, and soothing actives, all designed to refresh skin and restore a radiant appearance. Gentle enough for a.m. and p.m. use and powerful enough to improve even stubborn signs of damage.",
+      usage: "Gently pat a pump of C-Tango™ around the eye area using your ring finger. May be mixed with Shaba Complex™ Eye Serum.",
+      ingredients: "Water/Aqua/Eau, Glycerin, Dicaprylyl Carbonate, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Sodium Ascorbyl Phosphate, Cetearyl Olivate, Sorbitan Olivate, Sclerocarya Birrea Seed Oil, Persea Gratissima (Avocado) Oil, Plukenetia Volubilis Seed Oil, Magnesium Ascorbyl Phosphate, Ceteareth-6 Olivate, Tetrahexyldecyl Ascorbate, Ascorbyl Glucoside, Ascorbyl Palmitate, Palmitoyl Tripeptide-1, Glycine Soja (Soybean) Sterols, Linoleic Acid, Phospholipids, Ceramide NP, Glycine Soja (Soybean) Protein, Ceramide AP, Phytosphingosine, Cholesterol, Ceramide EOP, Cucumis Sativus (Cucumber) Fruit Extract, Camellia Sinensis Leaf Extract, Palmitoyl Dipeptide-5 Diaminobutyroyl Hydroxythreonine, Palmitoyl Dipeptide-5 Diaminohydroxybutyrate, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Sodium Hyaluronate Crosspolymer, C12-15 Alkyl Benzoate, Panthenol, Dipotassium Glycyrrhizate, Hesperidin Methyl Chalcone, Dipeptide-2, Palmitoyl Tetrapeptide-7, Fragaria Ananassa (Strawberry) Seed Extract, Medicago Sativa (Alfalfa) Extract, Morus Alba Leaf Extract, Hydrolyzed Rice Protein, Spilanthes Acmella Flower Extract, Aloe Barbadensis Leaf Juice, Ubiquinone, Superoxide Dismutase, Palmitoyl Tripeptide-38, Acetyl Hexapeptide-8, Pyrus Malus (Apple) Fruit Extract, Phytic Acid, Actinidia Chinensis (Kiwi) Fruit Extract."
     })
-    file7 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/C-Tango-Angled-Shot.png')
-    product_img7.photo.attach(io: file7, filename: 'C-Tango-Angled-Shot.png')
-    #--------------
-    product_img8 = Product.create!({
-      name: "Call It a Night Duo", 
+
+    skincare_7a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/C-Tango-Angled-Shot.png'),
+      filename: 'C-Tango-Angled-Shot.png'
+    }
+    skincare_7b = {
+      io: URI.open("https://funelephant-seed.s3.us-west-1.amazonaws.com/7_CTango_MotionSprite.jpeg"),
+      filename:'7_CTango_MotionSprite.jpeg'
+    }
+    skincare_7.photos.attach([skincare_7a,skincare_7b])
+    #-------------------
+    skincare_8 = Product.create!({
+      name: "Call It a Night Duo ($42 value)", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"This multifaceted rescue cream provides replenishing barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors."
+      desc:"This multifaceted rescue cream provides replenishing barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors.",
+      usage: "In the evening, mix T.L.C. Framboos™ and Lala Retro™ in the palm of hand and apply to a clean, dry face, neck, chest, and backs of hands. Not for eye area.",
+      ingredients: "Water/Aqua/Eau, Glycolic Acid, Butylene Glycol, Glycerin, Sodium Hydroxide, Lactic Acid, Salicylic Acid, Tartaric Acid, Vitis Vinifera (Grape) Juice Extract, Aloe Barbadensis Leaf Juice, Opuntia Ficus-Indica Extract, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Camellia Sinensis Leaf Extract, Rubus Idaeus (Raspberry) Fruit Extract, Saccharomyces Cerevisiae Extract, Buddleja Davidii Meristem Cell Culture, Sclerocarya Birrea Seed Oil, Sodium Hyaluronate Crosspolymer, Allantoin, Hydroxyethylcellulose, Galactoarabinan, Propanediol, Citric Acid, Tetrasodium Glutamate Diacetate, Xanthan Gum, Hexylene Glycol, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Potassium Sorbate, Pentylene Glycol, Sodium Carbonate, Sodium Chloride, Disodium Phosphate, Sodium Phosphate, Ethylhexylglycerin"
     })
-    file8 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Call_It_A_Night_Angled_Shot.png')
-    product_img8.photo.attach(io: file8, filename: 'Call_It_A_Night_Angled_Shot.png')
-    #---------------
-    product_img9 = Product.create!({
+
+    skincare_8a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Call_It_A_Night_Angled_Shot.png'),
+      filename: 'Call_It_A_Night_Angled_Shot.png'
+    }
+    skincare_8b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/8_CIAN_MotionSprite.jpeg')
+      filename: '8_CIAN_MotionSprite.jpeg'
+    }
+    skincare_8.photos.attach([skincare_8a,skincare_8b])
+    #-----------------------
+    skincare_9 = Product.create!({
       name: "A-Passioni™ Retinol Cream", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"Retinol and supportive peptides restore bounce, resilience, and a brighter clarity to skin while helping to even skin tone and texture—without the associated redness and irritation. Vitamin F and a blend of comforting passionfruit, apricot, marula, and jojoba oils replenish essential lipids and moisture, while antioxidant-packed kale, winter cherry, and xanthophylls help defend against environmental stressors. It’s like a reboot of your skin back to its healthiest, most youthful state."
+      desc:"Retinol and supportive peptides restore bounce, resilience, and a brighter clarity to skin while helping to even skin tone and texture—without the associated redness and irritation. Vitamin F and a blend of comforting passionfruit, apricot, marula, and jojoba oils replenish essential lipids and moisture, while antioxidant-packed kale, winter cherry, and xanthophylls help defend against environmental stressors. It’s like a reboot of your skin back to its healthiest, most youthful state.",
+      usage: "Morning or night, apply a pea-size amount (about half a pump) or less to clean, dry face, avoiding the eye area.  May be mixed with any Drunk Elephant cream or oil. Limit initial use to once or twice a week, gradually increasing frequency to every other night, and then every night as tolerated. Always use a broad spectrum sunscreen. Retinol products are not recommended for use by pregnant or nursing mothers. Always check with your doctor before using any new products while pregnant or nursing.",
+      ingredients: "Water/Aqua/Eau, Glycerin, Coco-Caprylate, Stearic Acid, Coconut Alkanes, Glyceryl Stearate, Niacinamide, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Pentylene Glycol, Passiflora Edulis Seed Oil, Retinol, Simmondsia Chinensis (Jojoba) Seed Oil, Sclerocarya Birrea Seed Oil, Prunus Armeniaca (Apricot) Kernel Oil, Cetyl Ethylhexanoate, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Brassica Oleracea Acephala Leaf Extract, Brassica Oleracea Italica (Broccoli) Extract, Tetrahexyldecyl Ascorbate, Chrysin, Persea Gratissima (Avocado) Oil, Linoleic Acid, Linolenic Acid, Ceramide NP, Xanthophylls, Phytosphingosine, Phytosterols, Jojoba Esters, Physalis Pubescens Fruit Juice, Stearyl Glycyrrhetinate, Oryza Sativa (Rice Bran) Extract, Glycine Soja (Soybean) Oil, Carthamus Tinctorium (Safflower) Seed Oil."
     })
-    file9 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/APassioni_AngledProductShot.png')
-    product_img9.photo.attach(io: file9, filename: 'APassioni_AngledProductShot.png')
+
+    skincare_9a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/APassioni_AngledProductShot.png'),
+      filename: 'APassioni_AngledProductShot.png'
+    }
+
+    skincare_9b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/9_APassioni_MotionSprite.jpeg'),
+      filename: '9_APassioni_MotionSprite.jpeg'
+    }
+    skincare_9.photos.attach([skincare_9a,skincare_9b])
     #---------------
-    product_img10 = Product.create!({
+    sincare_10 = Product.create!({
       name: "Ceramighty™ AF Eye Balm", 
       category: "SKIN CARE", 
       price: 60.00,
-      desc:"Loaded with ceramides, vitamin F, and omega-rich plant oils and butters, Ceramighty™ AF Eye Balm deeply nourishes and strengthens the skin barrier, restoring and preserving elasticity while delivering intense, long-lasting moisture. Soothing Avena sativa (oat) extract helps to calm skin and relieve the appearance of fatigue around the eye area."
+      desc:"Loaded with ceramides, vitamin F, and omega-rich plant oils and butters, Ceramighty™ AF Eye Balm deeply nourishes and strengthens the skin barrier, restoring and preserving elasticity while delivering intense, long-lasting moisture. Soothing Avena sativa (oat) extract helps to calm skin and relieve the appearance of fatigue around the eye area.",
+      usage: "Gently pat one pump under the eyes, along the orbital bone, and on the eyelids, morning or night.",
+      ingredients: " Water/Aqua/Eau, Octyldodecanol, Glycerin, Sclerocarya Birrea Seed Butter, Linoleic Acid, Glyceryl Stearate, Palmitic Acid, Pentylene Glycol, Cetearyl Alcohol, Stearic Acid, Sclerocarya Birrea Seed Oil, Persea Gratissima (Avocado) Oil, Avena Sativa (Oat) Kernel Oil, Oenothera Biennis (Evening Primrose) Oil, Linum Usitatissimum (Linseed) Seed Oil, Salvia Hispanica Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Ceramide AP, Ceramide NP, Ceramide EOP, Avena Sativa (Oat) Kernel Extract, Panthenol, Linolenic Acid, Adenosine, Beta-Glucan, Quercetin, Allantoin, Sodium Lauroyl Lactylate, Phytosphingosine, Cholesterol, Xanthan Gum, Tetrasodium Glutamate Diacetate, Propanediol, Citric Acid, Ceteareth-20, Sodium Carbonate, Phenoxyethanol, Sodium Chloride, Caprylyl Glycol, Sodium Hydroxide, Chlorphenesin, Carbomer, Ethylhexylglycerin"
     })
-    file10 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Ceramighty.png')
-    product_img10.photo.attach(io: file10, filename: 'Ceramighty.png') 
-    #---------------
-    product_img11 = Product.create!({
+
+    skincare_10a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Ceramighty.png'),
+      filename: 'Ceramighty.png'
+    }
+    skincare_10b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/10_Ceramighty_Motion_Sprite.png')
+      filename: '10_Ceramighty_Motion_Sprite.png'
+    }
+    skincare_10.photos.attach([skincare_10a,skincare_10b]) 
+    #---------------------
+    skincare_11 = Product.create!({
       name: "C-Firma™ Fresh Day Serum", 
       category: "SKIN CARE", 
       price: 78.00,
-      desc:"C-Firma™ Fresh Day Serum is designed to be mixed by you before its first use, which maximizes the potency of its delicate (but powerful) ingredients while keeping the formula fresh. This revolutionary vitamin C serum is packed with a powerful antioxidant complex of 15% l-ascorbic acid, 0.5% ferulic acid, and 1% vitamin E to reveal a brighter, firmer, and more even-looking complexion. Potently formulated with pumpkin ferment extract and sodium hyaluronate crosspolymer, C-Firma™ helps to enzymatically dissolve surface dead skin cells as it hydrates and soothes. The result is a noticeably diminished appearance of signs of aging and photodamage—replaced by incredible radiance and luminosity."
+      desc:"C-Firma™ Fresh Day Serum is designed to be mixed by you before its first use, which maximizes the potency of its delicate (but powerful) ingredients while keeping the formula fresh. This revolutionary vitamin C serum is packed with a powerful antioxidant complex of 15% l-ascorbic acid, 0.5% ferulic acid, and 1% vitamin E to reveal a brighter, firmer, and more even-looking complexion. Potently formulated with pumpkin ferment extract and sodium hyaluronate crosspolymer, C-Firma™ helps to enzymatically dissolve surface dead skin cells as it hydrates and soothes. The result is a noticeably diminished appearance of signs of aging and photodamage—replaced by incredible radiance and luminosity.",
+      usage: "Unscrew the cap of the liquid serum base and remove the pump from the vial containing the 15% I-ascorbic acid power.
+
+      Pour all of the liquid serum base into the vial with the powder. Screw the pump onto the top of the vial and shake for one minute until the powder dissolves fully. Bubbles will form-that's OK!
+      
+      Finally, insert the vial into C-Firma's opaque outer container with the pump facing to the left until it snaps into place. Your C-Firma™ Fresh Day Serum is ready to use.",
+      ingredients: "Water/Aqua/Eau, Dimethyl Isosorbide, Ascorbic Acid, Laureth-23, Glycerin, Tocopherol, Lactobacillus/Pumpkin Ferment Extract, Sclerocarya Birrea Seed Oil, Dipotassium Glycyrrhizate, Glycyrrhiza Glabra (Licorice) Root Extract, Vitis Vinifera (Grape) Juice Extract, Ferulic Acid, Phyllanthus Emblica Fruit Extract, Camellia Sinensis Leaf Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Propanediol, Gluconolactone, Sodium Hyaluronate Crosspolymer, Sodium Hyaluronate, Oryza Sativa (Rice) Bran Extract, Glutamylamidoethyl Imidazole, Tetrahydrobisdemethoxydiferuloylmethane, Tetrahydrodemethoxydiferuloylmethane, Tetrahydrodiferuloylmethane, Pentylene Glycol, Caprylhydroxamic Acid, Leuconostoc/Radish Root Ferment Filtrate, Sorbic Acid, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Chondrus Crispus (Carrageenan) Extract, Ethylhexylglycerin."
     })
-    file11 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/CFirmaFresh_Angled_.png')
-    product_img11.photo.attach(io: file11, filename: 'CFirmaFresh_Angled_.png')
+
+    skincare_11a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/CFirmaFresh_Angled_.png'),
+      filename: 'CFirmaFresh_Angled_.png' 
+    }
+
+    skincare_11b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/11_C-Firma_Fresh_MotionSprite_update.jpeg'),
+      filename: '11_C-Firma_Fresh_MotionSprite_update.jpeg'
+    }
+    skincare_11.photos.attach([skincare_11a,skincare_11b])
     #---------------
-    product_img12 = Product.create!({
+    skincare_12 = Product.create!({
       name: "D-Bronzi™ Anti-Pollution Sunshine Drops", 
       category: "SKIN CARE", 
       price: 36.00,
-      desc:"Like sunshine in a bottle without the damaging effects. Omega-rich virgin marula and black currant seed oils, along with vitamin F (fatty acids), immediately replenish the delicate balance that supports a healthy barrier function, while a concentrated mix of protective antioxidants boosts skin’s defenses against pollution and environmental stressors—all delivered with a bronzy finish."
+      desc:"Like sunshine in a bottle without the damaging effects. Omega-rich virgin marula and black currant seed oils, along with vitamin F (fatty acids), immediately replenish the delicate balance that supports a healthy barrier function, while a concentrated mix of protective antioxidants boosts skin’s defenses against pollution and environmental stressors—all delivered with a bronzy finish.",
+      usage: "Add a drop of D-Bronzi™ to any Drunk Elephant serum, oil, or moisturizer for a gorgeous glow and a potent dose of protective antioxidants and omega fatty acids.",
+      ingredients: "Water/Aqua/Eau, Hydrogenated Polyisobutene, Glyceryl Oleate Citrate, Mica, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Ribes Nigrum (Black Currant) Seed Oil, Sclerocarya Birrea Seed Oil, Theobroma Cacao (Cocoa) Extract, Caprylic/Capric Triglyceride, Vitis Vinifera (Grape) Seed Extract, Lecithin, Acetyl Tetrapeptide-17, Linoleic Acid, Linolenic Acid, Sorbitan Isostearate, Camellia Sinensis Leaf Extract, Maltodextrin, Sodium Hyaluronate Crosspolymer, Magnolia Officinalis Bark Extract, Glutamylamidoethyl Imidazole, Colloidal Platinum [nano], Tocopherol, Phenoxyethanol, Pentylene Glycol, Sodium Benzoate, Sorbic Acid, Caprylyl Glycol, Boron Nitride, Hexylene Glycol, Polysorbate 60, Ethylhexylglycerin, CI 77491 (Iron Oxides), CI 77492 (Iron Oxides), CI 77499 (Iron Oxides), Sodium C14-16 Olefin Sulfonate"
     })
-    file12 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/D-Bronzi_Angled_Shot.png')
-    product_img12.photo.attach(io: file12, filename: 'D-Bronzi_Angled_Shot.png') 
+
+    skincare_12a = {
+      io:URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/D-Bronzi_Angled_Shot.png'),
+      filename: 'D-Bronzi_Angled_Shot.png'
+    }
+
+    skincare_12b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/12_DBronzi_MotionSprite.jpeg'),
+      filename: '12_DBronzi_MotionSprite.jpeg'
+    }
+    skincare_12.photos.attach([skincare_12a,skincare_12b]) 
     #---------------
-    product_img13 = Product.create!({
+    skincare_13 = Product.create!({
       name: "E-Rase™ Milki Micellar Water", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"Made with ultra-mild micelles, soothing vitamin E, replenishing fatty acids, and antioxidant-rich, nonfragrant plant oils (marula, baobab, mongongo, wild melon seed, ximenia seed, passionfruit, and sweet almond), E-Rase™ nourishes skin while dissolving and lifting away makeup and dirt, is barrier-supportive, and may be used anytime you need a quick skin refreshment."
+      desc:"Made with ultra-mild micelles, soothing vitamin E, replenishing fatty acids, and antioxidant-rich, nonfragrant plant oils (marula, baobab, mongongo, wild melon seed, ximenia seed, passionfruit, and sweet almond), E-Rase™ nourishes skin while dissolving and lifting away makeup and dirt, is barrier-supportive, and may be used anytime you need a quick skin refreshment.",
+      usage: "Shake before use. Gently smooth over face, eyes, and lips with a soft cotton pad, holding for a few seconds on heavily made-up areas. Don’t scrub, tug, or rub. May also be used anytime in between facial cleansing—no need to rinse. Skin feels clean, cool, and soft after each use.",
+      ingredients: "Water/Aqua/Eau, Cetearyl Isononanoate, Propanediol, C15-19 Alkane, Dicaprylyl Carbonate, Heptyl Undecylenate, Sclerocarya Birrea Seed Oil, Adansonia Digitata Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Schinziophyton Rautanenii Kernel Oil, Tocopherol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Citrullus Lanatus (Watermelon) Seed Oil, Ximenia Americana Seed Oil, Sodium Lauroyl Lactylate, Ceramide AP, Ceramide EOP, Ceramide NP, Cholesterol, Phytosphingosine, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Potassium Sorbate, Polysorbate 20, Ethylhexylglycerin"
     })
-    file13 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/E-Rase_Angled_Shot.png')
-    product_img13.photo.attach(io: file13, filename: 'E-Rase_Angled_Shot.png')
+
+    skincare_13a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/E-Rase_Angled_Shot.png'),
+      filename: 'E-Rase_Angled_Shot.png'
+    }
+
+    skincare_13b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/13_ERase_Motion_Sprite.jpeg'),
+      filename: '13_ERase_Motion_Sprite.jpeg'
+    }
+    skincare_13.photos.attach([skincare_13a,skincare_13b])
     #---------------
-    product_img14 = Product.create!({
+    skincare_14 = Product.create!({
       name: "It's Summer Somewhere ($39 value)", 
       category: "SKIN CARE", 
       price: 30.00,
-      desc:"O-Bloos™ gives a golden peachy-pink wash of color while keeping skin soft and soothed; D-Bronzi™ supports a healthy barrier function and delivers a bronzy finish; Lala Retro™ provides barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors."
+      desc:"O-Bloos™ gives a golden peachy-pink wash of color while keeping skin soft and soothed; D-Bronzi™ supports a healthy barrier function and delivers a bronzy finish; Lala Retro™ provides barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors.",
+      usage: "Mix a drop or two of O-Bloos™ and D-Bronzi™ with a swipe of Lala Retro™ in the palm of your hand and apply to a clean, dry face.",
+      ingredients: "Water/Aqua/Eau, Hydrogenated Polyisobutene, Glyceryl Oleate Citrate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Ribes Nigrum (Black Currant) Seed Oil, Sclerocarya Birrea Seed Oil, Theobroma Cacao (Cocoa) Extract, Caprylic/Capric Triglyceride, Palmitoyl Tripeptide-1, Vitis Vinifera (Grape) Juice Extract, Caesalpinia Sappan Bark Extract, Sodium Lactate, Palmitoyl Tetrapeptide-7, Linoleic Acid, Linolenic Acid, Sorbitan Isostearate, Camellia Sinensis Leaf Extract, Propanediol, Sodium Hyaluronate Crosspolymer, Glutamylamidoethyl Imidazole, Silica, Butylene Glycol, Tocopherol, Polysorbate 20, Carbomer, Xanthan Gum, Phenoxyethanol, Pentylene Glycol, Sodium Benzoate, Sorbic Acid, Sodium Citrate, Caprylyl Glycol, Boron Nitride, Hexylene Glycol, Polysorbate 60, Ethylhexylglycerin, Tin Oxide. [+/- (May Contain/Peut Contenir): Mica, CI 77891 (Titanium Dioxide), CI 77491 (Iron Oxides)]"
     })
-    file14 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/its_summer_somewhere.png')
-    product_img14.photo.attach(io: file14, filename: 'its_summer_somewhere.png') 
+    skincare_14a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/its_summer_somewhere.png'),
+      filename: 'its_summer_somewhere.png'
+    }
+
+    skincare_14b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/14_ISS_Motion_Sprite.png'),
+      filename: '14_ISS_Motion_Sprite.png'
+    }
+    skincare_14.photos.attach([skincare_14a,skincare_14b]) 
     #---------------
-    product_img15 = Product.create!({
+    skincare_15 = Product.create!({
       name: "Juju Bar", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"This multitasking bar is designed to effectively cleanse while gently removing dead skin cells from the surface of the skin. Infused with a blend of thermal mud, marula, bamboo, and superfruit, this unique formulation creates a creamy lather that dissolves excess oil, pore-clogging surface debris, and impurities while gently exfoliating dead skin cells. Skin feels softer and smoother with improved clarity."
+      desc:"This multitasking bar is designed to effectively cleanse while gently removing dead skin cells from the surface of the skin. Infused with a blend of thermal mud, marula, bamboo, and superfruit, this unique formulation creates a creamy lather that dissolves excess oil, pore-clogging surface debris, and impurities while gently exfoliating dead skin cells. Skin feels softer and smoother with improved clarity.",
+      usage: "Wet Juju Bar and lather until creamy. With your hands, gently massage over face, neck, and chest. Rinse with warm water and pat dry. Use 2 or 3 times per week. Do not apply bar directly to skin. Avoid direct contact with eyes.",
+      ingredients: "Sodium Coco-Sulfate, Disodium Lauryl Sulfosuccinate, Triticum Vulgare (Wheat) Starch, Cetearyl Alcohol, Bambusa Vulgaris Leaf/Stem Extract, Paraffin, Sclerocarya Birrea Seed Oil, Water/Aqua/Eau, Heilmoor Clay, Titanium Dioxide (CI 77891), Helianthus Annuus (Sunflower) Seed Oil, Euterpe Oleracea Fruit Extract, Lycium Barbarum Fruit Extract"
     })
-    file15 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Juju_Bar_Angled_Shot.png')
-    product_img15.photo.attach(io: file15, filename: 'Juju_Bar_Angled_Shot.png') 
+
+    skincare_15a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Juju_Bar_Angled_Shot.png'),
+      filename: 'Juju_Bar_Angled_Shot.png'
+    }
+
+    skincare_15b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/15_Juju_MotionSprite.jpeg'),
+      filename: '15_Juju_MotionSprite.jpeg'
+    }
+
+    skincare_15.photos.attach([skincare_15a,skincare_15b]) 
     #---------------
-    product_img16 = Product.create!({
+    skincare_16 = Product.create!({
       name: "Lala Retro™ Whipped Cream", 
       category: "SKIN CARE", 
       price: 60.00,
-      desc:"Lala Retro™ is a whipped dream-come-true for tired, dry skin. This  multifaceted rescue cream, infused with six African oils and a plant ceramide complex, provides replenishing barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors. Sodium hyaluronate crosspolymer easily soaks in to release intense hydration. In addition, antioxidant-rich fermented green tea helps combat signs of aging. Loaded with omega acids, Lala helps skin retain long-lasting moisture, forming a protective layer that allows skin to function at its optimal level."
+      desc:"Lala Retro™ is a whipped dream-come-true for tired, dry skin. This  multifaceted rescue cream, infused with six African oils and a plant ceramide complex, provides replenishing barrier support by reinforcing skin’s acid mantle and defending against the effects of everyday stressors. Sodium hyaluronate crosspolymer easily soaks in to release intense hydration. In addition, antioxidant-rich fermented green tea helps combat signs of aging. Loaded with omega acids, Lala helps skin retain long-lasting moisture, forming a protective layer that allows skin to function at its optimal level.",
+      usage: "Apply a pump of Lala Retro™ anytime to clean, dry skin. Mix with any Drunk Elephant serum or oil as part of a total skincare solution.",
+      ingredients: "Water/Aqua/Eau, Glycerin, Caprylic/Capric Triglyceride, Isopropyl Isostearate, Pseudozyma Epicola/Camellia Sinensis Seed Oil/Glucose/Glycine Soja (Soybean) Meal/Malt Extract/Yeast Extract Ferment Filtrate, Glyceryl Stearate SE, Cetearyl Alcohol, Palmitic Acid, Stearic Acid, Pentylene Glycol, Plantago Lanceolata Leaf Extract, Adansonia Digitata Seed Oil, Citrullus Lanatus (Watermelon) Seed Oil, Passiï¬‚ora Edulis Seed Oil, Schinziophyton Rautanenii Kernel Oil, Sclerocarya Birrea Seed Oil, Polyglyceryl-6 Ximenia Americana Seedate, Cholesterol, Ceramide AP, Ceramide EOP, Sodium Hyaluronate Crosspolymer, Ceramide NP, Phytosphingosine, Ceteareth-20, Trisodium Ethylenediamine Disuccinate, Tocopherol, Sodium Lauroyl Lactylate, Sodium Hydroxide, Citric Acid, Carbomer, Xanthan Gum, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol, Ethylhexylglycerin"
     })
-    file16 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Lala_Angled_Shot.png')
-    product_img16.photo.attach(io: file16, filename: 'Lala_Angled_Shot.png') 
+    skincare_16a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Lala_Angled_Shot.png'),
+      filename: 'Lala_Angled_Shot.png'
+    }
+
+    skincare_16b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/16_Lala_MotionSprite.jpeg'),
+      filename: '16_Lala_MotionSprite.jpeg'
+    }
+
+    skincare_16.photos.attach([skincare_16a,skincare_16b]) 
     #---------------
-    product_img17 = Product.create!({
+    skincare_17 = Product.create!({
       name: "Lippe Balm", 
       category: "SKIN CARE", 
       price: 18.00,
-      desc:"Spiked with an antioxidant-rich blend of avocado and mongongo nut oils, plus a tripeptide and sea fern algae, Lippe gives lips a plump look and a better-defined lip line. This buttery, luxurious balm softens and plumps the look of rough, parched lips, keeping them in lip-top condition."
+      desc:"Spiked with an antioxidant-rich blend of avocado and mongongo nut oils, plus a tripeptide and sea fern algae, Lippe gives lips a plump look and a better-defined lip line. This buttery, luxurious balm softens and plumps the look of rough, parched lips, keeping them in lip-top condition.",
+      usage: "Apply to lips as needed. Use alone as a sheer lip balm or under any lipstick for a silky smooth application.",
+      description: "Cocos Nucifera (Coconut) Oil, Sclerocarya Birrea Seed Oil, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Beeswax/Cera Alba/Cire d’abeille, Ozokerite, Polyisobutene, Glycine Soja (Soybean) Oil, Copernicia Cerifera (Carnauba) Wax/Cera Carnauba/Cire de carnauba, Euphorbia Cerifera (Candelilla) Wax/Candelilla Cera/Cire de candelilla, Camellia Oleifera Leaf Extract, Dictyopteris Membranacea Extract, Magnolia Grandiflora Bark Extract, Carthamus Tinctorius (Safflower) Seed Oil, Persea Gratissima (Avocado) Oil, Schinziophyton Rautanenii (Mongongo) Kernel Oil, Vaccinium Macrocarpon (Cranberry) Seed Oil, Tocopheryl Acetate, Dipotassium Glycyrrhizate, Palmitoyl Tripeptide-1, Tetrahexyldecyl Ascorbate, Ethylhexyl Palmitate, Dicaprylyl Ether, Tribehenin, Sorbitan Isostearate, Lauryl Alcohol, Linoleic Acid, Linolenic Acid, Caprylyl Glycol, Phenoxyethanol "
     })
-    file17 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Lippe_Balm_Angled_Shot.png')
-    product_img17.photo.attach(io: file17, filename: 'Lippe_Balm_Angled_Shot.png') 
+    skincare_17a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Lippe_Balm_Angled_Shot.png'),
+      filename: 'Lippe_Balm_Angled_Shot.png'
+    }
+
+    skincare_17b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/17_Lippe_MotionSprite.jpeg'),
+      filename: '17_Lippe_MotionSprite.jpeg'
+    }
+
+    skincare_17.photos.attach([skincare_17a,skincare_17b]) 
     #---------------
-    product_img18 = Product.create!({
-      name: "Littles Night Out ($70)", 
+    skincare_18 = Product.create!({
+      name: "Wonderwild™ Miracle Butter", 
       category: "SKIN CARE", 
-      price: 50.00,
-      desc:"Beste™ No. 9 removes all traces of makeup and grime, T.L.C. Framboos™ visibly resurfaces dull, congested skin, B-Hydra™ replenishes thirsty skin, and Protini™ improves the look of skin’s tone, texture, and firmness."
+      price: 30.00,
+      desc:"Restorative plant butters—marula, cupuaçu, mango, and shea—help shield skin from environmental stressors, while antioxidant- and fatty-acid-rich plant oils (such as meadowfoam, pumpkin, green tea seed, kukui, and rose hip) replenish vital lipids to deeply nourish and strengthen a temporarily compromised skin barrier, bringing skin back to its healthiest state.",
+      usage: "Dab it any place that needs extra love. Wonderwild™ Miracle Butter may be applied anywhere on the face and body, including the eye area and lips, as often as needed.",
+      ingredients: "Sclerocarya Birrea Seed Oil, Cocos Nucifera (Coconut) Oil, Hydrogenated Vegetable Oil, Cucurbita Pepo (Pumpkin) Seed Oil, Butyrospermum Parkii (Shea) Butter, Sclerocarya Birrea Seed Butter, Mangifera Indica (Mango) Seed Butter, Theobroma Grandiflorum Seed Butter, Camellia Sinensis Seed Oil, Rosa Canina Fruit Oil, Aleurites Moluccanus Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Limnanthes Alba (Meadowfoam) Seed Oil, Oryza Sativa (Rice) Bran Oil, Persea Gratissima (Avocado) Oil, Helianthus Annuus (Sunflower) Seed Wax, Vitis Vinifera (Grape) Seed Oil"
     })
-    file18 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Call_It_A_Night_Angled_Shot.png')
-    product_img18.photo.attach(io: file18, filename: 'Call_It_A_Night_Angled_Shot.png.png') 
+
+    skincare_18a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Wonderwild_AngledProductShot.png'),
+      filename: 'Wonderwild_AngledProductShot.png'
+    }
+
+    skincare_18b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/32_Wonderwild_MotionSprite.jpeg'),
+      filename: '32_Wonderwild_MotionSprite.jpeg'
+    }
+
+    skincare_18.photos.attach([skincare_18a,skincare_18b]) 
     #---------------
-    product_img19 = Product.create!({
+    skincare_19 = Product.create!({
       name: "O-Bloos™ Rosi Drops", 
       category: "SKIN CARE", 
       price: 36.00,
-      desc:"O-Bloos™ (the O stands for omegas) gives skin that flattering “nobody knows why you’re flushed” flush. The foolproof, watercolor-light formula is buildable and flatters most skin, and it’s delivered in concentrated drops that can be mixed into your other Drunk Elephant products."
+      desc:"O-Bloos™ (the O stands for omegas) gives skin that flattering “nobody knows why you’re flushed” flush. The foolproof, watercolor-light formula is buildable and flatters most skin, and it’s delivered in concentrated drops that can be mixed into your other Drunk Elephant products.",
+      usage: "Shake before use. Dab a tiny bit of O-Bloos™ onto cheeks or anywhere you would like to add a warm, natural-looking flush of peachy-pink color and barrier-fortifying omega fatty acids. Or add a drop or two to your serum, cream, or oil for an allover rosy wash of color. Tip: Mix a drop of O-Bloos™ and a drop of D-Bronzi™ into your moisturizer for a flush with added warmth. ",
+      ingredients: "Water/Aqua/Eau, Hydrogenated Polyisobutene, Glyceryl Oleate Citrate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Ribes Nigrum (Black Currant) Seed Oil, Sclerocarya Birrea Seed Oil, Theobroma Cacao (Cocoa) Extract, Caprylic/Capric Triglyceride, Palmitoyl Tripeptide-1, Vitis Vinifera (Grape) Juice Extract, Caesalpinia Sappan Bark Extract, Sodium Lactate, Palmitoyl Tetrapeptide-7, Linoleic Acid, Linolenic Acid, Sorbitan Isostearate, Camellia Sinensis Leaf Extract, Propanediol, Sodium Hyaluronate Crosspolymer, Glutamylamidoethyl Imidazole, Silica, Butylene Glycol, Tocopherol, Polysorbate 20, Carbomer, Xanthan Gum, Phenoxyethanol, Pentylene Glycol, Sodium Benzoate, Sorbic Acid, Sodium Citrate, Caprylyl Glycol, Boron Nitride, Hexylene Glycol, Polysorbate 60, Ethylhexylglycerin, Tin Oxide.  [+/- (May Contain/Peut Contenir): Mica, CI 77891 (Titanium Dioxide), CI 77491 (Iron Oxides)]"
     })
-    file19 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/O-Bloos_Angled_Shot_new.png')
-    product_img19.photo.attach(io: file19, filename: 'O-Bloos_Angled_Shot_new.png') 
+    skincare_19a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/O-Bloos_Angled_Shot_new.png'),
+      filename: 'O-Bloos_Angled_Shot_new.png'
+    }
+
+    skincare_19b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/19_O-Bloos_Motion_Sprite.jpeg'),
+      filename: '19_O-Bloos_Motion_Sprite.jpeg'
+    }
+
+    skincare_19.photos.attach([skincare_19a,skincare_19b]) 
     #---------------
-    product_img20 = Product.create!({
+    skincare_20 = Product.create!({
       name: "Pekee Bar™", 
       category: "SKIN CARE", 
       price: 28.00,
-      desc:"Infused with a blend of blueberry extract, marula oil, and honey, Pekee Bar™ tones and promotes moisture retention for skin that feels firmer and more elastic. Pekee Bar™ is totally fragrance- and soap-free and formulated with only skin-friendly ingredients designed to cleanse and calm the skin."
+      desc:"Infused with a blend of blueberry extract, marula oil, and honey, Pekee Bar™ tones and promotes moisture retention for skin that feels firmer and more elastic. Pekee Bar™ is totally fragrance- and soap-free and formulated with only skin-friendly ingredients designed to cleanse and calm the skin.",
+      usage: "Wet Pekee Bar™ and lather until creamy. With your hands, massage over face, neck, and chest. Rinse well with warm water and pat dry. Use morning or night. Avoid direct contact with eyes.",
+      ingredients: "Sodium Coco-Sulfate, Disodium Lauryl Sulfosuccinate, Triticum Vulgare (Wheat) Starch, Cetearyl Alcohol, Paraffin, Sclerocarya Birrea Seed Oil, Water/Aqua/Eau, Titanium Dioxide (CI 77891), Honey/Mel/Miel, Glycerin, Vaccinium Angustifolium (Blueberry) Fruit Extract"
     })
-    file20 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Pekee_Bar_Angled_Shot.png')
-    product_img20.photo.attach(io: file20, filename: 'Pekee_Bar_Angled_Shot.png') 
+    skincare_20a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Pekee_Bar_Angled_Shot.png'),
+      filename: 'Pekee_Bar_Angled_Shot.png'
+    }
+
+    skincare_20b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/20_Pekee_MotionSprite.jpeg'),
+      filename: '20_Pekee_MotionSprite.jpeg'
+    }
+    skincare_20.photos.attach([skincare_20a,skincare_20b]) 
     #---------------
-    product_img21 = Product.create!({
+    skincare_21 = Product.create!({
       name: "Protini™ Polypeptide Cream", 
       category: "SKIN CARE", 
       price: 22.00,
-      desc:"Protini’s proprietary formula restores younger, revived-looking skin, almost from the first application. Lines, wrinkles, and signs of sun damage appear reduced, and skin feels strengthened and moisturized."
+      desc:"Protini’s proprietary formula restores younger, revived-looking skin, almost from the first application. Lines, wrinkles, and signs of sun damage appear reduced, and skin feels strengthened and moisturized.",
+      usage: "Apply morning and night to clean, dry skin for the vital dose of protein and replenishing moisture the skin needs to retain its youthful appearance. Mix with any Drunk Elephant serum, cream, or oil as part of a total skin-care solution.",
+      ingredients: "Water/Aqua/Eau, Dicaprylyl Carbonate, Glycerin, Cetearyl Alcohol, Cetearyl Olivate, Sorbitan Olivate, Sclerocarya Birrea Seed Oil, Bacillus/Folic Acid Ferment Extract, Nymphaea Alba Root Extract, sh-Oligopeptide-1, sh-Oligopeptide-2, sh-Polypeptide-1, sh-Polypeptide-9, sh-Polypeptide-11, Copper Palmitoyl Heptapeptide-14, Heptapeptide-15 Palmitate, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Acetyl Glutamine, Coconut Alkanes, Coco-Caprylate/Caprate, Sodium Hyaluronate, Aspartic Acid, Linoleic Acid, Linolenic Acid, Lecithin, Butylene Glycol, Polyvinyl Alcohol, Sodium Lactate, Sodium PCA, PCA, Sorbitan Isostearate, Carbomer, Polysorbate 20, Polysorbate 60, Lactic Acid/Glycolic Acid Copolymer, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Xanthan Gum, Isomalt, 1,2-Hexanediol, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol, Tocopherol, Sodium Benzoate, Phenylpropanol, Glyceryl Caprylate, Symphytum Officinale Callus Culture Extract"
     })
-    file21 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Protini_Angled_Shot.png')
-    product_img21.photo.attach(io: file21, filename: 'Protini_Angled_Shot.png') 
+    skincare_21a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Protini_Angled_Shot.png'),
+      filename: "Protini_Angled_Shot.png"
+    }
+    skincare_21b = {
+      io: URI.open("https://funelephant-seed.s3.us-west-1.amazonaws.com/21_ProtiniCream_MotionSprite_updated.jpeg"),
+      filename: "21_ProtiniCream_MotionSprite_updated.jpeg"
+    }
+    skincare_21.photos.attach([skincare_21a,skincare_21b]) 
     #---------------
-    product_img22 = Product.create!({
+    skincare_22 = Product.create!({
       name: "F-Balm™ Electrolyte Waterfacial Midi", 
       category: "SKIN CARE", 
       price: 18.00,
-      desc:"With a blend of barrier-replenishing ingredients, including niacinamide, sodium PCA, plant squalane, five forms of ceramides, omega fatty acids, and powerful antioxidants, F-Balm™ effectively rehydrates hungover, overly parched skin, making it soft and supple. Tiny beads loaded with vitamin F burst during application to deliver extra emollience and soothing hydration."
+      desc:"With a blend of barrier-replenishing ingredients, including niacinamide, sodium PCA, plant squalane, five forms of ceramides, omega fatty acids, and powerful antioxidants, F-Balm™ effectively rehydrates hungover, overly parched skin, making it soft and supple. Tiny beads loaded with vitamin F burst during application to deliver extra emollience and soothing hydration.",
+      usage: "Apply 4-5 pumps of F-Balm™ as the last step in your nighttime routine. May be worn as an overnight mask. Also can be layered over Virgin Marula Oil for an extra shot of absorbable moisture.",
+      ingredients: "Water/Aqua/Eau, Squalane, Propanediol, Niacinamide, Olive Oil Glycereth-8 Esters, Coconut Alkanes, Cocos Nucifera (Coconut) Water, Simmondsia Chinensis (Jojoba) Seed Oil, Ammonium Acryloyldimethyltaurate/VP Copolymer, Glycerin, Mannitol, Sclerocarya Birrea Seed Oil, Sclerocarya Birrea Seed Butter, Sodium PCA, Opuntia Tuna Fruit Extract, Linum Usitatissimum (Linseed) Seed Oil, Sorbitol, Quercetin, Trehalose, Zea Mays (Corn) Oil, Cetyl Alcohol, Sucrose, Creatine, Inositol, Pentylene Glycol, Ferulic Acid, Hydroxytyrosol, Behenic Acid, Linoleic Acid, Cholesterol, Ceramide NS, Ceramide AP, Ceramide EOS, Ceramide NP, Ceramide EOP,  Phospholipids, Sodium Hyaluronate Crosspolymer, Magnesium PCA, Microcrystalline Cellulose, Adenosine, Sodium Hyaluronate, Xanthan Gum, Caprooyl Phytosphingosine, Ascorbyl Palmitate, Hydroxypropyl Methylcellulose"
     })
-    file22 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/FBalm_AngledProduct.png')
-    product_img22.photo.attach(io: file22, filename: 'FBalm_AngledProduct.png') 
+    skincare_22a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/FBalm_AngledProduct.png'),
+      filename: 'FBalm_AngledProduct.png'
+    }
+
+    skincare_22b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/22_FBalm_MotionSprite.jpeg'),
+      filename: '22_FBalm_MotionSprite.jpeg'
+    }
+
+    skincare_22.photos.attach([skincare_22a,skincare_22b]) 
     #---------------
-    product_img23 = Product.create!({
+    skincare_23 = Product.create!({
       name: "Protini™ Powerpeptide Resurf Serum", 
       category: "SKIN CARE", 
       price: 82.00,
-      desc:"With its ultra-concentrated blend of 11 peptides, Protini™ Powerpeptide Resurf Serum delivers plump, bouncy skin while targeting a dull, uneven complexion. The appearance of fine lines, sun damage, and enlarged pores is improved and glow is restored, while powerful water-boosting ingredients (such as snow mushroom extract, sodium hyaluronate, and sodium PCA) replenish hydration levels. Antioxidant-rich, nonfragrant plant oils and vitamins (tocotrienols, squalane, green tea seed oil, and marula oil) soothe while adding a touch of lightweight moisture to skin."
+      desc:"With its ultra-concentrated blend of 11 peptides, Protini™ Powerpeptide Resurf Serum delivers plump, bouncy skin while targeting a dull, uneven complexion. The appearance of fine lines, sun damage, and enlarged pores is improved and glow is restored, while powerful water-boosting ingredients (such as snow mushroom extract, sodium hyaluronate, and sodium PCA) replenish hydration levels. Antioxidant-rich, nonfragrant plant oils and vitamins (tocotrienols, squalane, green tea seed oil, and marula oil) soothe while adding a touch of lightweight moisture to skin.",
+      usage:"Shake gently before use. Apply to a clean, dry face, avoiding the eye area. May also be applied to the chest and backs of hands. Follow (or mix) with your choice of Drunk Elephant moisturizer. During the daytime, may also be combined with C-Firma™ Day Serum for added brightening and firming benefits. Follow with Umbra. Protini™ Powerpeptide provides gentle chemical exfoliation on its own, so it is not necessary to also use T.L.C. Framboos™ or Babyfacial on the same day.",
+      ingredients: "Water/Aqua/Eau, Glycerin, Lactic Acid, Dicaprylyl Carbonate, Squalane, Sodium Hydroxide, Glycine Max (Soybean) Seed Extract, Sclerocarya Birrea Seed Oil, Camellia Sinensis Seed Oil, Sodium PCA, Caprylic/Capric Triglyceride, Borago Officinalis Seed Oil, Tremella Fuciformis Polysaccharide, Tocotrienols, Sh-Oligopeptide-1, Sh-Oligopeptide-2, Sh-Polypeptide-1, Sh-Polypeptide-9, Sh-Polypeptide-11, Copper Palmitoyl Heptapeptide-14, Heptapeptide-15 Palmitate, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Palmitoyl Tripeptide-38, Palmitoyl Hexapeptide-12, Tripeptide-1, Pyrus Malus (Apple) Fruit Extract, Propanediol, Sodium Hyaluronate, Panthenol, Sodium Hyaluronate Crosspolymer, Sodium Lactate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Adenosine, Nymphaea Alba Root Extract, Bacillus/Folic Acid Ferment Filtrate Extract, Symphytum Officinale Callus Culture Extract"
     })
-    file23 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/ProtiniSerum_AngledProductShot.png')
-    product_img23.photo.attach(io: file23, filename: 'ProtiniSerum_AngledProductShot.png') 
+    skincare_23a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/ProtiniSerum_AngledProductShot.png'),
+      filename: 'ProtiniSerum_AngledProductShot.png'
+    }
+
+    skincare_23b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/23_ProtiniSerum_MotionSprite.jpeg'),
+      filename: '23_ProtiniSerum_MotionSprite.jpeg'
+    }
+
+    skincare_23.photos.attach([skincare_23a,skincare_23b]) 
     #---------------
-    product_img24 = Product.create!({
+    skincare_24 = Product.create!({
       name: "Shaba Complex™ Eye Serum", 
       category: "SKIN CARE", 
       price: 60.00,
-      desc:"Shaba Complex™ Eye Serum contains potent doses of black tea ferment, niacinamide, copper peptides, and edelweiss stem cells, which work together to support a smoother, younger look around the eyes. With a unique combination of edelweiss stem cells and niacinamide, Shaba Complex™ helps diminish the appearance of fine lines and wrinkles. The powerful antioxidants in Co-Q10 help prevent premature signs of aging from environmental aggressors while also helping to fade age spots."
+      desc:"Shaba Complex™ Eye Serum contains potent doses of black tea ferment, niacinamide, copper peptides, and edelweiss stem cells, which work together to support a smoother, younger look around the eyes. With a unique combination of edelweiss stem cells and niacinamide, Shaba Complex™ helps diminish the appearance of fine lines and wrinkles. The powerful antioxidants in Co-Q10 help prevent premature signs of aging from environmental aggressors while also helping to fade age spots.",
+      usage: "Apply under the eye, around the orbital bone, and on the eyelid each morning and night for a refreshing boost to the eye area. ",
+      ingredients: "Water/Aqua/Eau, Octyldodecanol, Glycerin, Boron Nitride, Saccharomyces/Xylinum/Black Tea Ferment, Coconut Alkanes, Cetyl Alcohol, Cetearyl Olivate, Sorbitan Olivate, Niacinamide, Copper Tripeptide-1, Leontopodium Alpinum Meristem Cell Culture, Dipeptide-2, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Copper Lysinate/Prolinate, Hesperidin Methyl Chalcone, Chondrus Crispus (Carrageenan), Mangifera Indica (Mango) Seed Butter, Glycine Soja (Soybean) Oil, Hippophae Rhamnoides Oil, Sclerocarya Birrea Seed Oil, Sodium Hyaluronate Crosspolymer, Hydroxyethylcellulose, Coco-Caprylate/Caprate, Steareth-20, Lecithin, Panthenol, N-Hydroxysuccinimide, Ubiquinone, Citric Acid, Thioctic Acid, Tocopherol, Chrysin, Sclerotium Gum, Methylglucoside Phosphate, Xanthan Gum, Potassium Sorbate, Sodium Benzoate, Chlorphenesin, Caprylyl Glycol, Sodium Hydroxide, Phenoxyethanol, Pentylene Glycol, Ethylhexylglycerin"
     })
-    file24 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Shaba_AngledShot.png')
-    product_img24.photo.attach(io: file24, filename: 'Shaba_AngledShot.png') 
+    skincare_24a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Shaba_AngledShot.png'),
+      filename: 'Shaba_AngledShot.png'
+    }
+    skincare_24b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/24_Shaba_MotionSprite_update.jpeg'),
+      filename: '24_Shaba_MotionSprite_update.jpeg'
+    }
+    skincare_24.photos.attach([skincare_24a,skincare_24b]) 
     #---------------
-    product_img25 = Product.create!({
+    skincare_25 = Product.create!({
       name: "Slaai™ Makeup-Melting Butter Cleanser", 
       category: "SKIN CARE", 
       price: 34.00,
-      desc:"Skin-compatible Slaai™ effortlessly removes even water-resistant formulations and is free of PEGs and essential oils. Formulated with antioxidant-rich fruit extracts and oils to help soothe, plus a nourishing African oil blend of marula, baobab, kalahari melon, mongongo, and ximenia, Slaai™ Makeup-Melting Butter Cleanser cleanses and moisturizes without any irritants or sensitizers. Designed to be used on dry skin, Slaai™ removes excess oil, grime, and makeup from skin. Adding water activates Slaai™, transforming it into a milk that rinses cleanly, leaving behind a dewy glow."
+      desc:"Skin-compatible Slaai™ effortlessly removes even water-resistant formulations and is free of PEGs and essential oils. Formulated with antioxidant-rich fruit extracts and oils to help soothe, plus a nourishing African oil blend of marula, baobab, kalahari melon, mongongo, and ximenia, Slaai™ Makeup-Melting Butter Cleanser cleanses and moisturizes without any irritants or sensitizers. Designed to be used on dry skin, Slaai™ removes excess oil, grime, and makeup from skin. Adding water activates Slaai™, transforming it into a milk that rinses cleanly, leaving behind a dewy glow.",
+      usage: "",
+      ingredients: ""
     })
-    file25 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Slaai_Angled_Shot.png')
-    product_img25.photo.attach(io: file25, filename: 'Slaai_Angled_Shot.png') 
+
+    skincare_25a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Slaai_Angled_Shot.png'),
+      filename: 'Slaai_Angled_Shot.png'
+    }
+    skincare_25b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/25_Slaai_MotionSprite.jpeg'),
+      filename: "25_Slaai_MotionSprite.jpeg"
+    }
+
+    skincare_25.photos.attach([skincare_25a,skincare_25b]) 
     #---------------
-    product_img26 = Product.create!({
+    skincare_26= Product.create!({
       name: "Sweet Biome™ Fermented Sake Spray", 
       category: "SKIN CARE", 
       price: 42.00,
-      desc:"Sweet Biome’s cocktail of fermented sake extract, kombucha, and hops supplies skin with nutrient-dense substances that restore, soothe, and contribute to a balanced and healthy acid mantle and microbiome. Powerful electrolytes—coconut water and sodium PCA— provide potent antioxidant protection and critical hydration while natural minerals zinc, copper, and calcium gluconate help reduce redness and promote healthy collagen production. Ceramides, vitamin F, and essential amino acids keep skin soft, flexible, and moisturized."
+      desc:"Sweet Biome’s cocktail of fermented sake extract, kombucha, and hops supplies skin with nutrient-dense substances that restore, soothe, and contribute to a balanced and healthy acid mantle and microbiome. Powerful electrolytes—coconut water and sodium PCA— provide potent antioxidant protection and critical hydration while natural minerals zinc, copper, and calcium gluconate help reduce redness and promote healthy collagen production. Ceramides, vitamin F, and essential amino acids keep skin soft, flexible, and moisturized.",
+      usage: "Shake before each use. Mist Sweet Biome™ onto a clean, dry face and follow with your usual daytime or nighttime Drunk Elephant routine. Sweet Biome™ may be used alongside any Drunk Elephant serum, treatment, or moisturizer. Or you can mist on Sweet Biome™ anytime your skin needs a refresher throughout the day.",
+      ingredients: "Water/Aqua/Eau, Sodium PCA, Propanediol, Galactomyces Ferment Filtrate, Glycerin, Beta Vulgaris (Beet) Root Extract, Fructooligosaccharides, Saccharomyces/Xylinum/Black Tea Ferment, Cocos Nucifera (Coconut) Fruit Juice, Sclerocarya Birrea Seed Oil, Lactic Acid, Pentylene Glycol, Sodium Hyaluronate Crosspolymer, Zinc Gluconate, Sodium Lactate, Magnesium Aspartate, PCA, Alanine, Arginine,  Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Aspartic Acid, Calcium Gluconate, Copper Gluconate,  Trehalose, Linoleic Acid, Linolenic Acid, Ceramide AP, Ceramide EOP, Ceramide NP, Phytosphingosine, Cholesterol, Xylitol, Humulus Lupulus  (Hops) Extract, Hyaluronic Acid, Sodium Lauroyl Lactylate, Tapioca Starch, Tetrasodium Glutamate Diacetate, Xanthan Gum, Potassium Lactate, Polysorbate 20, Citric Acid, Carbomer, Phenoxyethanol, Sodium Benzoate, Tocopherol, Sodium Hydroxide, Potassium Sorbate, Ethylhexylglycerin"
     })
-    file26 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/SweetBiome_AngledProduct.png')
-    product_img26.photo.attach(io: file26, filename: 'SweetBiome_AngledProduct.png') 
+    skincare_26a ={
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/SweetBiome_AngledProduct.png'),
+      filename: 'SweetBiome_AngledProduct.png'
+    }
+    skincare_26b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/26_SweetBiome_MotionSprite.jpeg'),
+      filename:'26_SweetBiome_MotionSprite.jpeg'
+    }
+    skincare_26.photos.attach([skincare_26a,skincare_26b]) 
     #---------------
-    product_img27 = Product.create!({
+    skincare_27 = Product.create!({
       name: "T.L.C. Framboos™ Glycolic Night Serum", 
       category: "SKIN CARE", 
       price: 134.00,
-      desc:"Formulated with our dream team of glycolic, tartaric, lactic, citric, and salicylic acids and blended with raspberry extract and horse chestnut, T.L.C. Framboos™ curbs excess oiliness as it reveals greater clarity and luminosity. It also enhances the performance of other products by clearing the way for maximum absorption. T.L.C. Framboos™ sinks in easily and delivers an effective level of chemical exfoliation without harsh side effects, like dryness or sensitization. Go from a drab complexion to an absolutely luminous one, practically overnight."
+      desc:"Formulated with our dream team of glycolic, tartaric, lactic, citric, and salicylic acids and blended with raspberry extract and horse chestnut, T.L.C. Framboos™ curbs excess oiliness as it reveals greater clarity and luminosity. It also enhances the performance of other products by clearing the way for maximum absorption. T.L.C. Framboos™ sinks in easily and delivers an effective level of chemical exfoliation without harsh side effects, like dryness or sensitization. Go from a drab complexion to an absolutely luminous one, practically overnight.",
+      usage: "In the evening, apply to a clean, dry face (and even to the chest and backs of hands), avoiding the eye area. Mix with Virgin Marula Oil for a dose of moisture and barrier-boosting fatty acids.",
+      ingredients: "Water/Aqua/Eau, Glycolic Acid, Butylene Glycol, Glycerin, Sodium Hydroxide, Lactic Acid, Salicylic Acid, Tartaric Acid, Vitis Vinifera (Grape) Juice Extract, Aloe Barbadensis Leaf Juice, Opuntia Ficus-Indica Extract, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Camellia Sinensis Leaf Extract, Rubus Idaeus (Raspberry) Fruit Extract, Saccharomyces Cerevisiae Extract, Buddleja Davidii Meristem Cell Culture, Sclerocarya Birrea Seed Oil, Sodium Hyaluronate Crosspolymer, Allantoin, Hydroxyethylcellulose, Galactoarabinan, Propanediol, Citric Acid, Tetrasodium Glutamate Diacetate, Xanthan Gum, Hexylene Glycol, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Potassium Sorbate, Pentylene Glycol, Sodium Carbonate, Sodium Chloride, Disodium Phosphate, Sodium Phosphate, Ethylhexylglycerin"
     })
-    file27 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/TLCFramboos_AngledShortfor.png')
-    product_img27.photo.attach(io: file27, filename: 'TLCFramboos_AngledShortfor.png') 
+
+    
+
+    skincare_27a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/TLCFramboos_AngledShortfor.png'),
+      filename: 'TLCFramboos_AngledShortfor.pn'
+    }
+    skincare_27b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/27_TLCFramboos_MotionSprite.jpeg'),
+      filename: '27_TLCFramboos_MotionSprite.jpeg'
+    }
+    skincare_27.photos.attach([skincare_27a,skincare_27b]) ``
     #---------------
     product_img28 = Product.create!({
       name: "Baby Juju Bar + Baby Pekee Bar™ Duo", 
@@ -402,14 +692,7 @@ ApplicationRecord.transaction do
     file31 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/VMO_AngledProductShot.png')
     product_img31.photo.attach(io: file31, filename: 'VMO_AngledProductShot.png') 
   #---------------
-    product_img32 = Product.create!({
-      name: "Wonderwild™ Miracle Butter", 
-      category: "SKIN CARE", 
-      price: 38.00,
-      desc:"Restorative plant butters—marula, cupuaçu, mango, and shea—help shield skin from environmental stressors, while antioxidant- and fatty-acid-rich plant oils (such as meadowfoam, pumpkin, green tea seed, kukui, and rose hip) replenish vital lipids to deeply nourish and strengthen a temporarily compromised skin barrier, bringing skin back to its healthiest state."
-    })
-    file32 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Wonderwild_AngledProductShot.png')
-    product_img32.photo.attach(io: file32, filename: 'Wonderwild_AngledProductShot.png') 
+  
 
 
   #-----------------
