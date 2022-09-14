@@ -22,7 +22,9 @@ const ProductShow = () => {
     dispatch(fetchProduct(productId));
   }, [productId]);
 
+
   if (!product) return null;
+  const photo2 = product.photoUrl[1]
 
   return (
 
@@ -43,15 +45,13 @@ const ProductShow = () => {
                         <img id="skincare-awards" src={skincare_reward}/>
                       </div>
                     </div>
-                    <div id="product-desc">
+                    <div id="product-desc"> 
                       <span>{product.desc}</span>
                     </div> 
                   </div>
               </div>
-              <div id="showImgBg">
-                <div id="show-img-display">
-                  <img id="img-direct" src={product.photoUrl} />
-                </div>
+              <div className="show-img-display">
+                  <img className="img-direct" src={photo2} />
               </div>
             </div>
         </div>

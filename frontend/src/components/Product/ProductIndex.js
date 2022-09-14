@@ -22,6 +22,8 @@ const ProductIndex = () => {
 
 
 
+
+
     return(
         <div id="outer-index-div">
             <img id="fun-elephant-banner" src={funElephantBanner}/>

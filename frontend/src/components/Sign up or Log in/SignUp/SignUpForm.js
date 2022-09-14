@@ -123,32 +123,32 @@ const SignUpForm = () => {
             <h2 id="first-time">First time here?</h2>
             <form className="sign-up" onSubmit={handleSubmit}>
                         <br/>
-                    <div class="firstName">
+                    <div className="firstName">
                         <span > FIRST NAME</span>               
                         <br/>
                         <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value) } required/>
-                        <span class="hidden" id="firstNameHidden">Please enter a valid first name</span>
+                        <span className="hidden" id="firstNameHidden">Please enter a valid first name</span>
                         <br/>
                     </div>
                     <div className="lastName">
                         <span> LAST NAME</span>              
                         <br/>
                         <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/>
-                        <span class="hidden" id="lastNameHidden">Please enter a valid last name</span>
+                        <span className="hidden" id="lastNameHidden">Please enter a valid last name</span>
                         <br/>
                     </div>
                     <div className="email">
                         <span> EMAIL</span>          
                         <br/>
                         <input  type="text" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
-                        <span class="hidden" id="emailHidden">Error: email is required</span>
+                        <span className="hidden" id="emailHidden">Error: email is required</span>
                         <br/>
                     </div>
                     <div className="confirm-email">
                         <span> CONFIRM EMAIL</span>          
                         <br/>
                         <input  type="text" value={confirmEmail} onChange={(e)=>setConfirmEmail(e.target.value)} required/>
-                        <span class="hidden" id="confirmEmailHidden">Email addresses do not match</span>
+                        <span className="hidden" id="confirmEmailHidden">Email addresses do not match</span>
                         <br/>
                     </div>
                     <div className="password">
@@ -157,10 +157,10 @@ const SignUpForm = () => {
                         <input  type="password" value={password} onChange={handleChangePassword} required/>
                         <br/>
                         <div id="message">
-                                <p id="length" class="invalid">8 characters (minimum)</p>
-                                <p id="letter" class="invalid">1 letter from A to Z with a mixture of both uppercase and lowercase letters (at least)</p>
-                                <p id="number" class="invalid">1 number (at least)</p>
-                                <p id="special-chars" class="invalid">1 punctuation mark such as !, @, #, etc.</p>
+                                <p id="length" className="invalid">8 characters (minimum)</p>
+                                <p id="letter" className="invalid">1 letter from A to Z with a mixture of both uppercase and lowercase letters (at least)</p>
+                                <p id="number" className="invalid">1 number (at least)</p>
+                                <p id="special-chars" className="invalid">1 punctuation mark such as !, @, #, etc.</p>
                         </div>
                         <br/>
                     </div>

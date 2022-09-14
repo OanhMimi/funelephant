@@ -4,6 +4,8 @@ import { getCartItems, fetchCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { deleteCartItem } from "../../store/cartItems";
 import CartItem from "./CartItem";
+import { GrClose } from "react-icons/gr";
+
 
 const CartItemIndex = ({ setShowCartItems }) => {
   const dispatch = useDispatch();
@@ -20,14 +22,14 @@ const CartItemIndex = ({ setShowCartItems }) => {
       <div className="container-for-cart"></div>
       <div className="container-for-cart-box">
         <div className="cartItemIndex-container">
-          <div className="container-2-top">
+          <div className="cart-2-top">
             <button
               id="close-cart-item"
               onClick={() => setShowCartItems(false)}
             >
-              X
+              < GrClose/>
             </button>
-            <h1>Shopping Bag</h1>
+            <h1 id="shopping-bag">Shopping Bag</h1>
             <div className="cart-items-contents">
               {cartItems.map((cartItem) => (
                 <CartItem cartItem={cartItem}/>

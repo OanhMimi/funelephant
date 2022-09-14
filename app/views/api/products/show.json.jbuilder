@@ -1,5 +1,7 @@
 json.product do
     json.partial! 'api/products/product', product: @product
+    json.photo_url @product.photos.map { |product| product.url}
+
 end
  
 json.reviews do 

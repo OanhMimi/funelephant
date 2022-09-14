@@ -273,9 +273,10 @@ ApplicationRecord.transaction do
       filename: 'Call_It_A_Night_Angled_Shot.png'
     }
     skincare_8b = {
-      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/8_CIAN_MotionSprite.jpeg')
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/8_CIAN_MotionSprite.jpeg'),
       filename: '8_CIAN_MotionSprite.jpeg'
     }
+
     skincare_8.photos.attach([skincare_8a,skincare_8b])
     #-----------------------
     skincare_9 = Product.create!({
@@ -298,7 +299,7 @@ ApplicationRecord.transaction do
     }
     skincare_9.photos.attach([skincare_9a,skincare_9b])
     #---------------
-    sincare_10 = Product.create!({
+    skincare_10 = Product.create!({
       name: "Ceramighty™ AF Eye Balm", 
       category: "SKIN CARE", 
       price: 60.00,
@@ -312,7 +313,7 @@ ApplicationRecord.transaction do
       filename: 'Ceramighty.png'
     }
     skincare_10b = {
-      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/10_Ceramighty_Motion_Sprite.png')
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/10_Ceramighty_Motion_Sprite.png'),
       filename: '10_Ceramighty_Motion_Sprite.png'
     }
     skincare_10.photos.attach([skincare_10a,skincare_10b]) 
@@ -447,7 +448,7 @@ ApplicationRecord.transaction do
       price: 18.00,
       desc:"Spiked with an antioxidant-rich blend of avocado and mongongo nut oils, plus a tripeptide and sea fern algae, Lippe gives lips a plump look and a better-defined lip line. This buttery, luxurious balm softens and plumps the look of rough, parched lips, keeping them in lip-top condition.",
       usage: "Apply to lips as needed. Use alone as a sheer lip balm or under any lipstick for a silky smooth application.",
-      description: "Cocos Nucifera (Coconut) Oil, Sclerocarya Birrea Seed Oil, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Beeswax/Cera Alba/Cire d’abeille, Ozokerite, Polyisobutene, Glycine Soja (Soybean) Oil, Copernicia Cerifera (Carnauba) Wax/Cera Carnauba/Cire de carnauba, Euphorbia Cerifera (Candelilla) Wax/Candelilla Cera/Cire de candelilla, Camellia Oleifera Leaf Extract, Dictyopteris Membranacea Extract, Magnolia Grandiflora Bark Extract, Carthamus Tinctorius (Safflower) Seed Oil, Persea Gratissima (Avocado) Oil, Schinziophyton Rautanenii (Mongongo) Kernel Oil, Vaccinium Macrocarpon (Cranberry) Seed Oil, Tocopheryl Acetate, Dipotassium Glycyrrhizate, Palmitoyl Tripeptide-1, Tetrahexyldecyl Ascorbate, Ethylhexyl Palmitate, Dicaprylyl Ether, Tribehenin, Sorbitan Isostearate, Lauryl Alcohol, Linoleic Acid, Linolenic Acid, Caprylyl Glycol, Phenoxyethanol "
+      ingredients: "Cocos Nucifera (Coconut) Oil, Sclerocarya Birrea Seed Oil, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Beeswax/Cera Alba/Cire d’abeille, Ozokerite, Polyisobutene, Glycine Soja (Soybean) Oil, Copernicia Cerifera (Carnauba) Wax/Cera Carnauba/Cire de carnauba, Euphorbia Cerifera (Candelilla) Wax/Candelilla Cera/Cire de candelilla, Camellia Oleifera Leaf Extract, Dictyopteris Membranacea Extract, Magnolia Grandiflora Bark Extract, Carthamus Tinctorius (Safflower) Seed Oil, Persea Gratissima (Avocado) Oil, Schinziophyton Rautanenii (Mongongo) Kernel Oil, Vaccinium Macrocarpon (Cranberry) Seed Oil, Tocopheryl Acetate, Dipotassium Glycyrrhizate, Palmitoyl Tripeptide-1, Tetrahexyldecyl Ascorbate, Ethylhexyl Palmitate, Dicaprylyl Ether, Tribehenin, Sorbitan Isostearate, Lauryl Alcohol, Linoleic Acid, Linolenic Acid, Caprylyl Glycol, Phenoxyethanol "
     })
     skincare_17a = {
       io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Lippe_Balm_Angled_Shot.png'),
@@ -602,8 +603,8 @@ ApplicationRecord.transaction do
       category: "SKIN CARE", 
       price: 34.00,
       desc:"Skin-compatible Slaai™ effortlessly removes even water-resistant formulations and is free of PEGs and essential oils. Formulated with antioxidant-rich fruit extracts and oils to help soothe, plus a nourishing African oil blend of marula, baobab, kalahari melon, mongongo, and ximenia, Slaai™ Makeup-Melting Butter Cleanser cleanses and moisturizes without any irritants or sensitizers. Designed to be used on dry skin, Slaai™ removes excess oil, grime, and makeup from skin. Adding water activates Slaai™, transforming it into a milk that rinses cleanly, leaving behind a dewy glow.",
-      usage: "",
-      ingredients: ""
+      usage: "Add water to activate, rinse well with warm water, and pat dry. May also be removed with a soft, damp cloth. In the morning (optional), 1 or 2 times per week, add our Bamboo Booster™ to Slaai™ for a customized, skin-refining physical exfoliation to aid in the removal of dead skin cells that  have accumulated on the surface overnight. Tip: If using retinol, we recommend avoiding Bamboo Booster™, or using with caution, as it can be too much for skin.",
+      ingredients: "Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Carthamus Tinctorius (Safflower) Seed Oil, Lauryl Laurate, Polyglyceryl-3 Laurate, Polyhydroxystearic Acid, Helianthus Annuus (Sunflower) Seed Wax, Polyglyceryl-10 Laurate, Sclerocarya Birrea Seed Oil, Euterpe Oleracea Fruit Oil, Actinidia Chinensis (Kiwi) Fruit Extract, Fragaria Ananassa (Strawberry) Seed Extract, Vaccinium Macrocarpon (Cranberry) Seed Oil, Borago Officinalis Seed Oil, Adansonia Digitata Seed Oil, Polyglyceryl-2 Caprate, Citrullus Lanatus (Watermelon) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Schinziophyton Rautanenii Kernel Oil, Vaccinium Angustifolium (Blueberry) Fruit Extract, Ximenia Americana Seed Oil, Tocopherol, Glycerin"
     })
 
     skincare_25a = {
@@ -644,8 +645,6 @@ ApplicationRecord.transaction do
       ingredients: "Water/Aqua/Eau, Glycolic Acid, Butylene Glycol, Glycerin, Sodium Hydroxide, Lactic Acid, Salicylic Acid, Tartaric Acid, Vitis Vinifera (Grape) Juice Extract, Aloe Barbadensis Leaf Juice, Opuntia Ficus-Indica Extract, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Camellia Sinensis Leaf Extract, Rubus Idaeus (Raspberry) Fruit Extract, Saccharomyces Cerevisiae Extract, Buddleja Davidii Meristem Cell Culture, Sclerocarya Birrea Seed Oil, Sodium Hyaluronate Crosspolymer, Allantoin, Hydroxyethylcellulose, Galactoarabinan, Propanediol, Citric Acid, Tetrasodium Glutamate Diacetate, Xanthan Gum, Hexylene Glycol, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Potassium Sorbate, Pentylene Glycol, Sodium Carbonate, Sodium Chloride, Disodium Phosphate, Sodium Phosphate, Ethylhexylglycerin"
     })
 
-    
-
     skincare_27a = {
       io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/TLCFramboos_AngledShortfor.png'),
       filename: 'TLCFramboos_AngledShortfor.pn'
@@ -654,64 +653,417 @@ ApplicationRecord.transaction do
       io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/27_TLCFramboos_MotionSprite.jpeg'),
       filename: '27_TLCFramboos_MotionSprite.jpeg'
     }
-    skincare_27.photos.attach([skincare_27a,skincare_27b]) ``
+    skincare_27.photos.attach([skincare_27a,skincare_27b]) 
     #---------------
-    product_img28 = Product.create!({
+    skincare_28 = Product.create!({
       name: "Baby Juju Bar + Baby Pekee Bar™ Duo", 
       category: "SKIN CARE", 
       price: 22.00,
-      desc:"Formulated at nonstripping pH levels, Juju Bar and Pekee Bar™ easily remove grime and makeup from the day and are appropriate for all skin."
+      desc:"Formulated at nonstripping pH levels, Juju Bar and Pekee Bar™ easily remove grime and makeup from the day and are appropriate for all skin.",
+      usage: "Wet Juju Bar and lather until creamy. With your hands, massage over face, neck, and chest. Rinse with warm water and pat dry. Use 2 or 3 times per week. Do not apply bar directly to skin.",
+      ingredients: "Ingredients: Sodium Coco-Sulfate, Disodium Lauryl Sulfosuccinate, Triticum Vulgare (Wheat) Starch, Cetearyl Alcohol, Bambusa Vulgaris Leaf/Stem Extract, Paraffin, Sclerocarya Birrea Seed Oil, Water/Aqua/Eau, Heilmoor Clay, Titanium Dioxide (CI 77891), Helianthus Annuus (Sunflower) Seed Oil, Euterpe Oleracea Fruit Extract, Lycium Barbarum Fruit Extract"
     })
-    file28 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Travel_Bar_Duo_Angled_Shot.png')
-    product_img28.photo.attach(io: file28, filename: 'Travel_Bar_Duo_Angled_Shot.png') 
+    skincare_28a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Travel_Bar_Duo_Angled_Shot.png'),
+      filename: 'Travel_Bar_Duo_Angled_Shot.png'
+    }
+    skincare_28b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/28_BarDuo_MotionSprite.jpeg'),
+      filename: '28_BarDuo_MotionSprite.jpeg'
+    }
+    skincare_28.photos.attach([skincare_28a,skincare_28b]) 
     #---------------
-    product_img29 = Product.create!({
+    skincare_29 = Product.create!({
       name: "Umbra Tinte™ Physical Daily Defense SPF 30", 
       category: "SKIN CARE", 
       price: 36.00,
-      desc:"This tinted daily sunscreen is loaded with potent antioxidants, like astaxanthin, grape juice, and sunflower shoot extract, to minimize the appearance of photoaging for a more youthful-looking complexion. Infused with raspberry seed and marula oils, Umbra Tinte™ delivers essential moisture and helps minimize the look of fine lines and wrinkles for skin that appears healthy and preserved. This unique formulation is ideal for daily use without any residue or greasiness, and has a universally flattering tint for all skin tones. Umbra Tinte™ is suitable for all skin, including the most sensitive."
+      desc:"This tinted daily sunscreen is loaded with potent antioxidants, like astaxanthin, grape juice, and sunflower shoot extract, to minimize the appearance of photoaging for a more youthful-looking complexion. Infused with raspberry seed and marula oils, Umbra Tinte™ delivers essential moisture and helps minimize the look of fine lines and wrinkles for skin that appears healthy and preserved. This unique formulation is ideal for daily use without any residue or greasiness, and has a universally flattering tint for all skin tones. Umbra Tinte™ is suitable for all skin, including the most sensitive.",
+      usage: "Every morning, apply evenly onto face, neck, chest, and back of hands. Apply liberally 15 minutes before sun exposure. Reapply at least every two hours. Use a water-resistant sunscreen if swimming or sweating. ",
+      ingredients: "Water, Caprylic/Capric Triglyceride, Dicaprylyl Carbonate, Glycerin, Pentylene Glycol, Steareth-2, Propanediol, Steareth-21, Polyhydroxystearic Acid, Cetearyl Alcohol, Silica, Sclerocarya Birrea Seed Oil, Aloe Barbadensis Leaf Extract, Chondrus Crispus Extract, Haematococcus Pluvialis Extract, Helianthus Annuus (Sunflower) Sprout Extract, Vitis Vinifera (Grape) Juice Extract, Helianthus Annuus (Sunflower) Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Raspberry Seed Oil/Tocopheryl Succinate Aminopropanediol Esters, Hydrolyzed Wheat Protein, Tocopheryl Acetate, Tocopherol, Sea Water, Acetyl Glucosamine, Cetearyl Glucoside, Sodium Stearoyl Glutamate, Tetrahexyldecyl Ascorbate, Glycine, Sucrose, Lecithin, Triethoxycaprylylsilane, Xanthan Gum, Trisodium Ethylenediamine Disuccinate, Caprylhydroxamic Acid, Caprylyl Glycol, Sodium C14-16 Olefin Sulfonate, Phenoxyethanol, Chlorphenesin, Sodium Dehydroacetate, Iron Oxides (CI 77491, CI 77492, CI 77499)"
     })
-    file29 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Umbra_Sheer_Angled_Shot.png')
-    product_img29.photo.attach(io: file29, filename: 'Umbra_Sheer_Angled_Shot.png') 
-    #---------------
-    product_img30 = Product.create!({
+    skincare_29a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Umbra_Sheer_Angled_Shot.png'),
+      filename: 'Umbra_Sheer_Angled_Shot.png'
+    }
+    skincare_29b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/29_UmbraSheer_MotionSprite.jpeg'),
+      filename: '29_UmbraSheer_MotionSprite.jpeg'
+    }
+    skincare_29.photos.attach([skincare_29a,skincare_29b]) 
+    #-------------------
+    skincare_30 = Product.create!({
       name: "Umbra Sheer™ Physical Daily Defense SPF 30", 
       category: "SKIN CARE", 
       price: 34.00,
-      desc:"Umbra Sheer™ is a daily sunscreen loaded with potent antioxidants, like astaxanthin, grape juice, and sunflower shoot extract, to minimize the appearance of photoaging for a more youthful-looking complexion. Infused with raspberry seed and marula oils, Umbra Sheer™ delivers essential moisture and minimizes the look of fine lines and wrinkles for skin that appears healthy and preserved."
+      desc:"Umbra Sheer™ is a daily sunscreen loaded with potent antioxidants, like astaxanthin, grape juice, and sunflower shoot extract, to minimize the appearance of photoaging for a more youthful-looking complexion. Infused with raspberry seed and marula oils, Umbra Sheer™ delivers essential moisture and minimizes the look of fine lines and wrinkles for skin that appears healthy and preserved.",
+      usage: "Every morning, apply evenly to face, neck, chest, and backs of hands. Apply liberally 15 minutes before sun exposure. Reapply at least every two hours. Use a water-resistant sunscreen if swimming or sweating.",
+      ingredients: "water, caprylic/capric triglyceride, dicaprylyl carbonate, pentylene glycol, glycerin, steareth-2, propanediol, steareth-21, polyhydroxystearic acid, cetearyl alcohol, silica, sclerocarya birrea seed oil, aloe barbadensis leaf extract, chondrus crispus extract, haematococcus pluvialis extract, helianthus annuus (sunflower) sprout extract, vitis vinifera (grape) juice extract, helianthus annuus (sunflower) seed oil, simmondsia chinensis (jojoba) seed oil, raspberry seed oil/tocopheryl succinate aminopropanediol esters, hydrolyzed wheat protein, tocopheryl acetate, tocopherol, sea water, acetyl glucosamine, cetearyl glucoside, sodium stearoyl glutamate, tetrahexyldecyl ascorbate, glycine, sucrose, lecithin, triethoxycaprylylsilane, xanthan gum, trisodium ethylenediamine disuccinate, caprylhydroxamic acid, caprylyl glycol, phenoxyethanol, chlorphenesin, sodium dehydroacetate, iron oxides (CI 77491)"
     })
-    file30 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Umbra_Tinte_Angled_Shot.png')
-    product_img30.photo.attach(io: file30, filename: 'Umbra_Tinte_Angled_Shot.png') 
+    skincare_30a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/Umbra_Tinte_Angled_Shot.png'),
+      filename: 'Umbra_Tinte_Angled_Shot.png'
+    }
+    skincare_30b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/30_UmbraTinte_MotionSprite.jpeg'),
+      filename: '30_UmbraTinte_MotionSprite.jpeg'
+    }
+    skincare_30.photos.attach([skincare_30a,skincare_30b]) 
   #---------------
-    product_img31 = Product.create!({
+    skincare_31 = Product.create!({
       name: "Virgin Marula Luxury Facial Oil", 
       category: "SKIN CARE", 
       price: 68.00,
-      desc:"Straight from the pip of the marula fruit, our pure, unrefined oil is virtually untouched by any chemical or fragrance, natural or synthetic. This super-absorbable oil will quickly sink in and diminish the look of fine lines and wrinkles. Appropriate for all skin, including the most sensitive. Our marula oil contains greater concentrations of polyphenols than dark chocolate or green or black teas, which means a powerful antioxidant defense against pollution and damaging environmental free radicals."
+      desc:"Straight from the pip of the marula fruit, our pure, unrefined oil is virtually untouched by any chemical or fragrance, natural or synthetic. This super-absorbable oil will quickly sink in and diminish the look of fine lines and wrinkles. Appropriate for all skin, including the most sensitive. Our marula oil contains greater concentrations of polyphenols than dark chocolate or green or black teas, which means a powerful antioxidant defense against pollution and damaging environmental free radicals.",
+      usage: "Apply 2-3 drops evenly to face, neck, chest, hands, backs of arms, or any place needing increased moisture without any greasy residue for balanced, glowing, healthy-looking skin. Use with Drunk Elephant cleansers, serums, and sun protection as part of your complete Drunk Elephant skincare routine.",
+      ingredients: "100% Unrefined Sclerocarya Birrea (Marula) Kernel Oil."
     })
-    file31 = URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/VMO_AngledProductShot.png')
-    product_img31.photo.attach(io: file31, filename: 'VMO_AngledProductShot.png') 
-  #---------------
   
+    skincare_31a = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/VMO_AngledProductShot.png'),
+      filename: 'VMO_AngledProductShot.png'
+    }
+    skincare_31b = {
+      io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/31_VMO_MotionSprite.jpeg'),
+      filename: '31_VMO_MotionSprite.jpeg'
+    }
+    skincare_31.photos.attach([skincare_31a,skincare_31b]) 
+  #---------------
+  ### HAIR CARE
+  #--------
+  haircare_1 = Product.create!({
+    name: "The Littles™ Hair and Body 3.0", 
+    category: "HAIR CARE", 
+    price: 59.00,
+    desc:"This Littles starter kit is the best way to dip your, well, toes, into getting #drunkheadtotoe. It comes wrapped up with a cheery coral comb in a neon blue case and means we’ll care for you, head, shoulders, knees and toes (knees and toes). And scalp. And hair. And legs. And feet....",
+    usage: "When hair is dry, apply directly to a dry scalp and massage. Allow to sit for 10 minutes or more. Rinse thoroughly and follow with Cocomino™ Shampoo and Conditioner. Use 1 or 2 times per week. Apply to wet hair and massage. Add a little more water to get it nice and sudsy. Rinse well. Do not repeat. Follow with Cocomino™ Marula Cream Conditioner for best results",
+    ingredients: "1Water/Aqua/Eau, Cellulose Acetate, Glycolic Acid, Dicaprylyl Carbonate, Glycerin, Cetearyl Alcohol, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Sodium Hydroxide, Coconut Alkanes, Cetearyl Olivate, Sorbitan Olivate, Lactic Acid, Sclerocarya Birrea Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Citrullus Lanatus (Watermelon) Seed Oil, Passiflora Edulis Seed Oil, Caprylic/Capric Triglyceride, Adansonia Digitata Seed Extract, Salicylic Acid, Sodium PCA, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Vitis Vinifera (Grape) Juice Extract, Sodium Lactate, Sodium Hyaluronate Crosspolymer, Coco-Caprylate/Caprate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Citric Acid, Aspartic Acid, Sorbitan Isostearate, Propanediol, Zinc Oxide, Polysorbate 60, Phenoxyethanol, Caprylyl Glycol, Tocopherol, Hexylene Glycol, Pentylene Glycol, Ethylhexylglycerin"
+  })
+  haircare_1a = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/1_haircare.png'),
+    filename: '1_haircare.png'
+  }
+  haircare_1b = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/1a_haircare_sprite.jpg'),
+    filename: '1a_haircare_sprite.jpg'
+  }
+  haircare_1.photos.attach([haircare_1a,haircare_1b]) 
 
+  #-------------------
+  haircare_2 = Product.create!({
+    name: "Silkamino™ Conditioning Leave-In Milk", 
+    category: "HAIR CARE", 
+    price: 32.00,
+    desc:"Silk amino acids and proteins rebuild weakened hair bonds, strengthening and smoothing damaged, color-processed, and dry strands. Nourishing plant-derived oils—Abyssinian, argan, and marula—replenish and seal in moisture while restoring shine and manageability for a fuss- and frizz-free finish with or without heat styling.
+
+    We skipped the non-water-soluble silicones and the traditional (and hard-to-remove) plasticizers, instead utilizing gentle, plant-derived ingredients that work with your hair to restore strength and natural movement without leaving any buildup. This deeply moisturizing and restorative treatment rescues dry hair while shielding it from future damage from heat-styling tools.",
+    usage: "Apply a small amount to freshly cleansed, towel-dried hair, combing through from roots to ends. Style as usual. Tip: Apply to dry hair as needed throughout the day for a boost of moisture, smoothness, and shine.",
+    ingredients: "Water/Aqua/Eau, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Argania Spinosa Kernel Oil, Sclerocarya Birrea Seed Oil, Crambe Abyssinica Seed Oil, Stearamidopropyl Dimethylamine, Sodium PCA, Behentrimonium Methosulfate, Hydrolyzed Silk, Silk Amino Acids, Pseudozyma Epicola/Camellia Sinensis Seed Oil Ferment Extract Filtrate, Sericin, Panthenol, Hydrolyzed Quinoa, Dicaprylyl Carbonate, Sodium Lactate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Hydroxyethylcellulose, Aspartic Acid, Glycine Soja (Soybean) Oil, Sorbitan Oleate, Sodium Phosphate, Tocopherol, Lauryl Glucoside, Vanilla Planifolia Fruit Extract, Disodium Phosphate, Citric Acid, Polyquaternium-37, Acrylates/Stearyl Methacrylate Copolymer, Caprylyl Glycol, Chlorphenesin, Sodium Benzoate, Phenoxyethanol, Potassium Sorbate, Benzyl Alcohol"
+  })
+  haircare_2a = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/2_haircare.png'),
+    filename: '2_haircare.png'
+  }
+  haircare_2b = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/2a_haircare_sprite.png'),
+    filename: '2a_haircare_sprite.png'
+  }
+  haircare_2.photos.attach([haircare_2a,haircare_2b]) 
 
   #-----------------
+  haircare_3 = Product.create!({
+    name: "Silkamino™ Mega-Moisturizing Masker", 
+    category: "HAIR CARE", 
+    price: 28.00,
+    desc:"Marula butter, sunflower fatty acids, and panthenol penetrate to replenish and seal in moisture while a fortifying blend of hydration-boosting and hair-smoothing agents restores shine and touchability to even the most unmanageable, extra-dry, or damaged hair.
+
+    This super-nourishing cream formula infuses strands with a concentrated blend of silk amino acids and proteins to rebuild bonds, strengthening and smoothing the hair shaft and giving hair the ultimate body, bounce, and shine.",
+    usage: "After cleansing hair with the Drunk Elephant shampoo of your choice, apply a small amount of Silkamino™ Masker, starting at the ends and working up to the roots. Wait 1-3 minutes and rinse well. For a deeper weekly treatment, apply a generous amount, comb through to disperse evenly, and wait 20-30 minutes before rinsing.",
+    ingredients: "Water/Aqua/Eau, Cetearyl Alcohol, Shea Butter Glycerides, Behentrimonium Chloride, Glycerin, Brassicamidopropyl Dimethylamine, Cetyl Alcohol, Diheptyl Succinate, Polyester-37, Capryloyl Glycerin/Sebacic Acid Copolymer, Caprylic/Capric Triglyceride, Disunfloweroylethyl Dimonium Chloride, Sunflower Seed Oil Glycerides, Sclerocarya Birrea Seed Butter, Cetrimonium Chloride, Sclerocarya Birrea Seed Oil, Silk Amino Acids, Hydrolyzed Silk, Helianthus Annuus (Sunflower) Seed Oil, Sericin, Panthenol, Vanilla Planifolia Fruit Extract, Lauryl Lactyl Lactate, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Caprylyl Glycol, Sodium Benzoate, Ethylhexylglycerin, Hexylene Glycol, Phenoxyethanol, Potassium Sorbate, Benzyl Alcohol"
+  })
+  haircare_3a = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/3_haircare.png'),
+    filename: '3_haircare.png'
+  }
+  haircare_3b = {
+    io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/3a_haircare_sprite.jpeg'),
+    filename: '3a_haircare_sprite.jpeg'
+  }
+  haircare_3.photos.attach([haircare_3a,haircare_3b]) 
+
+#-----------------
+haircare_4 = Product.create!({
+  name: "Cocomino™ Marula Cream Conditioner ", 
+  category: "HAIR CARE", 
+  price: 55.00,
+  desc:"Formulated with an advanced blend of amino acids and smoothing, hydrating agents, Cocomino™ fights frizz and static while adding shine. Marula butter and a nourishing mix of oils (including argan, mongongo, baobab, tamanu, and kalahari seed) leave hair soft—never greasy or weighed down. Our multi-amino-acid blend adds strength, improves manageability, and gives hair a healthier appearance with visible body and bounce. At a scalp-compatible acidic pH of 3.6, Cocomino™ Marula Cream Conditioner, powered with coconut alkanes, won’t disrupt scalp’s delicate acid mantle or cause the buildup commonly associated with silicones. ",
+  usage: "For best results, apply to freshly cleansed hair and comb through from roots to ends to disperse evenly. Rinse well.",
+  ingredients: "Ingredients: Water/Aqua/Eau, Cetearyl Alcohol, Diheptyl Succinate, Glycerin, Coconut Alkanes, Behentrimonium Methosulfate, Sclerocarya Birrea Seed Butter, Sclerocarya Birrea Seed Oil, Argania Spinosa Kernel Oil, Aloe Barbadensis Leaf Juice, Coco-Caprylate/Caprate, Passiflora Edulis Seed Oil, Plukenetia Volubilis Seed Oil, Rosa Canina Fruit Oil, Adansonia Digitata Seed Oil, Caprylic/Capric Triglyceride, Calophyllum Inophyllum Seed Oil, Ribes Nigrum (Black Currant) Seed Oil, Schinziophyton Rautanenii Kernel Oil,  Citrullus Lanatus (Watermelon) Seed Oil, Ximenia Americana Seed Oil, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Simmondsia Chinesis (Jojoba) Seed Oil, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium PCA, Niacinamide, Panthenol, Sodium Lactate, PCA, Glycolic Acid, Pseudozyma Epicola/Argania Spinosa Kernel Oil/Camellia Japonica Seed Oil/Camellia Sinensis Seed Oil/Sunflower Seed Oil/Sweet Almond Oil Ferment Extract Filtrate, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Hydroxyethylcellulose, Polyester-37, Adansonia Digitata Seed Extract, Aspartic Acid, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Sodium Benzoate, Citric Acid, Tocopherol, Calcium Gluconate, Gluconolactone"
+})
+haircare_4a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/4_haircare.png'),
+  filename: '4_haircare.png'
+}
+haircare_4b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/4a_haircare_sprite.jpeg'),
+  filename: '4a_haircare_sprite.jpeg'
+}
+haircare_4.photos.attach([haircare_4a,haircare_4b]) 
+
+#-----------------
+haircare_5 = Product.create!({
+  name: "Wild Marula™ Tangle Spray", 
+  category: "HAIR CARE", 
+  price: 25.00,
+  desc:"Nourishing plant oils—including sacha inchi seed, pracaxi seed, marula, and argan—condition while penetrating the hair shaft to strengthen it against the high temperatures of hair straighteners and dryers. Our multi-amino-acid blend adds strength, improves manageability, and gives hair a healthier appearance with visible body and bounce. Added to damp hair and before heat styling (or air-drying), Wild Marula™ Tangle Spray leaves hair feeling healthier— never sticky, greasy or heavy. Wild Marula™ Tangle Spray has a pH of 4.5. ",
+  usage: "Shake before use. Spray evenly over towel-dried or damp hair and comb through. No need to rinse. ",
+  ingredients: "Water/Aqua/Eau, Glycerin, Sodium PCA, Coconut Alkanes,Pseudozyma Epicola/Argania Spinosa Kernel Oil/Camellia Japonica Seed Oil/Camellia Sinensis Seed Oil/Sunflower Seed Oil/Sweet Almond Oil Ferment Extract Filtrate, Brassicamidopropyl Dimethylamine, Sclerocarya Birrea Seed Oil, Argania Spinosa Kernel Oil, Coco-Caprylate/Caprate, Plukenetia Volubilis Seed Oil, Caprylic/Capric Triglyceride, Pentaclethra Macroloba Seed Oil, Panthenol, Pentylene Glycol, Cocos Nucifera (Coconut) Oil, Sodium Lactate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Aspartic Acid, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Citric Acid, Polysorbate 20, Caprylyl Glycol, Hexylene Glycol, Phenoxyethanol, Ethylhexylglycerin"
+})
+haircare_5a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/5_haircare.png'),
+  filename: '5_haircare.png'
+}
+haircare_5b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/5a_haircare_sprite.png'),
+  filename: '5a_haircare_sprite.png'
+}
+haircare_5.photos.attach([haircare_5a,haircare_5b]) 
+
+#-----------------
+haircare_6 = Product.create!({
+  name: "T.L.C. Happi Scalp™ Scrub", 
+  category: "HAIR CARE", 
+  price: 36.00,
+  desc:"Using a blend of 6 antioxidant- and fatty-acid-rich plant oils (including marula, mongongo, baobab, and maracuja) and a quick-absorbing multi-amino-acid blend, T.L.C. Happi Scalp™ Scrub keeps the scalp nourished, flake-free, and balanced. ",
+  usage: "Before showering, when hair is dry, apply directly to a dry scalp and massage. Allow to sit for 10 minutes. Rinse thoroughly and follow with Cocomino™ Shampoo and Conditioner. Use 1-2 times per week.",
+  ingredients: " Water/Aqua/Eau, Cellulose Acetate, Glycolic Acid, Dicaprylyl Carbonate, Glycerin, Cetearyl Alcohol, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Sodium Hydroxide, Coconut Alkanes, Cetearyl Olivate, Sorbitan Olivate, Lactic Acid, Sclerocarya Birrea Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Citrullus Lanatus (Watermelon) Seed Oil, Passiflora Edulis Seed Oil, Caprylic/Capric Triglyceride, Adansonia Digitata Seed Extract, Salicylic Acid, Sodium PCA, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Vitis Vinifera (Grape) Juice Extract, Sodium Lactate, Sodium Hyaluronate Crosspolymer, Coco-Caprylate/Caprate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Citric Acid, Aspartic Acid, Sorbitan Isostearate, Propanediol, Zinc Oxide, Polysorbate 60, Phenoxyethanol, Caprylyl Glycol, Tocopherol, Hexylene Glycol, Pentylene Glycol, Ethylhexylglycerin"
+})
+haircare_6a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/6_haircare.png'),
+  filename: '6_haircare.png'
+}
+haircare_6b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/6a_haircare_sprite.png'),
+  filename: '6a_haircare_sprite.png'
+}
+haircare_6.photos.attach([haircare_6a,haircare_6b]) 
+
+#-----------------
+haircare_7 = Product.create!({
+  name: "Laini Latherless™ Conditioning Co-Cleanser", 
+  category: "HAIR CARE", 
+  price: 45.00,
+  desc:"Designed to be the gentlest, most scalp-supportive shampoo you’ve ever used, Laini Latherless™ Conditioning Co-Cleanser uses a blend of plant-derived conditioning and smoothing agents—along with a mild, no-lather cleansing system—to care for all hair types (including the most fragile and processed of strands) without stripping away vital oils or protective substances. Laini Latherless™ has a pH of 3.5, which means it will cleanse and condition while supporting the naturally acidic balance of both your hair and scalp.",
+  usage: "Apply Laini Latherless™ to wet hair and massage for 1-2 minutes, making sure you saturate hair and cleanse your scalp, too. Rinse thoroughly for a full minute. Follow with Cocomino™ Conditioner, depending on your hair’s needs. Most people will find there is no need to follow Laini Latherless™ with a separate conditioner—we recommend trying it without to see how your hair responds.",
+  ingredients: "Water/Aqua/Eau, Cetyl Alcohol, Cetearyl Alcohol, Glycerin, Stearamidopropyl Dimethylamine, Sclerocarya Birrea Seed Oil, Argania Spinosa Kernel Oil, Plukenetia Volubilis Seed Oil, Rosa Canina Fruit Oil, Caprylic/Capric Triglyceride, Simmondsia Chinensis (Jojoba) Seed Oil, Behentrimonium Methosulfate, Brassicamidopropyl Dimethylamine, Aloe Barbadensis Leaf Juice, Sodium PCA, Capryloyl Glycerin/Sebacic Acid Copolymer, Panthenol, Sodium Lactate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Diheptyl Succinate, Vanilla Planifolia Fruit Extract, Aspartic Acid, Cocamidopropyl Betaine, Citric Acid, Gluconolactone, Stearyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Sodium Chloride, Sodium Glycolate, Chloroacetic Acid, Sodium Hydroxide, Hexylene Glycol, Ethylhexylglycerin"
+})
+haircare_7a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/7_haircare.png'),
+  filename: '7_haircare.png'
+}
+haircare_7b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/7a_LainiLatherless_MotionSprite.jpeg'),
+  filename: '7a_LainiLatherless_MotionSprite.jpeg'
+}
+haircare_7.photos.attach([haircare_7a,haircare_7b]) 
+
+
+#-----------------
+haircare_8 = Product.create!({
+  name: "Laini Latherless™ Conditioning Co-Cleanser Midi", 
+  category: "HAIR CARE", 
+  price: 20.00,
+  desc:"Designed to be the gentlest, most scalp-supportive shampoo you’ve ever used, Laini Latherless™ Conditioning Co-Cleanser uses a blend of plant-derived conditioning and smoothing agents—along with a mild, no-lather cleansing system—to care for all hair types (including the most fragile and processed of strands) without stripping away vital oils or protective substances. Laini Latherless™ has a pH of 3.5, which means it will cleanse and condition while supporting the naturally acidic balance of both your hair and scalp.",
+  usage: "Apply Laini Latherless™ to wet hair and massage for 1-2 minutes, making sure you saturate hair and cleanse your scalp, too. Rinse thoroughly for a full minute. Follow with Cocomino™ Conditioner, depending on your hair’s needs. Most people will find there is no need to follow Laini Latherless™ with a separate conditioner—we recommend trying it without to see how your hair responds.",
+  ingredients: "Water/Aqua/Eau, Cetyl Alcohol, Cetearyl Alcohol, Glycerin, Stearamidopropyl Dimethylamine, Sclerocarya Birrea Seed Oil, Argania Spinosa Kernel Oil, Plukenetia Volubilis Seed Oil, Rosa Canina Fruit Oil, Caprylic/Capric Triglyceride, Simmondsia Chinensis (Jojoba) Seed Oil, Behentrimonium Methosulfate, Brassicamidopropyl Dimethylamine, Aloe Barbadensis Leaf Juice, Sodium PCA, Capryloyl Glycerin/Sebacic Acid Copolymer, Panthenol, Sodium Lactate, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Diheptyl Succinate, Vanilla Planifolia Fruit Extract, Aspartic Acid, Cocamidopropyl Betaine, Citric Acid, Gluconolactone, Stearyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Sodium Chloride, Sodium Glycolate, Chloroacetic Acid, Sodium Hydroxide, Hexylene Glycol, Ethylhexylglycerin"
+})
+haircare_8a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/8_haircare.png'),
+  filename: '8_haircare.png'
+}
+haircare_8b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/8a_Laini-Midi-Motion-Sprite.jpeg'),
+  filename: '8a_Laini-Midi-Motion-Sprite.jpeg'
+}
+haircare_8.photos.attach([haircare_8a,haircare_8b]) 
+
+#-----------------
+gifts_1 = Product.create!({
+  name: "Drunk Break™: Wake-Up Haul Day Kit ($162 value)", 
+  category: "GIFTS", 
+  price: 98.00,
+  desc:"30 days. That’s how long it takes to see a total and complete reboot of your skin when you use the Drunk Break™ Wake-Up Haul Day Kit—along with any other Drunk Elephant products—exclusively. (That means really, truly nothing else.)",
+  usage: "In the morning, mix 1 pump of C-Firma™ Fresh, 1 pump of Protini™ Serum, and 1 swipe of Protini™ Cream in the palm of your hand and apply all at once. Finish with 1 pump of C-Tango™ around the eyes.",
+  ingredients: "Water/Aqua/Eau, Dimethyl Isosorbide, Ascorbic Acid, Laureth-23, Glycerin, Tocopherol, Lactobacillus/Pumpkin Ferment Extract, Sclerocarya Birrea Seed Oil, Dipotassium Glycyrrhizate, Glycyrrhiza Glabra (Licorice) Root Extract, Vitis Vinifera (Grape) Juice Extract, Ferulic Acid, Phyllanthus Emblica Fruit Extract, Camellia Sinensis Leaf Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Propanediol, Gluconolactone, Sodium Hyaluronate Crosspolymer, Sodium Hyaluronate, Oryza Sativa (Rice) Bran Extract, Glutamylamidoethyl Imidazole, Tetrahydrobisdemethoxydiferuloylmethane, Tetrahydrodemethoxydiferuloylmethane, Tetrahydrodiferuloylmethane, Pentylene Glycol, Caprylhydroxamic Acid, Leuconostoc/Radish Root Ferment Filtrate, Sorbic Acid, Phenoxyethanol, Sodium Benzoate, Caprylyl Glycol, Chondrus Crispus (Carrageenan) Extract, Ethylhexylglycerin."
+})
+gifts_1a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/1_gifts.png'),
+  filename: '1_gifts.png'
+}
+gifts_1b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/1a_gifts_sprite.png'),
+  filename: '1a_gifts_sprite.png'
+}
+gifts_1.photos.attach([gifts_1a,gifts_1b]) 
+## ------- GIFTS -----------
+
+gifts_2 = Product.create!({
+  name: "Drunk Break™: A Night to Remember Night Kit ($150 value)", 
+  category: "GIFTS", 
+  price: 98.00,
+  desc:"30 days. That’s how long it takes to see a total and complete reboot of your skin when you use the Drunk Break™ A Night to Remember Night Kit—along with any other Drunk Elephant products—exclusively. (That means really, truly nothing else.)",
+  usage: "In the evening, cleanse with Beste™ No. 9. Then mix 1 pump of T.L.C. Framboos™ and 1 swipe of Lala Retro™ in the palm of your hand and apply all at once. Top it off with F-Balm™.",
+  ingredients: "Water/Aqua/Eau, Glycerin, Caprylic/Capric Triglyceride, Isopropyl Isostearate, Pseudozyma Epicola/Camellia Sinensis Seed Oil/Glucose/Glycine Soja (Soybean) Meal/Malt Extract/Yeast Extract Ferment Filtrate, Glyceryl Stearate SE, Cetearyl Alcohol, Palmitic Acid, Stearic Acid, Pentylene Glycol, Plantago Lanceolata Leaf Extract, Adansonia Digitata Seed Oil, Citrullus Lanatus (Watermelon) Seed Oil, Passiï¬‚ora Edulis Seed Oil, Schinziophyton Rautanenii Kernel Oil, Sclerocarya Birrea Seed Oil, Polyglyceryl-6 Ximenia Americana Seedate, Cholesterol, Ceramide AP, Ceramide EOP, Sodium Hyaluronate Crosspolymer, Ceramide NP, Phytosphingosine, Ceteareth-20, Trisodium Ethylenediamine Disuccinate, Tocopherol, Sodium Lauroyl Lactylate, Sodium Hydroxide, Citric Acid, Carbomer, Xanthan Gum, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol, Ethylhexylglycerin"
+})
+gifts_2a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/2_gifts.png'),
+  filename: '2_gifts.png'
+}
+gifts_2b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/2a_gifts.png'),
+  filename: '2a_gifts.png'
+}
+gifts_2.photos.attach([gifts_2a,gifts_2b]) 
+
+#-----------------
+
+gifts_3 = Product.create!({
+  name: "Drunk Break™: Weekend w/ My Baby Weekend Kit ($113 value)", 
+  category: "GIFTS", 
+  price: 88.00,
+  desc:"30 days. That’s how long it takes to see a total and complete reboot of your skin when you use the Drunk Break™ Weekend w/ My Baby Weekend Kit—along with any other Drunk Elephant products—exclusively. (That means really, truly nothing else.)",
+  usage: "In the evening, melt away the day with Slaai™. Once a week (we like Sundays for this), apply Babyfacial to clean, dry skin and leave on for up to 20 minutes. Rinse, pat dry, and follow with one pump of B-Hydra™ and 2-3 drops of A-Gloei™.",
+  ingredients: "Water (Aqua), Glycolic Acid, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Sodium Hydroxide, Salicylic Acid, Aloe Barbadensis Leaf Extract, Camellia Oleifera Leaf Extract, Lactobacillus/Pumpkin Ferment Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Opuntia Ficus-Indica Extract, Pyrus Malus (Apple) Fruit Extract, Silybum Marianum Seed Extract, Saccharomyces Cerevisiae Extract, Vitis Vinifera (Grape) Juice Extract, Camellia Sinensis Leaf Powder, Cicer Arietinum Seed Powder, Sclerocarya Birrea Seed Oil, Passiflora Edulis Seed Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Hyaluronate Crosspolymer, Sodium PCA, Allantoin, Dipotassium Glycyrrhizate, Dextrin, Polydextrose, Sorbitan Isostearate, Amylopectin, Niacinamide, Phytosphingosine, Lactic Acid, Propanediol, Citric Acid, Titanium Dioxide, Trisodium Ethylenediamine Disuccinate, Polysorbate 60, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol"
+})
+gifts_3a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/3_gifts.png'),
+  filename: '3_gifts.png'
+}
+gifts_3b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/3a_gifts.png'),
+  filename: '3a_gifts.png'
+}
+gifts_3.photos.attach([gifts_3a,gifts_3b]) 
+
+
+#-----------------
+gifts_4 = Product.create!({
+  name: "All Protinis Great and Small ($108 value)", 
+  category: "GIFTS", 
+  price: 74.00,
+  desc:"Protini™ combines signal peptides, growth factors, supportive amino acids, and pygmy waterlily to restore younger, revived-looking skin. Lines, wrinkles, and signs of sun damage appear reduced, and skin feels strengthened and moisturized.",
+  usage: "Apply morning and night to clean, dry skin for the vital dose of protein and replenishing moisture the skin needs to retain its youthful appearance.",
+  ingredients: "Water/Aqua/Eau, Dicaprylyl Carbonate, Glycerin, Cetearyl Alcohol, Cetearyl Olivate, Sorbitan Olivate, Sclerocarya Birrea Seed Oil, Bacillus/Folic Acid Ferment Extract, Nymphaea Alba Root Extract, sh-Oligopeptide-1, sh-Oligopeptide-2, sh-Polypeptide-1, sh-Polypeptide-9, sh-Polypeptide-11, Copper Palmitoyl Heptapeptide-14, Heptapeptide-15 Palmitate, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalanine, Proline, Serine, Threonine, Valine, Acetyl Glutamine, Coconut Alkanes, Coco-Caprylate/Caprate, Sodium Hyaluronate, Aspartic Acid, Linoleic Acid, Linolenic Acid, Lecithin, Butylene Glycol, Polyvinyl Alcohol, Sodium Lactate, Sodium PCA, PCA, Sorbitan Isostearate, Carbomer, Polysorbate 20, Polysorbate 60, Lactic Acid/Glycolic Acid Copolymer, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Xanthan Gum, Isomalt, 1,2-Hexanediol, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol, Tocopherol, Sodium Benzoate, Phenylpropanol, Glyceryl Caprylate, Symphytum Officinale Callus Culture Extract"
+})
+gifts_4a = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/4_gifts.png'),
+  filename: '4_gifts.png'
+}
+gifts_4b = {
+  io: URI.open('https://funelephant-seed.s3.us-west-1.amazonaws.com/4a_gifts.png'),
+  filename: '4a_gifts.png'
+}
+gifts_4.photos.attach([gifts_4a,gifts_4b]) 
+
+#-----------------
+
+Review.create!(
+  title: 'i wouldve loved it...except', 
+  body: 'everything that ame is so good! however the bodywash makes my legs itchy after i use it so that’s the one thing i don’t love about it!',
+  rating: 4, 
+  user_id: 1,
+  product_id: 3
+)
+
+
+Review.create!(
+  title: 'just another honest review', 
+  body: 'I love this kit. Everything smells amazing and looks adorable but the shampoo and conditioner made my hair really dry and frizzy. ever since I started use this my hair has been so much healthier',
+  rating: 4, 
+  user_id: 2,
+  product_id: 1
+)
+
+
+Review.create!(
+  title: 'Expensive! is it worth it?', 
+  body: 'I wanted to try this brand becaues I heard a bunch of great things about it and cant say im disappointed. the only thing is it is a bit expensive...not sure if I will purchase again',
+  rating: 3, 
+  user_id: 3,
+  product_id: 4
+)
+
+Review.create!(
+  title: 'BEST PURCHASE IN A WHILE', 
+  body: 'If you are seeing this review and your are contemplating wheather or not to get it, i say go for it!! it is worth every penny, honestly',
+  rating: 5, 
+  user_id: 4,
+  product_id: 3
+)
+
+
+Review.create!(
+  title: 'Cant get enufffff', 
+  body: 'Is it worth it?? YES! should you buy it?  HECK TO THE YES!! this cured by skin and I spent years trying to find the best product!!! GET IT BEFORE ITS GONE',
+  rating: 5, 
+  user_id: 5,
+  product_id: 2
+)
+
+
+Review.create!(
+  title: 'love it!', 
+  body: 'I’m so incredible happy with my purchase! I have completely fallen in love with everything Fun Elephant. I have noticed such such a positive change in my skin.',
+  rating: 5, 
+  user_id: 6,
+  product_id: 2
+)
+
+
+Review.create!(
+  title: 'Cant say I love it', 
+  body: 'the content itself is not too bad, everything feels nice but I am not sure if its doing anything on my skin. Its been 2 weeks and I dont really see a difference....thinking about returning it ',
+  rating: 3, 
+  user_id: 7,
+  product_id: 2
+)
+
+
+Review.create!(
+  title: 'WOOT WOOT CLEAR SKIN', 
+  body: 'My skin CRAVES THIS. this is a miracle! GODS WORK I SWEAR. ive tried many products over the years and nothing work for me as best as this!! DONT EVER STOP MAKING THIS',
+  rating: 5, 
+  user_id: 8,
+  product_id: 1
+)
+
+
+Review.create!(
+  title: 'GREAT PRODUCTS NOT SO GOOD PRICE', 
+  body: 'I love it!! everything is amazng! I even let my sister tried it and she likes it too! but I dont know if i would purchase the actual full size since everythign on this site is expensive',
+  rating: 4, 
+  user_id: 9,
+  product_id: 1
+)
+
+
+Review.create!(
+  title: 'Not bad', 
+  body: 'I like that they offer these gifts/sample sizes because it allows me to try the difference items without committed to spending a lot on one product. The only down side is the items itself is pretty small so you go through it quick, but overall i like everything',
+  rating: 4, 
+  user_id: 10,
+  product_id: 1
+)
+
+#-----------------
   Review.create!(
     title: 'love it!', 
     body: 'I’m so incredible happy with my purchase! I have completely fallen in love with everything Fun Elephant. I have noticed such such a positive change in my skin.',
     rating: 5, 
     user_id: 1,
-    product_id: 1,
+    product_id: 33
   )
 
-  Review.create!(
-    title: 'fewer products than prior The Littles', 
-    body: 'I paid less than $50 for Littles 4.0 and received more items than is included in the current Littles Kit. very disappointing....',
-    rating: 2, 
-    user_id: 2,
-    product_id: 1,
-  )
-
+ 
 
   Review.create!(
     title: 'Love everything!', 
@@ -727,7 +1079,7 @@ ApplicationRecord.transaction do
     body: 'I received a deluxe sample of this in a squeeze tube. When I went to put it on my face, I noticed what seemed like sharp chunks of plastic in my product! I emailed Fun Elephant and they acted like this is a completely normal occurrence due to the salicylic acid crystallizing. That has never happened to me before with any form of SA. SO BE CAREFUL when applying this to your face! I understand that acids can be a delicate balance, but the formation of painful crystals in product is not normal to me! I cant find any information about this product crystallizing anywhere so please be aware that it can happen and it can scratch your face.',
     rating: 1, 
     user_id: 4,
-    product_id: 3,
+    product_id: 34,
   )
 
   Review.create!(
@@ -735,7 +1087,7 @@ ApplicationRecord.transaction do
     body: 'I really REALLY wanted to enjoy this product. I have been using an $8 store bought facewash for the past 10 years and never had any issues/acne. I decided this year I wanted to up my "face product game" and take care of my face with natural healthy products....and unfortunately it was not ready for a change. After using this product I broke out all over my cheeks and jaw line! To double check it was the product and not something with my diet/hormones, I switched back to the $8 cleanser and my face cleared right up...then I switched back to the Beste Cleanser and the acne came back in the same spots. UGH. Aside from the product giving me acne, it smells great, its super smooth and it even gives your face a little glow.',
     rating: 2, 
     user_id: 5,
-    product_id: 3,
+    product_id: 34,
   )
 
   Review.create!(
@@ -743,7 +1095,7 @@ ApplicationRecord.transaction do
     body: 'I have been reading about Babyfacial for a few years now. All comments are stellar reviews. Instead I have bought and tried so many other similar and cheaper products. Trying to make my sensitive acne prone skin happy. Turns out I should have saved the money spent on other products and just bought this one. One use of the kit I recieved with the Babyfacial ald the luxury Marula Oil and my skin was soothed and happy. Instructions say use is once a week. Cant wait to use it next week. Im hooked. Just love it.',
     rating: 5, 
     user_id: 6,
-    product_id: 2,
+    product_id: 35,
   )
 
   Review.create!(
@@ -751,15 +1103,15 @@ ApplicationRecord.transaction do
     body: 'I am unsure how I feel about this product. The first time I used it was last week and I woke up with amazingly smooth skin (something I haven‚Äôt had in quite some time). I used this product again last night and woke up with small pimples all over my face (my cheeks, chin, and forehead). I never get pimples on my cheeks so I am really disappointed that this is something directly related to this product. I am going to continue using for a couple of weeks in hopes that this improves.',
     rating: 3, 
     user_id: 7,
-    product_id: 2,
+    product_id: 36,
   )
 
   Review.create!(
-    title: 'Protini sample is too small', 
-    body: 'Protini sample needs to be bigger for this much money. I bought these for a 10 day vacation and had to take a second pot of protini',
+    title: 'Produc is too small', 
+    body: 'The product needs to be bigger for this much money. I bought these for a 10 day vacation and had to take a second pot of the product',
     rating: 3, 
     user_id: 8,
-    product_id: 4,
+    product_id: 36,
   )
 
 
@@ -768,7 +1120,7 @@ ApplicationRecord.transaction do
     body: 'Ive tried many hydrating serums and gels over the last few year - ranging from chanel to korean products and this is easily my favourite one and the only one I can say is worth its price. This is a clear gel that sinks in quickly and leaves such a wonderful natural finish to the skin. I used this alone as a moisturizer in the summer and will repurchase for the winter to use either as a mixer or moisturizer under the umbra tinte. This leaves a really lovely finish on the skin that wears great under makeup (no primer needed for me) I cant think of any cons to this one if anything I feel like I finished mine too fast',
     rating: 5, 
     user_id: 9,
-    product_id: 5,
+    product_id: 23,
   )
 
   Review.create!(
@@ -776,7 +1128,7 @@ ApplicationRecord.transaction do
     body: 'I cannot love the B-hydra serum enough! Its a perfect daytime serum and the best part is I can layer it with any of Drunk Elephants other products. It absorbs in to the skin and does not leave any sticky residue like most other serums. Ive noticed a huge difference in my skin after about 3 months of using this product and this is my second purchase. My skin is smoother, more luminous, and I dont break out as much anymore. I have relatively sensitive skin so other serums and moisturizers irritated my skin and caused breakouts but I dont have this problem with Drunk Elephant. Love it! Cant recommend it enough.',
     rating: 5, 
     user_id: 10,
-    product_id: 5,
+    product_id: 22,
   )
 
 
@@ -785,7 +1137,7 @@ ApplicationRecord.transaction do
     body: 'I have noticed that my sun spots are getting lighter and my skin tone looks even. This is a miracle product that my skin drinks up!!',
     rating: 5, 
     user_id: 11,
-    product_id: 6,
+    product_id: 30,
   )
 
 
@@ -794,7 +1146,7 @@ ApplicationRecord.transaction do
     body: 'I love the C-Tango eye serum. Living through CO winters is hard on the skin. My eyelids have been known to start flaking when I use any anti-aging serum that can sometimes dry you out. This is a great combination of restoration and moisture. My only complaint is the packaging‚Äîwhich goes for all Drunk Elephant products. I love how well it seals for travel BUT you can‚Äôt tell it‚Äôs gonna be gone till BAM it‚Äôs gone. Then, it takes a while to deliver. Don‚Äôt create a product I can‚Äôt live without that you then make me live without ;)',
     rating: 4, 
     user_id: 12,
-    product_id: 7,
+    product_id: 29,
   )
 
 
@@ -802,60 +1154,261 @@ ApplicationRecord.transaction do
     title: 'Good Stuff', 
     body: 'I like the ingredients and the way it feels on application. I have faith it is brightening, but no empirical evidence. I plan to do a side by side with the Sheba eye serum and will update upon completion. I love the airtight packaging. Really the only reason for one star off is the price and the amount pumped. It is hard to master how to pump the right amount of product since one pump is way too much -- it pumps as much product (a bit more than pea size) as they recommend to cover an entire face with a different product.',
     rating: 5, 
-    user_id: 13,
-    product_id: 7,
+    user_id: 1,
+    product_id: 27,
   )
 
   Review.create!(
     title: 'Wonderful Eye Cream with a Unique, Lovely Texture!', 
-    body: 'C-Tango is probably my favorite product from Drunk Elephant (apart from Lippe). The product has a unique, beautiful texture, almost like a gel-cream. It sinks quickly into my skin, but still leaves it hydrated. Best of all, it seems to have helped with my hereditary dark circles! I havent experienced any irritation with this product, even when using it twice a day. As an added bonus, the packaging is SUPER sanitary (and cute!) compared to other eye creams. Two thumbs way up for this DE product!',
+    body: 'thisprobably my favorite product from Drunk Elephant (apart from Lippe). The product has a unique, beautiful texture, almost like a gel-cream. It sinks quickly into my skin, but still leaves it hydrated. Best of all, it seems to have helped with my hereditary dark circles! I havent experienced any irritation with this product, even when using it twice a day. As an added bonus, the packaging is SUPER sanitary (and cute!) compared to other eye creams. Two thumbs way up for this DE product!',
     rating: 5, 
-    user_id: 14,
-    product_id: 7,
+    user_id: 2,
+    product_id: 24,
   )
 
   Review.create!(
     title: 'Returned', 
     body: 'I liked the fact that the LaLa cream is rich in ceramides, but I really don‚Äôt like the smell of it. I will stick to the Protini Cream and use a ceramide serum from another brand.',
     rating: 1, 
-    user_id: 15,
-    product_id: 8,
+    user_id: 3,
+    product_id: 24,
   )
 
   Review.create!(
     title: 'Extremely Small product for price', 
     body: 'I knew it was sample size but these are so small I would not have spent over $40 on them. Also not a fan of the cream it leaves a white residue',
     rating: 2, 
-    user_id: 16,
-    product_id: 8,
+    user_id: 4,
+    product_id: 15,
   )
   Review.create!(
     title: 'One for my me and one for my sister', 
     body: 'My sister tried mine when were on vacation. She LOVED it I bought it for her. She is too funny, she only uses it on her lip wrinkles, because that what drives her crazy.',
     rating: 5, 
-    user_id: 17,
-    product_id: 9,
+    user_id: 5,
+    product_id: 13,
   )
   Review.create!(
     title: 'Use it as a booster!', 
     body: 'I don’t use Ceramighty as an eye cream. Instead, I mix a pump of it into the skincare product smoothie I apply to my entire face and neck, and the result is a skin barrier so fortified that it feels like there’s an invisible, weightless veil of protection sealing in my skin’s moisture. I LOVE it. And at nighttime, I also mix a dab of Wonderwild into the smoothie along with Ceramighty to really seal everything in!',
     rating: 5, 
-    user_id: 18,
-    product_id: 10,
+    user_id: 6,
+    product_id: 17,
   )
   Review.create!(
     title: 'Burns my eyes', 
     body: 'The lotion is itself great, but the directions say you can put this not only under your eyes, but also on your eyelids. This would be cool if not for the fact that if you get it in your eyes, they sting like hell. Then your eyes water from the stinging which just increases the stinging as youre wiping away your tears. Ill stick to my C-Tango and Shaba that dont sting.',
     rating: 3, 
-    user_id: 19,
-    product_id: 10,
+    user_id: 7,
+    product_id: 30,
   )
   Review.create!(
     title: 'Not bad but wouldnt purchase again', 
     body: 'I bought your new eye cream. It goes on nicely and looks moisturizing. I have never had so much trouble with a pump dispenser before, though. It is all in pieces, now. This dispenser needs some improvement.',
     rating: 3, 
-    user_id: 20,
-    product_id: 10,
+    user_id: 8,
+    product_id: 40,
+  )
+  
+#---------
+  Review.create!(
+    title: 'A must have!', 
+    body: 'I have tried so many different eye creams/treatments and I was at the point where I was about to give up hope, after all of them had done nothing at all for my under eye bags and wrinkles. Once I saw drunk elephant dropped a new one I knew I had to try it, when I put it on ever after one use I woke up the next morning noticing a huge difference, for once my under eyes felt hydrated, smooth, and my wrinkles were seriously decreased more than could’ve ever expected. My dark circles are now barely noticeable. Everyone asks me what I use and I tell them this. I will never go back to another eye cream again. Trust me you Need this, this did wonders for my under eyes and helps me feel more confident throughout my day! I excepted nothing less from drunk elephant, they are an amazing brand. The products I tried I am in love with! After how much I loved this and many others I cant wait to try more!',
+    rating: 5, 
+    user_id: 1,
+    product_id: 41
   )
 
-  end
+
+  Review.create!(
+    title: 'Burns my eyes!!!!', 
+    body: 'The lotion is itself great, but the directions say you can put this not only under your eyes, but also on your eyelids. This would be cool if not for the fact that if you get it in your eyes, they sting like hell. Then your eyes water from the stinging which just increases the stinging as youre wiping away your tears. Ill stick to my C-Tango and Shaba that dont sting.',
+    rating: 2, 
+    user_id: 2,
+    product_id: 42,
+  )
+
+
+  Review.create!(
+    title: 'Hard to find fragrance-free balms', 
+    body: 'I like this--its fragrance free, with a slightly sweet taste (maybe from the sorbitan?). It comes in a fat tube, maybe the diameter of a quarter, which means on my average lips, it goes outside the lines. Its not shiny, so that doesnt really matter. My one complaint is that it stops being perceptibly there in maybe an hour---it may still be moisturizing, but I am used to the lip gloss coating feeling that lasts for at least a couple of hours. I prefer Bite Agave Lip Mask for this reason. My husband likes the Lippe. Your call!',
+    rating: 4, 
+    user_id: 3,
+    product_id: 42,
+  )
+ 
+
+  Review.create!(
+    title: 'EFFECTIVE FORMUL', 
+    body: 'This product came up as a fix for this issue on You Tube (Stephanie Marie).The appearance, lip pigmentation, & the lip line is way better. A lot more plump! The dryness & lines on my lips has definitely improved as has my overall lip health. Pleasantly surprised!!! I use it as a nighttime lip treatment & has earned its place to stay there! In my opinion, the only downside is the size. The circumference of the tube is too large for the lips. For me the circumference of a ChapStick would be great. However, this very minor flaw will not deter me at all from repurchasing due to the effectiveness of this formula.',
+    rating: 5, 
+    user_id: 4,
+    product_id: 42,
+  )
+
+
+  Review.create!(
+    title: 'Best Micellar Water I’ve Ever Used', 
+    body: 'I bought the smaller size originally to see what it was about and I was immediately blown away. This product works like magic in removing dirt and makeup from your face (especially if you’re feeling lazy) and just slapping some moisturizer on after. You’re face will thank you. Only con I have is that it smells like play doh so that can be off putting at times, but the benefits completely out ways the single con.',
+    rating: 5, 
+    user_id: 5,
+    product_id: 39,
+  )
+  
+
+
+  Review.create!(
+    title: 'THis KiT Is mY BeStIe!!!', 
+    body: 'OMG I love this kit so much I’m ordering the products in full size really soon! Also the bag OMG it’s so cute! If ur a teen I rlly recommend!So glad DE has brought back an almost full set for The Littles. I missed having these sets available for travel! I really wish an eye cream or serum was included. This was available in past sets, and with three to choose from with the DE lineup, one should have been included.',
+    rating: 5, 
+    user_id: 6,
+    product_id: 31,
+  )
+  
+
+
+  Review.create!(
+    title: 'GREAT PRODUCT, IM IN LOVEE XOXO', 
+    body: 'this product is magic!!!! The whipped cream soothes my skin and is gentle to the skin. THE MOISTURE IS SOMETHING I DONT EVEN HAVE WORDS FOR!! As for the blush drops and bronzer drops goes very well with my skin. I would recommend you to buy this product because it is great for anybody with any skin color. These products are cruelty free and vegan!!',
+    rating: 5, 
+    user_id: 7,
+    product_id: 32,
+  )
+  
+
+
+  Review.create!(
+    title: 'Young mom with stressful job and busy life', 
+    body: 'I love the JuJu Bar by Drunk Elephant! It is the perfect lathering bar to make my face feel soft and clean but not stripped or dry. I like the feel of the small granules in the lather that exfoliate my skin without scratching or damaging it. My skin has demonstrably improved since using all of the Drunk Elephant products and the JuJu Bar, combined with the day serum, the night serum, and the oil, make for a perfect combination for my semi-oily skin! Best of all, the JuJu bar lasts a really long time!',
+    rating: 5, 
+    user_id: 7,
+    product_id: 13,
+  )
+  
+
+
+  Review.create!(
+    title: 'Dont over use', 
+    body: 'I ran out of my cleansing grains of another product and thought I would try the JuJu bar. It is a little harsher than the other product that I would use every day. So I simply follow the directions: wet the soap, dont apply the bar directly to the skin and only use it 3 times per week and it does the job of gently lifting away the days dirt and grime. And Im sure to apply the c-serum and/or the oil after using. So far so good.',
+    rating: 4, 
+    user_id: 8,
+    product_id: 14,
+  )
+  
+
+
+  Review.create!(
+    title: 'Disappointed!! need a refundddd', 
+    body: 'I wanted to love this moisturizer‚Äîthe clean ingredient list and the airtight pump. I have combo skin that was feeling dehydrated. I tried lala retro alone and paired with B-hydra. Both ways made my skin feel dryer than before using DE. This gave me small red bumps on my cheeks and clogged my forehead pores. Despite being a clean product, it seemed to really irritate my skin. Discontinuing the moisturizer (and B-hydra) solved the problem :/. I‚Äôve heard great things about DE, so I was excited to try the products. I guess to all future DE-ers, I‚Äôd recommend getting the small sizes and testing your skin..',
+    rating: 1, 
+    user_id: 9,
+    product_id: 12,
+  )
+  
+
+  Review.create!(
+    title: 'Overall this is great', 
+    body: 'Overall, this is a great product. My lips get chapped very easily and the bags under my eyes are awful. But this product got rid of my dry lips very quickly and it helps the bags and my eyes as well. The one thing is that it doesn‚Äôt smell very nice so if you only buying chapsticks for the scent, I wouldn‚Äôt recommend this. Otherwise, it‚Äôs really great and I highly recommend this product for people with chapped lips.',
+    rating: 4, 
+    user_id: 10,
+    product_id: 15,
+  )
+  
+
+  Review.create!(
+    title: 'Disappointed!! need a refundddd', 
+    body: 'I wanted to love this moisturizer‚Äîthe clean ingredient list and the airtight pump. I have combo skin that was feeling dehydrated. I tried lala retro alone and paired with B-hydra. Both ways made my skin feel dryer than before using DE. This gave me small red bumps on my cheeks and clogged my forehead pores. Despite being a clean product, it seemed to really irritate my skin. Discontinuing the moisturizer (and B-hydra) solved the problem :/. I‚Äôve heard great things about DE, so I was excited to try the products. I guess to all future DE-ers, I‚Äôd recommend getting the small sizes and testing your skin..',
+    rating: 1, 
+    user_id: 11,
+    product_id: 15,
+  )
+
+  Review.create!(
+    title: "could be better.....",
+    body: 'I was so excited to see this new item, O-Bloos Rosi Drops, added to Drunk Elephants products that I ordered it as soon as it was offered. I love their D Bronzi Sunshine Drops, which I use daily, but was highly disappointed that the OBloos Rosi Drops were barely visible on my skin. I even tried mixing it with the D Bronzi to see if there was additional impact and nothing. Please dont waste your money on this product.',
+    rating: 2, 
+    user_id:12,
+    product_id: 16,
+  )
+
+  ###------hair care review ------##
+  Review.create!(
+    title: "OBSSESSEDDDDDD !!!",
+    body: 'Being a curly haired girl , finding great products are hard sometimes. This sweet hair and body kit was gifted to be and I am obsessed !!! Having curly hair I use multiple products so the scalp scrub is amazing ! Doesn’t irritate my scalp , gets rid on build up and isn’t too harsh , the shampoo is really cleansing which I love and my hair felt clean and the conditioner, baby the conditioner is AMAZING my scalp and hair felt clean and my curls were so soft even when my hair dried and smelled so good ! The body cleanser left me feeling clean and fresh , the deodorant cream is a nice scent and texture and didn’t seem to irritate me the body lotion leaves my skin soft and the neon comb and bag are super cute !!! Over all I love it will purchase again !',
+    rating: 5, 
+    user_id: 1,
+    product_id: 13,
+  )
+
+  Review.create!(
+    title: 'just fabulousss',
+    body: "I'm now on my second bottle, this mask is extremely hydrating and helps my hair stay tangle free and manageable. It is a must for my hair care, one of the better investments I've made in regards to learning how to care for my thick curly hair!",
+    rating: 4, 
+    user_id: 1,
+    product_id: 29,
+  )
+
+  Review.create!(
+    title:'amazing stuff',
+    body:'so good! love everything! however the bodywash makes my legs itchy after i use it so that’s the one thing i don’t love about it!',
+    rating: 4, 
+    user_id: 2,
+    product_id: 41,
+  )
+
+  Review.create!(
+    title: 'honestly exceeded my expectations!! Must get',
+    body: 'Before Silkamino my hair was especially dull and dry due to being over processed during a recent salon trip but after just one use I noticed an immediate change in my hair, it looks and feels healthier than it has in years!',
+    rating: 5, 
+    user_id: 2,
+    product_id: 40,
+  )
+  
+  Review.create!(
+    title: 'meh',
+    body: 'It’s ok but I don’t see a big difference. Maybe I am not putting the right quantity. Would not repurchase. for the price i paid, could be a lot better',
+    rating: 2, 
+    user_id: 12,
+    product_id: 37,
+  )
+  
+  Review.create!(
+    title: 'Love jumbo Cocomino!',
+    body: "I had to buy this as soon as I saw it, Cocomino Glossing Shampoo is one of my faves of the hair/body range, and I use it frequently! It always leaves my hair so soft and silky and bouncy, and is so very gentle! I love the regular size but the jumbo is such an exciting option also to have. I cant wait to eventually add the other jumbos to my collection!",
+    rating: 5, 
+    user_id: 12,
+    product_id: 42,
+  )
+
+  Review.create!(
+    title: "The only conditioner in existence",
+    body: 'I will start off by saying I have waist length thick fine hair. This is the only conditioner I have found that 1:is light enough to not weigh my hair down 2: doesnt dry my hair out 3: detangles my long hair. I feel like I have tried every shampoo and conditioner ever made- this is holy grail status. The only negative is I feel the "BIG" version seems less concentrated. I always feel like I have to use more (that amount is still not alot considering how much hair I have and how long it is)',
+    rating: 5, 
+    user_id: 3,
+    product_id: 39,
+  )
+  
+  Review.create!(
+    title: 'almost perfect',
+    body:'I love this kit. Everything smells amazing and looks adorable but the shampoo and conditioner made my hair really dry and frizzy',
+    rating: 4, 
+    user_id: 4,
+    product_id: 41,
+  )
+  
+  Review.create!(
+    title:'fantastic!',
+    body: 'I have thick curly hair that seemed impossible to manage, but I took a chance and bought this leave in conditioner. Now I can untangle, and style my hair DRY. I have the entire Drunk Elephant hair care collection and this is by far my newest obsession.',
+    rating: 5, 
+    user_id: 9,
+    product_id: 41,
+  )
+  Review.create!(
+    title: "never thought my hair would be this healthy!! miracle in a bottle",
+    body: 'I have always used pharmacy store, or just general shampoo and conditioner, but now I will never use anything else. I have been using it for two weeks and can already see a difference in my hair! It‚Äôs shinier, bouncier, and stays that way for double the amount of time it used to. I would shower and 12 hours later I could already see my hair starting to flatten and become greasy, but this has made my scalp and hair so much better!!',
+    rating: 2, 
+    user_id: 4,
+    product_id: 40,
+  )
+end
+

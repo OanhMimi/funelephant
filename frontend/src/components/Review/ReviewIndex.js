@@ -9,18 +9,19 @@ import { deleteReview } from "../../store/review";
 import { FaStar } from 'react-icons/fa';
 import { GrEdit } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { Redirect } from "react-router-dom";
 
 
 
 const ReviewIndex  = ({product}) => {
 
     const dispatch = useDispatch();
-    const reviews = useSelector(getReviews)
     const currentUserId = useSelector(state=> state.session.user?.id)
     const [showModal, setShowModal] = useState(false);
     const [selectedReview,setSelectedReview] = useState();
     const [createdReview,setCreatedReview] = useState(false);
-
+    
+    const reviews = useSelector(getReviews)
     useEffect(()=>{
 
         let eachReview = Object.values(reviews)
@@ -33,6 +34,9 @@ const ReviewIndex  = ({product}) => {
         setCreatedReview(false)
         }
      },[reviews])
+
+     const sessionUser = useSelector(state => state.session.user);
+     
     
     //selectedReview = the review we select
 
@@ -93,6 +97,11 @@ const ReviewIndex  = ({product}) => {
         )
         } 
     }
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        !sessionUser? <Redirect to="/signUpOrLogIn" /> : setShowModal(true) 
+    }
     return(
         <>
             <div className="review-container">
@@ -137,7 +146,7 @@ const ReviewIndex  = ({product}) => {
                 </div>
             </div>
             <div id="div-write-review">
-                { createdReview ? <h1></h1> : <button id="write-review" onClick={()=>setShowModal(true)}>Write a Review</button>}
+                { createdReview ?  <h1></h1> : <button id="write-review" onClick={handleClick}>Write a Review</button>}
                 {showModal && <ReviewFormModal 
                 product={product}
                 setShowModal={setShowModal}

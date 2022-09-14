@@ -19,9 +19,9 @@ const SlideOutMenu = ({setShowSlideOut}) => {
             <div id="bg-menu-slide-out"></div>
                 <div id="menu-slide-out">
                     <button id="x-closeSideBar" onClick={handleCloseSideBar}>
-                        <div class="close-container">
-                            <div class="leftright"></div>
-                            <div class="rightleft"></div>
+                        <div className="close-container">
+                            <div className="leftright"></div>
+                            <div className="rightleft"></div>
                         </div>
                     </button>
                     <div id="menu-slide-content">

@@ -1,17 +1,19 @@
 import './Review.css'
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { createReview,updateReview } from '../../store/review';
 // import StarRating from '../StarRating';
 import { FaStar } from 'react-icons/fa';
+import { AiOutlineClose } from "react-icons/ai";
 
 
 const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
 
     const {productId} = useParams();
     let editReview = true;
+    const sessionUser = useSelector(state => state.session.user);
 
     if (!selectedReview){
        selectedReview = {
@@ -35,7 +37,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
         }else{
             dispatch(createReview({title,body,rating,product_id:productId}))
         }
-    
+
         setShowModal(false)
     }
 
@@ -45,20 +47,17 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
     return(
         <>
             <div onClick={()=>setShowModal(false)} id="blur-background"></div>
-            <div  className="bg-modal">
+            <div   className="bg-modal">
+                <div id="form-close">
+                    <AiOutlineClose id="form-modal-close" onClick={()=>setShowModal(false)}/>
+                </div>
                 <div className='review-modal'>
                     <div className="product-img-title">
-                        <div className="review-product">
-                            <img id="review-product-img" src={product.photoUrl} />
-                        </div>
-                        <div id="modal-product-title">
-                            <div>{product.name}</div>
-                        </div>
-                    </div>
-                    <form className ="review-form-modal" onSubmit={handleSubmit}>
-                        
-                        <label>Rating
-                            <div>
+                        <img id="review-product-img" src={product.photoUrl[0]} />
+                        <div id="product-rating-star">
+                            <div id="form-product-name">{product.name}</div>
+                            <div id="product-rating">Rating
+                            <div id="star-rating">
                                 {[...Array(5)].map((star, i) => {
                                     const ratingValue = i + 1;
                                     return (
@@ -74,30 +73,40 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
                                             className="star" 
                                             color={ratingValue <= (rating) ? "#ecc8f8" : "#e4e5e9"} 
                                             size={40}
-                                   
+                                
                                         />
                                         </label>
-                                        )
-                                        })}                                         
+                                    )
+                                })}                                         
                             </div>
-                        </label>
-                        <label>Review Title
-                            <input 
+                            </div>
+                        </div>
+                    </div>
+                    <form className ="review-form-modal" onSubmit={handleSubmit}>
+                        <div id="user-welcome-message">
+                            <div id="hello-user">Hello </div>
+                            <p id="hello-username">{sessionUser.firstName},</p>
+                        </div>
+                            <div id="review-message">We care about our customer and would love to hear your feedbacks </div>
+                        <label id="review-title">Review Title 
+                            <input id="title-input"
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                                 required
                                 />
                         </label>
-                        <label>Review 
-                            <input 
+
+                        <label id="review-review">Review 
+                            <textarea 
+                               placeholder='Minimum 50 characters'
                                 type="text"
                                 value={body}
                                 onChange={(e) => setBody(e.target.value)}
                                 required
                                 />
                         </label>
-                        <button type="submit" >Post Review</button>
+                        <button id="post-review" type="submit" >Post Review</button>
                     </form>
                 </div>
             </div >

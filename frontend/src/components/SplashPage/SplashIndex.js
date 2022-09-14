@@ -10,14 +10,14 @@ const SplashIndex = () => {
         <div id="splashPage-outer-div">
             <div className="block">
                 <div className="threeSplashImg">
-                    <div id="background-color" class="center">
+                    <div id="background-color" className="center">
                     </div>
                     <h2 id="free-shipping">ENJOY FREE GROUND SHIPPING ON ALL ORDERS! PLUS, ORDERS $200+ GET 2-DAY SHIPPING - ON US!</h2>
                     <div>
-                        <div class="splash2">
+                        <div className="splash2">
                             <img  id="splash-2" src={splashImage2}/>
                         </div>
-                        <div class="splash1">
+                        <div className="splash1">
                             <img id="splash-1" src={splashImage1}/>
                         </div>
                       

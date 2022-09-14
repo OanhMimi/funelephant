@@ -3,8 +3,8 @@ import * as sessionActions from '../../store/session'
 import { useDispatch } from 'react-redux' 
 import { Redirect } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import testingImg from './Silkamino_Leave-In_Sprite.png';
-import testingImg2 from './1_Littles_6.0_Motion_Sprite.png'
+// import testingImg from './Silkamino_Leave-In_Sprite.png';
+// import testingImg2 from './1_Littles_6.0_Motion_Sprite.png'
 
 
 const Profile = () => {
@@ -37,11 +37,9 @@ const Profile = () => {
                     {/* <img id="sprite-test" src={testingImg}/> */}                
                 </div>
             </div>
-            
-            <div className="sprite-test">
-                    <img className="sprite" src={testingImg2} alt="sprite"/>
-            </div>
-            
+
+        
+        
         </div>
         
     )

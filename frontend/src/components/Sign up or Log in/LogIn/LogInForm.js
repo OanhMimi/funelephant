@@ -50,7 +50,7 @@ const LogInForm = () => {
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <br/>
                     </div>
-                    <span class="hidden" id="emailPasswordValidation">Email address/ Password combination not recognized</span>
+                    <span className="hidden" id="emailPasswordValidation">Email address/ Password combination not recognized</span>
                     <br/>
     
                     <button className="input" type="Submit">Sign In</button>

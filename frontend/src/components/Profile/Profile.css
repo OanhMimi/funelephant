@@ -36,43 +36,4 @@
 
 
 
-.sprite-test{
-    /* background-image: url(https://www.drunkelephant.com/on/demandware.static/-/Sites-itemmaster_drunkelephant/default/dw52a6320d/products/images/Haircare/812343037366/Silkamino_Leave-In_Sprite.png); */
-    background-color: aqua;
-    width: 480px;
-    height: 830px;
-    transform: scale(1);
 
-    /* animation: example 1s steps(35) infinite alternate;
-    transform: scale(.5); */
-    overflow: hidden;
-
-    /* animation-name: example;
-    animation: 0s ease 2s 1 normal none running none;
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    background-position-x: 0px;
-    background-position-y: 50%; */
-    /* background-size: auto 30%; */
-    /* position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    image-rendering: -webkit-optimize-contrast; */
-    }
- @keyframes example {
-    /* from {background-position:0px;}
-    to {background-position: -17470px;} */
-
-    from{
-        transform: translate3d(0px,0,0)
-    }
-    to{ 
-        transform: translate3d(-100%,0,0)
-    }
-}
-
-.sprite{
-    animation: example 1.6s steps(35) infinite alternate;
-}

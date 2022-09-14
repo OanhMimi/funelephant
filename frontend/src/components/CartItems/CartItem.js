@@ -1,20 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteCartItem, updateCartItem } from "../../store/cartItems";
+import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
+
 
 const CartItem = ({ cartItem }) => {
   console.log(cartItem);
   const dispatch = useDispatch();
   const [count, setCount] = useState(cartItem.quantity);
   const firstRender = useRef(true);
-  //   const handleQuantity = (type) => {
-  //     return (e) => {
-  //       e.preventDefault();
-  //       if (type === "positive") {
-  //         cartItem.quantity = cartItem.quantity + 1;
-  //       }
-  //     };
-  //   };
+
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
@@ -25,23 +21,26 @@ const CartItem = ({ cartItem }) => {
 
 
 
-
-  
-
   return (
     <div className="items-in-my-cart">
       <div id="img-in-cart">
-        <img id="cart-item-img" src={cartItem.productImage} />
+        <img id="cart-item-img" src={cartItem.photoUrl[0]} />
       </div>
       <div className="product-info">
         <div>{cartItem.productName}</div>
         <div id="subtotal">
-          <div>
-            <div onClick={(e) => count < 1 ? dispatch(deleteCartItem(cartItem.id)) : setCount( count - 1)}>-</div>
+          <div id="changing-quantity">
+            <div onClick={(e) => count < 1 ? dispatch(deleteCartItem(cartItem.id)) : setCount( count - 1)}>
+                <AiOutlineMinus id="ai-minus"/>
+            </div>
             QTY: {cartItem.quantity}
-            <div onClick={(e) => count > 9 ? setCount(10): setCount(count + 1)}>+</div>
+            <div onClick={(e) => count > 9 ? setCount(10): setCount(count + 1)}>
+                <AiOutlinePlus id="ai-plus"/>
+            </div>
           </div>
-          <div>{cartItem.quantity * cartItem.productPrice}</div>
+          <div>
+            {cartItem.quantity * cartItem.productPrice}
+          </div>
         </div>
         <button
           id="remove-item"
