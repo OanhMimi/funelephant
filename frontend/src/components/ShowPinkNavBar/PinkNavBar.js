@@ -98,8 +98,7 @@ const PinkNavBar = ({ product }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setShowCartItems(true);
-    debugger;
-    console.log(itemQuantity);
+
     const item = {
       cartItem: {
         productId: product.id,
@@ -118,9 +117,9 @@ const PinkNavBar = ({ product }) => {
   };
 
   const [fullHeart, setFullHeart] = useState(false);
-  const handleHeart = (e) => {
-    e.preventDefault();
-  };
+  // const handleHeart = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div className="pink-nav-sticky">

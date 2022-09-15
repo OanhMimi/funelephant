@@ -53,10 +53,12 @@
 
 #slide-home{
     padding-bottom: 2vh;
-    font-family: mustica;
+    font-family: zabalBold;
     color: #615f5f;
     font-size: 1vw;
     text-decoration: none;
+    letter-spacing: .1vw;
+
 }
 
 #slide-home:hover{
@@ -79,29 +81,42 @@
     padding-bottom: 2vh;
 }
 
-#slide-skincare{
+#slide-products{
     padding-top: 2vh;
     padding-bottom: 2vh;
-    font-family: mustica;
+    font-family: zabalBold;
     color: #615f5f;
     font-size: 1vw;
     text-decoration: none;
+    letter-spacing: .1vw;
+}
+
+#slide-skincare{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-family: zabalBold;
+    color: #615f5f;
+    font-size: 1vw;
+    text-decoration: none;
+    letter-spacing: .1vw;
 }
 #slide-haircare{
     padding-top: 2vh;
     padding-bottom: 2vh;
-    font-family: mustica;
+    font-family: zabalBold;
     color: #615f5f;
     font-size: 1vw;
     text-decoration: none;
+    letter-spacing: .1vw;
 }
 #slide-gifts{
     padding-top: 2vh;
     padding-bottom: 2vh;
-    font-family: mustica;
+    font-family: zabalBold;
     color: #615f5f;
     font-size: 1vw;
     text-decoration: none;
+    letter-spacing: .1vw;
 }
 
 #slide-haircare:hover{

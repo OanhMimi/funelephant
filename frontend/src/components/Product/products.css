@@ -29,6 +29,7 @@
 #fun-elephant-banner{
     width: 100vw;
     height: 35vh;
+    top: 1vh;
     position: relative;
     z-index: -1;
 }
@@ -50,9 +51,31 @@
     align-items: center;
     background-color: #f6dcff;
     width: 100vw;
-    height: 8vh;
-    padding: 0;
-    top:-1vh;
+    height: 8.2vh;
+    padding: none;
+    margin: 0;
+    position: relative;
+}
+
+#banner2-dropdown{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: #f6dcff;
+    width: 100vw;
+    height: 8.2vh;
+    padding: none;
+    margin: 0;
+}
+
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a4a4a;
+    text-decoration: none!important;
+
+
 }
 
 
@@ -154,6 +177,7 @@
 #what-it-does{
     font-size: 2.5vh;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     font-family: zabal;
@@ -241,6 +265,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1.1);
+    padding-right: 4vw;
+
 }
 
 
@@ -263,6 +290,13 @@
     height: 12.5vh;
 }
 
+#skincare-dropdown{
+    margin-left: 1vw;
+    font-family: mustica;
+    color: #4a4a4a;
+    letter-spacing: .2vw;
+    transform: scale(1.7vw);
+}
 
 .show-img-display{
     padding-top: 8vh;

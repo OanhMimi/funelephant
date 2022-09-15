@@ -26,25 +26,29 @@ const ProductIndex = () => {
             <img id="fun-elephant-banner" src={funElephantBanner}/>
             <h1 id="Skincare-collectionHeader">skin care</h1>
             <div id="banner2-bg">
-                <div className="press-to-slide-down">
-                    <button id ="slide-down" type="button" onClick={()=> setShowSlideDown(!showSlideDown)}>SKIN CARE
+                <div className="press-to-slide-down" onClick={()=> setShowSlideDown(!showSlideDown)}>
+                    <div id ="slide-down">
                             {showSlideDown ? <AiOutlineUp id="up-menu-icon"/>: <AiOutlineDown id="down-menu-icon"/>}
-                            {showSlideDown && <div className='collapse-content'> 
-                                <div id="links">
-                                    <Link exact to ="/">Home</Link>
-                                    <Link exact to ="/profile">Profile</Link>
-                                </div>
-                            </div>}
-                    </button>
+                    </div>
+                    <div id="skincare-dropdown"> SKIN CARE</div>
                 </div>
-                
-             </div>
+            </div>
+            <div>
+
+                {showSlideDown && <div id='banner2-dropdown'> 
+                                    <div id="links">
+                                        <Link exact to ="/">Home</Link>
+                                        <Link exact to ="/profile">Profile</Link>
+                                    </div>
+                                </div>}
+            </div>
+
             <div id="display-all-products">
                 {products.map(product=>(
                     <ProductIndexItem product={product} key={product.id}/>
                 ))} 
             </div>
-               
+          
         </div>
       
         
