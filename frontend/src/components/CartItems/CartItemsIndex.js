@@ -60,7 +60,7 @@ const CartItemIndex = ({ setShowCartItems }) => {
                           <div id="subtotal-amount">${getSubtotal(cartItems)}.00</div>
                   </div>
                   <div className="check-out">
-                      <NavLink exact to="/CheckOut" id="checkout-btn" CheckOut={cartItems} >Checkout</NavLink>
+                      <NavLink exact to="/CheckOut" id="checkout-btn" >Checkout</NavLink>
                   </div>
             </div>
           </div>

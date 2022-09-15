@@ -8,6 +8,9 @@ import ProductIndex from "./components/Product/ProductIndex";
 import ProductShow from "./components/Product/ProductShow";
 import ScrollToTop from "./components/ScrollToTop";
 import CheckOut from "./components/CheckOut";
+import SkinCareIndex from "./components/Product/SkinCareIndex";
+import HairCareIndex from "./components/Product/HairCareIndex";
+import GiftsIndex from "./components/Product/GiftsIndex";
 
 const App = () => (
     <>
@@ -18,7 +21,7 @@ const App = () => (
               <SplashIndex/>
               <ScrollToTop/>
             </Route>
-            <Route exact path="/SignUp-LogIn">
+            <Route exact path="/signup">
               <MashForm/>
               <ScrollToTop/>
             </Route>
@@ -29,6 +32,15 @@ const App = () => (
             <Route exact path="/products">
               <ProductIndex/>
               <ScrollToTop/>
+            </Route>
+            <Route exact path="/products/skincare">
+              <SkinCareIndex />
+            </Route>
+            <Route exact path="/products/haircare">
+              <HairCareIndex />
+            </Route>
+            <Route exact path="/products/gifts">
+              <GiftsIndex />
             </Route>
             <Route exact path="/products/:productId">
               <ScrollToTop/>

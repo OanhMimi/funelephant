@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { useState } from "react";
 // import SubmitButton from "../../Buttons/SubmitButton";
@@ -15,6 +15,11 @@ const LogInForm = () => {
     const dispatch = useDispatch();
 
     const sessionUser = useSelector(state => state.session.user);
+
+    
+    // useEffect(()=>{
+    //     if (sessionUser) return <Redirect to="/profile" />
+    // },[sessionUser])
 
     if (sessionUser) return <Redirect to="/profile" />;
 

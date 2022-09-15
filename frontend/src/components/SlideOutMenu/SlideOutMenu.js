@@ -28,9 +28,9 @@ const SlideOutMenu = ({setShowSlideOut}) => {
                         <ul id="slide-content">    
                             <NavLink id="slide-home" exact to="/">HOME</NavLink>
                             <NavLink id="slide-products" exact to="/products">All COLLECTIONS</NavLink>
-                            <NavLink id="slide-skincare" exact to="/products">SKIN CARE</NavLink>
-                            <NavLink id="slide-haircare" exact to="/products">HAIR CARE</NavLink>
-                            <NavLink id="slide-gifts" exact to="/products">GIFTS</NavLink>
+                            <NavLink id="slide-skincare" exact to="/products/skincare">SKIN CARE</NavLink>
+                            <NavLink id="slide-haircare" exact to="/products/haircare">HAIR CARE</NavLink>
+                            <NavLink id="slide-gifts" exact to="/products/gifts">GIFTS</NavLink>
 
                         </ul>
                     </div>

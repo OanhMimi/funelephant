@@ -4,7 +4,6 @@ import splashImage2 from './F_114811.jpeg'
 
 const SplashIndex = () => {
 
-
     return(
         
         <div id="splashPage-outer-div">

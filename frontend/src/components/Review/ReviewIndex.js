@@ -103,7 +103,7 @@ const ReviewIndex  = ({product}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        !sessionUser? <Redirect to="/signUpOrLogIn" /> : setShowModal(true) 
+        !sessionUser? <Redirect to="/SignUp" /> : setShowModal(true) 
     }
     return(
         <>

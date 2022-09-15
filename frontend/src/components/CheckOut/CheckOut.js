@@ -1,13 +1,12 @@
 import './CheckOut.css'
 import { useEffect, useRef, useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { deleteCartItem, updateCartItem } from "../../store/cartItems";
+import { deleteCartItem, fetchCartItems, updateCartItem,getCartItem,getCartItems } from "../../store/cartItems";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
-import { getCartItem } from '../../store/cartItems';
 import { useParams } from 'react-router-dom';
 
-const CheckOut = ({cartItems}) => {
+const CheckOut = () => {
 
     const dispatch = useDispatch();
     const {cartItemId} = useParams();
@@ -24,6 +23,12 @@ const CheckOut = ({cartItems}) => {
       }
       dispatch(updateCartItem(cartItem.id, { ...cartItem, quantity: count }));
     }, [count]);
+
+    const cartItems = useSelector(getCartItems)
+
+    useEffect(() => {
+        dispatch(fetchCartItems())
+    }, [])
   
   
     return (

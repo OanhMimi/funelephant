@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { useEffect } from "react";
 import { fetchProducts, getProducts } from "../../store/product";
 import ProductIndexItem from "./ProductIndexItem";
 import './products.css'
@@ -24,21 +23,23 @@ const ProductIndex = () => {
     return(
         <div id="outer-index-div">
             <img id="fun-elephant-banner" src={funElephantBanner}/>
-            <h1 id="Skincare-collectionHeader">skin care</h1>
+            <h1 id="all-collectionHeader">shop all collections</h1>
             <div id="banner2-bg">
                 <div className="press-to-slide-down" onClick={()=> setShowSlideDown(!showSlideDown)}>
                     <div id ="slide-down">
                             {showSlideDown ? <AiOutlineUp id="up-menu-icon"/>: <AiOutlineDown id="down-menu-icon"/>}
                     </div>
-                    <div id="skincare-dropdown"> SKIN CARE</div>
+                    <div id="skincare-dropdown">COLLECTIONS</div>
                 </div>
             </div>
             <div>
 
                 {showSlideDown && <div id='banner2-dropdown'> 
                                     <div id="links">
-                                        <Link exact to ="/">Home</Link>
-                                        <Link exact to ="/profile">Profile</Link>
+                                        <Link exact to ="/products/skincare">SKIN CARE</Link>
+                                        <Link exact to ="/products/haircare">HAIR CARE</Link>
+                                        <Link exact to ="/products/gifts">GIFTS</Link>
+
                                     </div>
                                 </div>}
             </div>
