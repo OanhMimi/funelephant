@@ -25,7 +25,10 @@ const ReviewIndex  = ({product}) => {
     useEffect(()=>{
 
         let eachReview = Object.values(reviews)
-
+        if (eachReview.length === 0){
+            setCreatedReview(false)
+            return
+        }
         for (let index = 0; index < eachReview.length; index++) {
             if (currentUserId === eachReview[index].userId) {
                 setCreatedReview(true)

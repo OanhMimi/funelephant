@@ -21,29 +21,23 @@ const ProductIndex = () => {
 
 
 
-
-
-
     return(
         <div id="outer-index-div">
             <img id="fun-elephant-banner" src={funElephantBanner}/>
             <h1 id="Skincare-collectionHeader">skin care</h1>
             <div id="banner2-bg">
                 <div className="press-to-slide-down">
-                    <button id ="slide-down" type="button" onClick={()=> setShowSlideDown(!showSlideDown)}>
-                            <div className='slide-down-icon'>{showSlideDown ? 
-                                <AiOutlineUp id="up-menu-icon"/>: <AiOutlineDown id="down-menu-icon"/>               
-                            }</div>
+                    <button id ="slide-down" type="button" onClick={()=> setShowSlideDown(!showSlideDown)}>SKIN CARE
+                            {showSlideDown ? <AiOutlineUp id="up-menu-icon"/>: <AiOutlineDown id="down-menu-icon"/>}
                             {showSlideDown && <div className='collapse-content'> 
                                 <div id="links">
                                     <Link exact to ="/">Home</Link>
                                     <Link exact to ="/profile">Profile</Link>
                                 </div>
-                            
                             </div>}
                     </button>
-                    <h2 id="skin-care-drop-down">SKIN CARE</h2>
                 </div>
+                
              </div>
             <div id="display-all-products">
                 {products.map(product=>(

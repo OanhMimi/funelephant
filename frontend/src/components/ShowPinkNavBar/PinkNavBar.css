@@ -21,7 +21,6 @@
 
 .pink-nav-sticky{
     position: fixed;
-    overflow: hidden;
     z-index: 2;
 }
 #pink-bar-display{
@@ -91,16 +90,15 @@
     color: white; 
 }
 
-.fa-heart{
+#fa-heart{
     display: flex;
     padding-right: 3vw;
-    padding-left: .5vw;
+    padding-left: 1.1vw;
     padding-top: 0;
     padding-bottom: none;
     align-items: center;
     margin: 0;
-    width: 2.5vw;
-    height: 4vh;
+    transform: scale(1.6)
 }
 
 .select{
@@ -128,4 +126,13 @@
     color: #4a4a4a;
     font-family: zabalBold;
     margin-right: 2vw;
+    font-size: 1.2vw;
+}
+
+#show-star-on-pinkNav{
+    margin-left: 1.5vw;
+    margin-right: .6vw;
+}
+#starFull{
+    color: #ff69d2;
 }

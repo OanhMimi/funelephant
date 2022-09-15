@@ -16,17 +16,32 @@ const CartItemIndex = ({ setShowCartItems }) => {
     }, [dispatch]);
 
 
+  const getSubtotal = (cartItems) => {
+    let subtotal= 0;
+    cartItems.forEach(cartItem=>{
+         subtotal+= (cartItem.quantity * cartItem.productPrice)
+    })
+    return subtotal;
+  }
+
+  const getQuantityTotal = (cartItems) => {
+    let totalQuantity = 0;
+    cartItems.forEach(cartItem=>{
+      totalQuantity+= cartItem.quantity
+    })
+    return totalQuantity;
+  }
+
+
 
   return (
     <>
       <div className="container-for-cart"></div>
-      <div className="container-for-cart-box">
         <div className="cartItemIndex-container">
           <div className="cart-2-top">
             <button
               id="close-cart-item"
-              onClick={() => setShowCartItems(false)}
-            >
+              onClick={() => setShowCartItems(false)}>
               < GrClose/>
             </button>
             <h1 id="shopping-bag">Shopping Bag</h1>
@@ -57,20 +72,18 @@ const CartItemIndex = ({ setShowCartItems }) => {
                 // </div>
               ))}
             </div>
-          </div>
-          <div className="container-2-bottom">
-            <div className="order-total">
-              <div className="cart-item-total">
-                <div>Order SubTotal</div>
-                <div>Item Quantity</div>
-              </div>
-            </div>
-            <div className="check-out-btn">
-              <div>Checkout</div>
+          
+            <div className="container-2-bottom">
+                  <div className="order-total">
+                          <div id="subtotal-quantity" >Subtotal ({getQuantityTotal(cartItems)}item)</div>
+                          <div id="subtotal-amount">${getSubtotal(cartItems)}.00</div>
+                  </div>
+                  <div className="check-out">
+                      <button id="checkout-btn">Checkout</button>
+                  </div>
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

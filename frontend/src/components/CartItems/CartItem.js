@@ -27,7 +27,7 @@ const CartItem = ({ cartItem }) => {
         <img id="cart-item-img" src={cartItem.photoUrl[0]} />
       </div>
       <div className="product-info">
-        <div>{cartItem.productName}</div>
+        <div id="cart-item-product-name">{cartItem.productName}</div>
         <div id="subtotal">
           <div id="changing-quantity">
             <div onClick={(e) => count < 1 ? dispatch(deleteCartItem(cartItem.id)) : setCount( count - 1)}>
@@ -38,16 +38,18 @@ const CartItem = ({ cartItem }) => {
                 <AiOutlinePlus id="ai-plus"/>
             </div>
           </div>
-          <div>
+          <div id="price-total">
             {cartItem.quantity * cartItem.productPrice}
           </div>
         </div>
-        <button
-          id="remove-item"
-          onClick={() => dispatch(deleteCartItem(cartItem.id))}
-        >
-          Remove
-        </button>
+        <div id="remove-cart-item">
+            <button
+            id="remove-item"
+            onClick={() => dispatch(deleteCartItem(cartItem.id))}
+            >
+            Remove
+            </button>
+        </div>
       </div>
     </div>
   );

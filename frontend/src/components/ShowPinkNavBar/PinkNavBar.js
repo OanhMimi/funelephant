@@ -1,6 +1,8 @@
 import React from "react";
 import "./PinkNavBar.css";
 import { FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+
 import { FaRegHeart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import CartItemIndex from "../CartItems/CartItemsIndex";
@@ -19,6 +21,75 @@ const PinkNavBar = ({ product }) => {
   const [showCartItems, setShowCartItems] = useState(false);
   const cartItems = useSelector(getCartItems);
   const [itemQuantity, setItemQuantity] = useState(1);
+
+  const showStar = (rating)=>{
+    if (rating === null || rating < 0){
+         return (
+             <div>
+                 <FaStar id="starFull"/>
+                 <FaStar id="noStar"/>
+                 <FaStar id="noStar"/>
+                 <FaStar id="noStar"/>
+                 <FaStar id="noStar"/>
+             </div>
+         )
+     } 
+    if (rating<2){
+     return (
+         <div>
+             <FaStar id="starFull"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+          </div>
+     )
+     } 
+     if (rating<3){
+              return (
+         <div>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+          </div>
+     )
+     } 
+     if (rating<4){
+              return (
+         <div>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="noStar"/>
+             <FaStar id="noStar"/>
+          </div>
+     )
+     } 
+     if (rating<5){
+              return (
+         <div>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="starFull"/>
+             <FaStar id="noStar"/>
+          </div>
+     )
+     } 
+     if (rating === 5) {
+        return(
+        <div>
+            <FaStar id="starFull"/>
+            <FaStar id="starFull"/>
+            <FaStar id="starFull"/>
+            <FaStar id="starFull"/>
+            <FaStar id="starFull"/>
+         </div>
+        )
+     }
+ }
 
   useEffect(() => {
     dispatch(fetchCartItems());
@@ -57,6 +128,9 @@ const PinkNavBar = ({ product }) => {
         <div id="first-pink-bar-display">
           <ul id="pink-nav-display-show1">{product.name}</ul>
           <ul id="pink-nav-display-show2">${product.price}.00</ul>
+          <div id="show-star-on-pinkNav">{showStar(product.avgReview)}</div>
+          <ul>{product.avgReview}</ul>
+          <ul></ul>
         </div>
         <div id="second-pink-bar-display">
           <div className="select">
@@ -71,19 +145,6 @@ const PinkNavBar = ({ product }) => {
                   return <option value={quantityValue}>{quantityValue}</option>;
                 })}
               </select>
-
-              {/* <select className="quantity">
-                                <option value="1" >1</option>
-                                <option value="2" >2</option>
-                                <option value="3" >3</option>
-                                <option value="4" >4</option>
-                                <option value="5" >5</option>
-                                <option value="6" >6</option>
-                                <option value="7" >7</option>
-                                <option value="8" >8</option>
-                                <option value="9" >9</option>
-                                <option value="10" >10</option>
-                            </select> */}
             </div>
           </div>
           <div>

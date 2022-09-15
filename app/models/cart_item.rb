@@ -15,4 +15,8 @@ class CartItem < ApplicationRecord
     
     belongs_to :user
     belongs_to :product 
+
+    def subtotal
+        (self.reviews.pluck(:rating).sum * 1.0)/self.reviews.length
+    end
 end

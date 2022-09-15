@@ -66,6 +66,13 @@
     background-color:#baffec;
 }
 
+#individual-img:hover{
+    transform: scale(.86);
+    transition-timing-function: ease;
+    transition: 0.9s;
+
+
+}
 .nav-link-products{
     text-decoration: none;
     margin:0;
@@ -82,13 +89,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: mustica;
+    font-family: zabal;
     color: #4a4a4a;
     font-size: .8vw;
     margin: 0;
     padding: none;
     max-width: 20vw;
-    line-height: 1.8vh;
+    line-height: 2.5vh;
 }
 
 #product-info{
@@ -163,12 +170,22 @@
     color: #4a4a4a;
     font-family: zabal;
 }
+#what:hover{
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: zabalBold;
+}
 #how{
     border-top: 1px solid #4a4a4a;
     padding: 1vw;
     font-size: 1vw;
     color: #4a4a4a;
     font-family: zabal;
+}
+#how:hover{
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: zabalBold;
 }
 #ingredients{
     border-top: 1px solid #4a4a4a;
@@ -177,6 +194,11 @@
     color: #4a4a4a;
     font-family: zabal;
     margin-bottom: 5vh;
+}
+#ingredients:hover{
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: zabalBold;
 }
 
 #product-desc{
@@ -204,6 +226,8 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    font-family: mustica;
+    letter-spacing: .2vw;
 }
 
 .slide-down-icon{
@@ -262,7 +286,7 @@
 }
 
 #star{
-    color: #ecc8f8;
+    color: #fa47c3 ;
     transform: scale(1);
 }
 

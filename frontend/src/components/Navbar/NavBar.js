@@ -42,13 +42,13 @@ const NavBar = () => {
 
                     <div className="right-nav-bar">
                         <div className="search">
-                            <NavLink className="user-icon" exact to="/signUpOrLogIn"><HiOutlineSearch id="search-icon"/></NavLink>
+                            <NavLink className="user-icon" exact to="/SignUp-LogIn"><HiOutlineSearch id="search-icon"/></NavLink>
                         </div>
                         <div className="bag">
                             <div onClick={()=>setShowCartItems(true)} className="user-icon"><HiOutlineShoppingBag id="bag-icon"/></div>
                         </div>
                         <div className="prof">
-                            <NavLink className="user-icon" exact to="/signUpOrLogIn"><AiOutlineUser id="prof-icon" /></NavLink>
+                            <NavLink className="user-icon" exact to="/SignUp-LogIn"><AiOutlineUser id="prof-icon" /></NavLink>
                         </div>
                     </div>   
                 </div>
