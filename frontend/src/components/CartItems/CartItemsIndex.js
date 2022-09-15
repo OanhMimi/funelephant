@@ -4,7 +4,9 @@ import { getCartItems, fetchCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { deleteCartItem } from "../../store/cartItems";
 import CartItem from "./CartItem";
+import { NavLink } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
+import CheckOut from "../CheckOut";
 
 
 const CartItemIndex = ({ setShowCartItems }) => {
@@ -48,28 +50,7 @@ const CartItemIndex = ({ setShowCartItems }) => {
             <div className="cart-items-contents">
               {cartItems.map((cartItem) => (
                 <CartItem cartItem={cartItem}/>
-                // <div className="items-in-my-cart">
-                //   <div id="img-in-cart">
-                //     <img id="cart-item-img" src={cartItem.productImage} />
-                //   </div>
-                //   <div className="product-info">
-                //     <div>{cartItem.productName}</div>
-                //     <div id="subtotal">
-                //       <div>
-                //         <button onClick={handleQuantity("negative")}>-</button>
-                //         QTY: {cartItem.quantity}
-                //         <button onClick={handleQuantity("positive")}>+</button>
-                //       </div>
-                //       <div>{cartItem.quantity * cartItem.productPrice}</div>
-                //     </div>
-                //     <button
-                //       id="remove-item"
-                //       onClick={() => dispatch(deleteCartItem(cartItem.id))}
-                //     >
-                //       Remove
-                //     </button>
-                //   </div>
-                // </div>
+
               ))}
             </div>
           
@@ -79,7 +60,7 @@ const CartItemIndex = ({ setShowCartItems }) => {
                           <div id="subtotal-amount">${getSubtotal(cartItems)}.00</div>
                   </div>
                   <div className="check-out">
-                      <button id="checkout-btn">Checkout</button>
+                      <NavLink exact to="/CheckOut" id="checkout-btn" CheckOut={cartItems} >Checkout</NavLink>
                   </div>
             </div>
           </div>

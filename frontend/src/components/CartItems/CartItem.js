@@ -6,7 +6,6 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 
 const CartItem = ({ cartItem }) => {
-  console.log(cartItem);
   const dispatch = useDispatch();
   const [count, setCount] = useState(cartItem.quantity);
   const firstRender = useRef(true);
@@ -39,7 +38,7 @@ const CartItem = ({ cartItem }) => {
             </div>
           </div>
           <div id="price-total">
-            {cartItem.quantity * cartItem.productPrice}
+            ${cartItem.quantity * cartItem.productPrice}.00
           </div>
         </div>
         <div id="remove-cart-item">

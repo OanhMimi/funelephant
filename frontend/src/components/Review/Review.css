@@ -169,6 +169,7 @@ textarea{
 .review-container{
     width: 100vw;
     display: flex;
+    z-index: 1;
     justify-content: space-evenly;
     background-color: white;
     border-top: #eeddf5 4vh solid;

@@ -7,6 +7,7 @@ import Profile from "./components/Profile/Profile";
 import ProductIndex from "./components/Product/ProductIndex";
 import ProductShow from "./components/Product/ProductShow";
 import ScrollToTop from "./components/ScrollToTop";
+import CheckOut from "./components/CheckOut";
 
 const App = () => (
     <>
@@ -32,6 +33,9 @@ const App = () => (
             <Route exact path="/products/:productId">
               <ScrollToTop/>
               <ProductShow/>
+            </Route>
+            <Route exact path="/CheckOut">
+              <CheckOut />
             </Route>
         </Switch>
     </>

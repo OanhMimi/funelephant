@@ -238,7 +238,6 @@
     width: 50%;
 }
 #img-direct{
-    margin-top: 26%;
     margin-right: 10%;
 }
 
@@ -299,11 +298,11 @@
 }
 
 .show-img-display{
-    padding-top: 8vh;
-    width: 31.7vw;
-    height: 88.5vh;
-    transform: scale(1.075);
+    padding-top: 1vh;
+    width:  32.936vw;
+    height:  99.520vh;
     overflow: hidden;
+    transform: scale(.99);
 }
  @keyframes example {
     from{

@@ -84,7 +84,7 @@
 #changing-quantity{
     display: flex;
     font-family: zabal;
-    font-size: .8vw;
+    font-size: 1vw;
 }
 
 #ai-minus{
@@ -104,6 +104,7 @@ button{
 	cursor: pointer;
 	outline: inherit;
 }
+
 #cart-item-product-name{
     font-family: zabal;
     margin-right: 5vw;
@@ -117,7 +118,7 @@ button{
 #remove-item{
     font-family: zabal;
     margin-top: .4vw;
-    font-size: .7vw;
+    font-size: .9vw;
     border-bottom: .05vw solid gray;
 }
 .cart-item-total{

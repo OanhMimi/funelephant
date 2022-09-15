@@ -1,0 +1,333 @@
+
+.check-out-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ur-shopping-cart{
+    background-color: white;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    letter-spacing: .1vw;
+    color: #4a4a4a;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+#your-shopping-cart{
+    margin-left: 9vw;
+    font-family: Mustica;
+    font-size: 1.7vw;
+    color: #4a4a4a;
+}
+#checking-out{
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+#check-out-cart-items{
+    width: 55vw;
+    padding-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#display-cart-items{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#checkout-msg{
+    background-color: #e5f4fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: zabalBold;
+    color: #807f7f;
+    font-size: 1.2vw;
+    height: 12vh;
+
+}
+
+#individual-item-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;;
+}
+#display-checkout-product-info{
+    display: flex;
+    flex-direction: column;
+}
+#my-wishlist-items{
+    font-family: zabalBold;
+    font-size: 1.6vw;
+    letter-spacing: .1vw;
+    color: #4a4a4a;
+}
+
+
+#display-wishlist-items{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+#wishlist-items{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#wishlist-img-info{
+    display: flex;
+}
+
+#display-wishlist-product-info{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#add-wishlist-to-bag{
+    background-color: white;
+}
+
+#checkout-cart{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+}
+
+#checkout-sub{
+    font-family: zabal;
+    color: #4a4a4a;
+    padding-top: 3.5vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+
+#enter-promo-code{
+    margin-top: 2vw;
+    font-family: zabalBold;
+    font-size: 1vw;
+    padding-left: 2vw;
+    padding-bottom: .5vw;
+    color: #4a4a4a;
+}
+
+#shipping-tbh{
+    font-family: zabal;
+    color: #4a4a4a;
+    padding-top: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+#promocode-text{
+    outline: none;
+    border: none;
+    height: 4vh;
+    width: 14vw;
+    font-family: zabal;
+    color: #4a4a4a;
+}
+
+#shopping-border-bot{
+    border-bottom: 1px solid black ;
+    padding-bottom: 2vw;
+}
+
+#apply-promo{
+    align-items: center;
+    background-color: #eee9fe;
+    border: 2px solid rgb(157, 157, 157);
+    box-sizing: border-box;
+    color: rgb(157, 157, 157);
+    cursor: pointer;
+    font-family: zabalBold;
+    font-size: 1.6vh;
+    font-weight: 600;
+    height: 4vh;
+    justify-content: center;
+    line-height: 2vh;
+    outline: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: .3vw; 
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+#apply-promo:hover{
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+
+#add-to-bag{
+    align-items: center;
+    background-color: #eee9fe;
+    border: 2px solid rgb(157, 157, 157);
+    box-sizing: border-box;
+    color: rgb(157, 157, 157);
+    cursor: pointer;
+    font-family: zabalBold;
+    font-size: 1.6vh;
+    font-weight: 600;
+    height: 4vh;
+    justify-content: center;
+    line-height: 2vh;
+    outline: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: .3vw; 
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+#add-to-bag:hover{
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+
+#promo-div{
+    display: flex;
+    padding-left: .6vw;
+    padding-right: 3vw;
+}
+#promo-code{
+    padding-left: 2vw;
+}
+
+#shipping-tbh-info{
+    padding-left: 2vw;
+}
+#tbh{
+    padding-right: 2vw;
+}
+
+#tax-total{
+    font-family: zabal;
+    color: #4a4a4a;
+    padding-top: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2vw;
+    padding-bottom: 1.6vw;
+}
+
+#tax-total-cart{
+    padding-left: 2vw;
+}
+
+#tax-tbh{
+    padding-right: 2vw;
+}
+
+#estimated-total{
+    display: flex;
+    justify-content: space-between;
+    font-family: zabal;
+    color: #4a4a4a;
+    padding-top: 1.1vh;
+    display: flex;
+    font-size: 1.2vw;
+}
+#est-border-top{
+    border-top: 1px solid black ; 
+    margin-left: 2vw;
+    max-width: 85%;
+}
+#est-border-bot{
+    border-bottom: 1px solid black ; 
+    padding-bottom: 1.3vw;
+    margin-left: 2vw;
+    max-width: 85%;
+}
+
+#estimated-total-cart{
+    padding-top: .6vw;
+    padding-left: 2vw;
+}
+#estimated-tbh{
+    padding-right: 2vw;
+}
+
+#promocode{
+    display: flex;
+    justify-content: space-between;
+}
+
+#secure-checkout-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+}
+
+
+#display-checkout-amt{
+    width: 24vw;
+    height: 70vh;
+    background-color:#e5f4fc;
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-subtotal{
+    padding-left: 2vw;
+}
+#checkout-price{
+    padding-right: 2vw;
+}
+
+#secure-checkout{
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #4a4a4a;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: zabal;
+    font-size: 2vh;
+    font-weight: 600;
+    height: 4vh;
+    justify-content: center;
+    line-height: 2vh;
+    outline: 0;
+    padding: 0 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    touch-action: manipulation;
+    letter-spacing: .2vw;
+}
+
+#secure-checkout:hover{
+    background-color: #4a4a4a;
+    color: white; 
+}
