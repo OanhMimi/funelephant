@@ -27,10 +27,10 @@ const SlideOutMenu = ({setShowSlideOut}) => {
                     <div id="menu-slide-content">
                         <ul id="slide-content">    
                             <NavLink id="slide-home" exact to="/">HOME</NavLink>
-                            <NavLink id="slide-products" exact to="/products">All COLLECTIONS</NavLink>
-                            <NavLink id="slide-skincare" exact to="/products/skincare">SKIN CARE</NavLink>
-                            <NavLink id="slide-haircare" exact to="/products/haircare">HAIR CARE</NavLink>
-                            <NavLink id="slide-gifts" exact to="/products/gifts">GIFTS</NavLink>
+                            <NavLink id="slide-products" exact to="/products"><p onClick={()=>setShowSlideOut(false)}>All COLLECTIONS</p></NavLink>
+                            <NavLink id="slide-skincare" exact to="/products/skincare"><p onClick={()=>setShowSlideOut(false)}>SKIN CARE</p></NavLink>
+                            <NavLink id="slide-haircare" exact to="/products/haircare"><p onClick={()=>setShowSlideOut(false)}>HAIR CARE</p></NavLink>
+                            <NavLink id="slide-gifts" exact to="/products/gifts"><p onClick={()=>setShowSlideOut(false)}>GIFTS</p></NavLink>
 
                         </ul>
                     </div>

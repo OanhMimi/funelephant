@@ -39,7 +39,7 @@ const GiftsIndex = () => {
         <>
             <div id="outer-index-div">
                 <img id="fun-elephant-banner" src={funElephantBanner}/>
-                <h1 id="all-collectionHeader">gifts care</h1>
+                <h1 id="all-collectionHeader">shop gifts</h1>
                 <div id="banner2-bg">
                     <div className="press-to-slide-down" onClick={()=> setShowSlideDown(!showSlideDown)}>
                         <div id ="slide-down">

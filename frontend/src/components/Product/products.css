@@ -24,6 +24,7 @@
     width: 100vw;
     height: 100vh;
     padding-bottom: 3vh;
+    z-index: 10;
  } 
 
 #fun-elephant-banner{
@@ -42,6 +43,17 @@
     position: absolute;
     top: 20vh;
     right: 42vw;
+    letter-spacing: .3vw;
+}
+
+#all-collectionHeader1{
+    font-size: 3.2vw;
+    color: #4a4a4a;
+    font-weight: bold;
+    font-family: mustica;  
+    position: absolute;
+    top: 20vh;
+    right: 34vw;
     letter-spacing: .3vw;
 }
 
@@ -130,13 +142,14 @@
     width: 100vw;
     height: 100vh;
     /* position: relative  */
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 
 #second-container{
     width: 100vw;
     height:100vh;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -147,6 +160,8 @@
     /* position: absolute; */
     flex-direction: column;
     margin-top: 10%;
+    height: 100vw;
+    max-height: 100%;
 }
 
 
@@ -298,15 +313,15 @@
 }
 
 .show-img-display{
-    padding-top: 1vh;
-    width:  32.936vw;
+    padding-top: 3.8vh;
+    width:  33.936vw;
     height:  99.520vh;
     overflow: hidden;
-    transform: scale(.99);
+    transform: scale(1.19);
 }
  @keyframes example {
     from{
-        transform: translate3d(0px,0,0)
+        transform: translate3d(1px,0,0)
     }
     to{ 
         transform: translate3d(-100%,0,0)

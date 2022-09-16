@@ -5,11 +5,12 @@
     /* overflow: hidden; */
     display: block;
     margin-bottom: .03vw;
-    z-index: 1;
+    z-index: 100;
 }
 
 
 #main-nav-bar{
+    position: sticky;
     display: flex;
     width: 100%;
     height: 7vh;
@@ -34,21 +35,21 @@
      align-items: center;
 }
 
-.user-icon{
-    color: white;
-}
 
 #search-icon{
     transform: scale(1.2);
     padding-right: 1.5vw;
+    color: white;
 }
 #bag-icon{
     transform: scale(1.2);
     padding-right: 1.5vw;
+    color: white;
 }
 #prof-icon{
     transform: scale(1.2);
     padding-right: 3vw;
+    color: white;
 }
 
 #search-icon:hover{
@@ -80,10 +81,17 @@
 
 #fun-elephant-logo{
     position: absolute;
+    display: flex;
     top: 0;
     width: 5vw;
     height: 7vh;
-    right: 50%;
+    right: 48%;
+    z-index: 101;
+}
+
+#fun-elephant-logo:hover{
+    cursor: pointer;
+    transform: scale(.9);
 }
 
 #display-slide-out{

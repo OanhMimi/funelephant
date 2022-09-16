@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import NavBar from './components/Navbar'; 
 import SplashIndex from './components/SplashPage/SplashIndex'
 import MashForm from "./components/mashedPage/mashSignUpLogIn";
@@ -11,7 +11,7 @@ import CheckOut from "./components/CheckOut";
 import SkinCareIndex from "./components/Product/SkinCareIndex";
 import HairCareIndex from "./components/Product/HairCareIndex";
 import GiftsIndex from "./components/Product/GiftsIndex";
-
+import SearchIndex from "./components/Search";
 const App = () => (
     <>
       <NavBar/>
@@ -49,6 +49,10 @@ const App = () => (
             <Route exact path="/CheckOut">
               <CheckOut />
             </Route>
+            <Route exact path="/search">
+              <SearchIndex/>
+            </Route>
+            <Redirect to="/"/>
         </Switch>
     </>
 );

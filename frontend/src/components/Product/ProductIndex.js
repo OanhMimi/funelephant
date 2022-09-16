@@ -23,7 +23,7 @@ const ProductIndex = () => {
     return(
         <div id="outer-index-div">
             <img id="fun-elephant-banner" src={funElephantBanner}/>
-            <h1 id="all-collectionHeader">shop all collections</h1>
+            <h1 id="all-collectionHeader1">shop all collections</h1>
             <div id="banner2-bg">
                 <div className="press-to-slide-down" onClick={()=> setShowSlideDown(!showSlideDown)}>
                     <div id ="slide-down">
@@ -51,7 +51,7 @@ const ProductIndex = () => {
             </div>
           
         </div>
-      
+
         
     )
 

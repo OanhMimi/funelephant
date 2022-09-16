@@ -1,0 +1,46 @@
+
+
+.search-nav-container{
+    width: 100%;
+    height: 7vh;
+    top: 0;
+    z-index: 3;
+    /* position: fixed; */
+    background-color: #6e6e6e ;
+    transition: ease-in 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+#search-container{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    gap: 0;
+}
+
+#no-results{
+    font-family: zabalBold;
+    color: #e8b5c1; 
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 10vh;
+}
+
+#search-id{
+    font-family: zabal;
+    color: #4a4a4a;
+    width: 15vw;
+    height: 3vh;
+}
+
+#fa-cry{
+    margin-left: .8vw;
+    transform: scale(1.3)
+}
+
+
+
+

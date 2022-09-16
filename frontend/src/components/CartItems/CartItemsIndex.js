@@ -1,13 +1,10 @@
 import "./CartItemIndex.css";
 import { useSelector, useDispatch } from "react-redux";
 import { getCartItems, fetchCartItems } from "../../store/cartItems";
-import { useEffect, useState } from "react";
-import { deleteCartItem } from "../../store/cartItems";
+import { useEffect } from "react";
 import CartItem from "./CartItem";
 import { NavLink } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
-import CheckOut from "../CheckOut";
-
 
 const CartItemIndex = ({ setShowCartItems }) => {
   const dispatch = useDispatch();
@@ -48,9 +45,9 @@ const CartItemIndex = ({ setShowCartItems }) => {
             </button>
             <h1 id="shopping-bag">Shopping Bag</h1>
             <div className="cart-items-contents">
-              {cartItems.map((cartItem) => (
+              {cartItems.length === 0? <div id="shopping-empt"><h1 id="empty-cart">Shopping cart empty</h1></div> :
+              cartItems.map((cartItem) => (
                 <CartItem cartItem={cartItem}/>
-
               ))}
             </div>
           

@@ -24,8 +24,6 @@ const NavBar = () => {
 
     const [showCartItems, setShowCartItems] = useState(false);
 
-
-
  
     return(
         <>
@@ -42,10 +40,10 @@ const NavBar = () => {
 
                     <div className="right-nav-bar">
                         <div className="search">
-                            <NavLink className="user-icon" exact to="/SignUp"><HiOutlineSearch id="search-icon"/></NavLink>
+                            <NavLink className="search-icon" exact to="/search"><HiOutlineSearch id="search-icon"/></NavLink>
                         </div>
                         <div className="bag">
-                            <div onClick={()=>setShowCartItems(true)} className="user-icon"><HiOutlineShoppingBag id="bag-icon"/></div>
+                            <div onClick={()=>setShowCartItems(true)} className="bag-icon"><HiOutlineShoppingBag id="bag-icon"/></div>
                         </div>
                         <div className="prof">
                             <NavLink className="user-icon" exact to="/SignUp"><AiOutlineUser id="prof-icon" /></NavLink>
