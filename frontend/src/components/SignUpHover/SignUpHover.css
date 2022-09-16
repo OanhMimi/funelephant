@@ -27,7 +27,7 @@
   
 }
 
-@media (max-width: 1024px) and (min-width: 581px){
+@media (max-width:  60.9vw) and (min-width: 34.58vw){
     .signup-hover {
         font-size: 7.2rem;
     }
