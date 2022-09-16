@@ -52,9 +52,9 @@ const SkinCareIndex = () => {
 
                     {showSlideDown && <div id='banner2-dropdown'> 
                                         <div id="links">
-                                            <Link exact to ="/products">ALL COLLECTIONS</Link>
-                                            <Link exact to ="/products/haircare">HAIR CARE</Link>
-                                            <Link exact to ="/products/gifts">GIFTS</Link>
+                                            <Link  id="link-deco"exact to ="/products">ALL COLLECTIONS</Link>
+                                            <Link id="link-deco"exact to ="/products/haircare">HAIR CARE</Link>
+                                            <Link id="link-deco"exact to ="/products/gifts">GIFTS</Link>
                                         </div>
                                     </div>}
                 </div>

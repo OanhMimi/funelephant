@@ -29,7 +29,7 @@ const NavBar = () => {
         <>
             <div className="outmost-nav-bar">
                 <div id="elephant-logo">
-                    <img id="fun-elephant-logo" src={FunElephantLogo}/>
+                    <NavLink exact to ="/"><img id="fun-elephant-logo" src={FunElephantLogo}/></NavLink>
                 </div>
                 <div id="main-nav-bar">
                     <div className="left-nav-bar">

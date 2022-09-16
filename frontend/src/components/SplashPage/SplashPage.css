@@ -103,8 +103,8 @@
 .splash2{
     animation-name:splashImage2;
     animation-duration:1s;
-    height: 260px;
-    width:100px; 
+    height: 27.6vh;
+    width:5.95vw; 
     position: absolute;
     animation-fill-mode: forwards;
 }
@@ -119,15 +119,15 @@
     width: 43vw;
     height: 49vh;
     left: 23vw;
-    top: 12vh;
+    top: 45vh;
     transform: scale(1.1);
 }
 
 .splash1{
     animation-name:splashImage1;
     animation-duration:1s;
-    height: 500px;
-    width:500px; 
+    height: 53.24vw;
+    width:29.76vw; 
     position: absolute;
     animation-fill-mode: forwards;
 }
