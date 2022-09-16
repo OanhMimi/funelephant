@@ -59,7 +59,7 @@ const CheckOut = () => {
                             <CheckOutCartItem cartItem={cartItem}/>
                     ))}
     
-                    <div id="my-wishlist-items">My Wishlist Items(QTY)</div>
+                    {/* <div id="my-wishlist-items">My Wishlist Items(QTY)</div>
                     <div id="display-wishlist-items">
                         <div id="wishlist-items">
                             <div id="wishlist-img-info">
@@ -74,7 +74,7 @@ const CheckOut = () => {
                                 <button id="add-to-bag">add to bag</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div id="display-checkout-amt">
                     <div id="checkout-cart">

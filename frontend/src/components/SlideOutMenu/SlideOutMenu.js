@@ -26,11 +26,11 @@ const SlideOutMenu = ({setShowSlideOut}) => {
                     </button>
                     <div id="menu-slide-content">
                         <ul id="slide-content">    
-                            <NavLink id="slide-home" exact to="/">HOME</NavLink>
-                            <NavLink id="slide-products" exact to="/products"><p onClick={()=>setShowSlideOut(false)}>All COLLECTIONS</p></NavLink>
-                            <NavLink id="slide-skincare" exact to="/products/skincare"><p onClick={()=>setShowSlideOut(false)}>SKIN CARE</p></NavLink>
-                            <NavLink id="slide-haircare" exact to="/products/haircare"><p onClick={()=>setShowSlideOut(false)}>HAIR CARE</p></NavLink>
-                            <NavLink id="slide-gifts" exact to="/products/gifts"><p onClick={()=>setShowSlideOut(false)}>GIFTS</p></NavLink>
+                            <NavLink id="slide-home" exact to="/"><div onClick={()=>setShowSlideOut(false)}>HOME</div></NavLink>
+                            <NavLink id="slide-products" exact to="/products"><div onClick={()=>setShowSlideOut(false)}>All COLLECTIONS</div></NavLink>
+                            <NavLink id="slide-skincare" exact to="/products/skincare"><div onClick={()=>setShowSlideOut(false)}>SKIN CARE</div></NavLink>
+                            <NavLink id="slide-haircare" exact to="/products/haircare"><div onClick={()=>setShowSlideOut(false)}>HAIR CARE</div></NavLink>
+                            <NavLink id="slide-gifts" exact to="/products/gifts"><div onClick={()=>setShowSlideOut(false)}>GIFTS</div></NavLink>
 
                         </ul>
                     </div>

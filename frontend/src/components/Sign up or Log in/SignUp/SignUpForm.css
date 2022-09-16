@@ -9,14 +9,16 @@
 .firstName{
     padding-bottom: 2vh;
 }
-
+xxf
 .lastName{
     padding-bottom: 2vh;
 }
 
 .email{
     padding-bottom: 2vh;
+    margin-top: 2vw;
 }
+
 
 .confirm-email{
     padding-bottom: 2vh;
@@ -41,13 +43,19 @@
 #first-time{
     font-size: 2.5vw;
     color: #4a4a4a;
+    font-weight: bold;
     font-family: 'yu-gothic-bold', sans-serif;
+    padding-bottom: 3vw;
 }
 
 .valid{
     color: green
 }
 
+#message{
+    font-family: zabal;
+    margin-top: 2vw;
+}
 .invalid{
     color :red
 }
@@ -73,31 +81,36 @@ form input{
 #firstNameHidden {
     color: #4a4a4a;
     font-size: 11.77px;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    margin-bottom: 2vw;
 }
 
 #lastNameHidden{
     color: #4a4a4a;
     font-size: 11.77px;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    margin-top: 2vw;
 }
 
 #emailHidden{
     color: #4a4a4a;
     font-size: 11.77px;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    margin-top: 4vw;
 }
 
 #confirmEmailHidden{
     color: #4a4a4a;
     font-size: 11.77px;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    margin-top: 2vw;
 }
 
 #confirmPasswordHidden{
     color: #4a4a4a;
     font-size: 11.77px;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
+    margin-top: 2vw;;
 }
 
 .input:hover{
@@ -121,7 +134,7 @@ form input{
     display: inline-flex;
     flex-wrap: wrap;
     width: 30vw;
-    font-family: 'yu-gothic-bold', sans-serif;
+    font-family: zabal;
     font-size: 10.8px;
     color: #4a4a4a;
     white-space: pre-wrap;

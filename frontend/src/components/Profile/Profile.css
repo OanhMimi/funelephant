@@ -1,5 +1,4 @@
 .profile-container{
-    background-color: aqua;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -16,7 +15,13 @@
     align-items: center;
 }
 
+#header-profile-msg{
+    padding-top: .5vw;
+    line-height: 2vw;
+}
+
 #profile-h1{
+    padding-top: 2vw;
     width: 63%;
     display: flex;
     flex-direction: column;
@@ -33,7 +38,7 @@
 }
 
 #profile-h1 h2{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: zabal;
     color: #4a4a4a;
     letter-spacing: .1vw;
@@ -60,7 +65,8 @@
     transition: all .3s;
     touch-action: manipulation;
     letter-spacing: 3px;
-    
+    margin-top: 2vw;
+    margin-left: 1vw;
 }
     
 .logout-button:hover{
@@ -80,9 +86,123 @@
 
 #your-wishlist{
     margin-right: 2vw;
+    margin-top: 3vw;
+}
+
+#your-reviews{
+    margin-left: 2vw;
+    margin-top: 3vw;
+}
+
+
+#LL{
+   margin-top: 3vw;
+}
+
+#flex-first-profile{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3vw;
+}
+#aqua-greeting{
+    width: 17vw;
+    height: 31vh;
+    background-color: #01ffd7;
+    margin-right: 4vw;
+}
+
+#yellow-icon{
+    width: 17vw;
+    height: 29vh;
+    margin-left: 2.5vw;
+
+}
+
+#blue-icon{
+    padding-left: 2vw;
+    height: 29vh;
+    width: 95%;
 }
 
 
 
 
+#hello{
+    padding-top: 1.2vw;
+    font-family: zabal;
+    color: #4a4a4a;
+    font-size: 2vw;
+    margin-bottom: 1.8vw;
+    padding-left: 1vw;
+}
+
+#profile-firstname{
+    font-family: zabalBold;
+    color: #4a4a4a;
+    font-size: 3vw;
+    padding-left: 1vw;
+}
+
+.profile-page{
+    display: flex;
+}
+
+#profileicon-2{
+    width: 17vw;
+    height: 31vh;
+    background-color:#dbaaed;
+    margin-left: 3vw;
+}
+#profileicon-1{
+    margin-bottom: 2vw;
+}
+
+.img-profile-div{
+    position: relative;
+}
+
+#blue-div{
+    position: relative
+}
+
+#snatch{
+    position: absolute;
+    top: 5vw;   
+    font-family: zabal;
+    color: #4a4a4a;
+    font-size: 2vw;
+    padding-left: 4vw;
+    padding-right: 2vw;
+}
+
+#profile-msg-2{
+    position: absolute;
+    top: 9vw;   
+    font-family: zabal;
+    color: #4a4a4a;
+    font-size: 1vw;
+    padding-left: 4vw;
+    padding-right: 2vw;
+}
+
+#awaits-wishlist{
+    position: absolute;
+    top: 2vw;   
+    font-family: zabalBold;
+    color: #4a4a4a;
+    font-size: 2vw;
+    padding-left: 2vw;
+}
+
+#awaits-msg{
+    position: absolute;
+    top: 5vw;   
+    font-family: zabal;
+    color: #4a4a4a;
+    font-size: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+
+}
 

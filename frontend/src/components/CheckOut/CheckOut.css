@@ -84,6 +84,7 @@
     font-size: 1.6vw;
     letter-spacing: .1vw;
     color: #4a4a4a;
+    margin-top: .2vw;;
 }
 
 
@@ -103,6 +104,9 @@
 
 #wishlist-img-info{
     display: flex;
+    font-family: zabal;
+    color: #4a4a4a;
+    letter-spacing: .1vw;
 }
 #img-photo{
     width: 10vw;

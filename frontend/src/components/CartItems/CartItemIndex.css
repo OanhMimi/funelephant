@@ -32,7 +32,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 32%;
+    width: 36%;
     background-color: white;
     box-shadow: 1vw 1vw 1vw 1vw black;
     /* overflow-x: hidden; */
@@ -93,6 +93,7 @@
     justify-content: flex-start;
     max-width: 100%;
     width: 100%;
+    margin-left: 1.3vw;
 }
 
 #changing-quantity{
@@ -123,6 +124,7 @@ button{
     font-family: zabal;
     margin-right: 5vw;
     line-height: 2.2vh;
+
 }
 
 #price-total{

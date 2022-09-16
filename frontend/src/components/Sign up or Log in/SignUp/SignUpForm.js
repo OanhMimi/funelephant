@@ -124,7 +124,7 @@ const SignUpForm = () => {
             <form className="sign-up" onSubmit={handleSubmit}>
                         <br/>
                     <div className="firstName">
-                        <span > FIRST NAME</span>               
+                        <span id="firstName-input" > FIRST NAME</span>               
                         <br/>
                         <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value) } required/>
                         <span className="hidden" id="firstNameHidden">Please enter a valid first name</span>

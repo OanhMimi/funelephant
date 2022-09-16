@@ -19,7 +19,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
        selectedReview = {
         title: "",
         body: "",
-        rating: 0 
+        rating: 1 
         }
         editReview = false;
     }
@@ -30,8 +30,10 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
     const [rating,setRating] = useState(selectedReview.rating)
 
     
-    const handleSubmit = (e) => {   
+    const handleSubmit = (e) => { 
+
         e.preventDefault();
+  
         if (editReview){
             dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
         }else{
@@ -42,7 +44,6 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
     }
 
    
-
    
     return(
         <>
@@ -100,6 +101,7 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
                         <label id="review-review">Review 
                             <textarea 
                                placeholder='Minimum 50 characters'
+                               id="body-input"
                                 type="text"
                                 value={body}
                                 onChange={(e) => setBody(e.target.value)}
