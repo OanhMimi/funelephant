@@ -52,6 +52,7 @@ const App = () => (
             <Route exact path="/search">
               <SearchIndex/>
             </Route>
+        
             <Redirect to="/"/>
         </Switch>
     </>

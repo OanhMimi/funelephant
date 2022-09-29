@@ -28,12 +28,14 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
     const [title,setTitle] = useState(selectedReview.title)
     const [body,setBody] = useState(selectedReview.body)
     const [rating,setRating] = useState(selectedReview.rating)
-
     
     const handleSubmit = (e) => { 
-
+        let min50 = document.getElementById('min50')
         e.preventDefault();
-  
+        if (body.length < 50){
+            min50.classList.remove("hidden")
+            return ""
+        }
         if (editReview){
             dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
         }else{
@@ -42,6 +44,17 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
 
         setShowModal(false)
     }
+
+    const handleMinBody = (e) =>{
+        let min50 = document.getElementById('min50')
+        e.preventDefault();
+        if (e.target.value.length > 50){
+            min50.classList.add("hidden")
+            return ""
+        }else
+        setBody(e.target.value)
+    }
+   
 
    
    
@@ -104,10 +117,11 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
                                id="body-input"
                                 type="text"
                                 value={body}
-                                onChange={(e) => setBody(e.target.value)}
+                                onChange={handleMinBody}
                                 required
                                 />
                         </label>
+                        <h1 id="min50" className="hidden">Minimum 50 Characters</h1>
                         <button id="post-review" type="submit" >Post Review</button>
                     </form>
                 </div>

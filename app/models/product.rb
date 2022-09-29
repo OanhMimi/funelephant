@@ -26,6 +26,6 @@ class Product < ApplicationRecord
     dependent: :destroy
     
     def average_rating
-        (self.reviews.pluck(:rating).sum * 1.0)/self.reviews.length
+        ((self.reviews.pluck(:rating).sum * 1.0)/self.reviews.length).round(2)
     end
 end

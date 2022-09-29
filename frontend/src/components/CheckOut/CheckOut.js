@@ -1,5 +1,5 @@
 import './CheckOut.css'
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { fetchCartItems,getCartItems,deleteCartItem } from "../../store/cartItems";
 import CheckOutCartItem from './CheckOutCartItem';
@@ -41,6 +41,13 @@ const CheckOut = () => {
             dispatch(deleteCartItem(cartItem.id))
     })
         history.push("/")
+    }
+    
+    const [applied,setApplied] = useState("APPLY")
+
+    const handleApply =(e) => {
+        e.preventDefault();
+        setApplied("APPLIED")
     }
    
   
@@ -84,23 +91,23 @@ const CheckOut = () => {
                         </div>
                         <div id="shipping-tbh">
                             <div id="shipping-tbh-info">Shipping</div>
-                            <div id="tbh">TBH</div>
+                            <div id="tbh">Free</div>
                         </div>
                         <div id="tax-total">
                             <div id="tax-total-cart">Tax Total</div>
-                            <div id="tax-tbh">$TBH</div>
+                            <div id="tax-tbh">$TBD</div>
                         </div>
                         <div id="est-border-top"></div>
                         <div id="estimated-total">
                             <div id="estimated-total-cart">${getSubtotal(cartItems)}.00</div>
-                            <div id="estimated-tbh">$TBH</div>
+                            <div id="estimated-tbh">$TBD</div>
                         </div>
                         <div id="est-border-bot"></div>
                         <div id="enter-promo-code">Enter Promo Code</div>
                         <div id="promocode">
-                            <div id="promo-code"><input id="promocode-text" type="text"/></div>
+                            <div id="promo-code"><input id="promocode-text" type="text" /></div>
                             <div id="promo-div">
-                                <button id="apply-promo">APPLY</button>
+                                <button onClick={handleApply} id="apply-promo">{applied}</button>
                             </div>
                         </div>
                         <div id="shopping-border-bot"></div>

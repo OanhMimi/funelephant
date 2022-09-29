@@ -181,7 +181,7 @@
     color: rgb(157, 157, 157);
     cursor: pointer;
     font-family: zabalBold;
-    font-size: 1.6vh;
+    font-size: 1.2vh;
     font-weight: 600;
     height: 4vh;
     justify-content: center;
@@ -344,7 +344,7 @@
     cursor: pointer;
     display: inline-flex;
     font-family: zabal;
-    font-size: 2vh;
+    font-size: vh;
     font-weight: 600;
     height: 4vh;
     justify-content: center;
