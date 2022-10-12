@@ -1,20 +1,15 @@
 .outmost-nav-bar{
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    /* overflow: hidden; */
     display: block;
-    margin-bottom: .03vw;
-    z-index: 1;
-
+    z-index: 20;
 }
 
-
 #main-nav-bar{
-    position: sticky;
     display: flex;
     width: 100%;
-    height: 7vh;
+    height: 70px;
     background-color: #6e6e6e ;
     justify-content: space-between;
 }
@@ -36,20 +31,19 @@
      align-items: center;
 }
 
-
 #search-icon{
     transform: scale(1.2);
-    padding-right: 1.5vw;
+    padding-right: 20px;
     color: white;
 }
 #bag-icon{
     transform: scale(1.2);
-    padding-right: 1.5vw;
+    padding-right: 20px;
     color: white;
 }
 #prof-icon{
     transform: scale(1.2);
-    padding-right: 3vw;
+    padding-right: 40px;
     color: white;
 }
 
@@ -74,7 +68,7 @@
   background: none;
 	color: inherit;
 	border: none;
-	padding-left: 3vw;
+	padding-left:40px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -84,8 +78,8 @@
     position: absolute;
     display: flex;
     top: 0;
-    width: 5vw;
-    height: 7vh;
+    width: 100px;
+    height: 70px;
     right: 48%;
     z-index: 101;
 }

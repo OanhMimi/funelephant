@@ -1,9 +1,56 @@
-#registration{
+
+.mashedForm-outer-container{
+    margin-top: 70px;
+    background-color: #aafbff;
+}
+
+.registration{
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    margin: 0 auto;
     background-color: #aafbff;
-    margin-bottom: 20%;
-    top: 10vh;
+ 
+}
+
+@media only screen and (max-width: 504px){
+    .registration{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #aafbff;
+    }
+    
+    .signup-hover-container{
+        display: none;
+    }
+
+    .login-form-outer-container{
+        width: 400px;
+    }
+
+    .log-in{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+   
+    #input-button{
+        transform: scale(.5);
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+
+    }
+
+    #input-demo-button{
+        transform: scale(.5);
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+
+    }
+    
 }

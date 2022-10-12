@@ -5,9 +5,9 @@ import SignUpHover from "../SignUpHover/SignUpHover";
 
 const mashForm = () => {
     return (
-        <div id="background">
+        <div className="mashedForm-outer-container">
             <SignUpHover/>
-            <div id="registration">
+            <div className="registration">
                 <LogInForm/>
                 <SignUpForm/>
             </div>

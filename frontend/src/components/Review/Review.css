@@ -271,7 +271,6 @@ textarea{
     transition: color 200ms
   }
 
-
   .review-modal{
     display: flex;
     flex-direction: column;

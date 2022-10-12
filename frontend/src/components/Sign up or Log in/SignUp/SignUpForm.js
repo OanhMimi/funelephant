@@ -147,7 +147,7 @@ const SignUpForm = () => {
                     <div className="confirm-email">
                         <span> CONFIRM EMAIL</span>          
                         <br/>
-                        <input  type="text" value={confirmEmail} onChange={(e)=>setConfirmEmail(e.target.value)} required/>
+                        <input  id="email" type="text" value={confirmEmail} onChange={(e)=>setConfirmEmail(e.target.value)} required/>
                         <span className="hidden" id="confirmEmailHidden">Email addresses do not match</span>
                         <br/>
                     </div>
@@ -172,7 +172,7 @@ const SignUpForm = () => {
                         <br/>
                     </div>
                     <br/>
-                    <button className="input" type='submit' on>REGISTER</button>
+                    <button id="input-button" type='submit' on>REGISTER</button>
                     <br/>
                     <div id="subscription-wrapper">
                         <input id="checkbox-sub" type="checkbox" />

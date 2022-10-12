@@ -6,23 +6,14 @@ const SplashIndex = () => {
 
     return(
         
-        <div id="splashPage-outer-div">
-            <div className="block">
+        <div className="splashPage-outer-div">
+                <h1 id="side-slogan">Keep your friends close, and your moisturizer closer.</h1>
                 <div className="threeSplashImg">
-                    <div id="background-color" className="center">
-                    </div>
-                    <h2 id="free-shipping">ENJOY FREE GROUND SHIPPING ON ALL ORDERS! PLUS, ORDERS $200+ GET 2-DAY SHIPPING - ON US!</h2>
-                    <div>
-                        <div className="splash2">
-                            <img  id="splash-2" src={splashImage2}/>
-                        </div>
-                        <div className="splash1">
-                            <img id="splash-1" src={splashImage1}/>
-                        </div>
-                      
-                    </div>
+                    <div className="pink-block"></div>
+                    <div id="free-shipping">ENJOY FREE GROUND SHIPPING ON ALL ORDERS! PLUS, ORDERS $200+ GET 2-DAY SHIPPING - ON US!</div>
+                    <img id="splash-1" src={splashImage1}/>
+                    <img  id="splash-2" src={splashImage2}/>
                 </div>
-               
                 <div className="splash-hover">
                     <div className="splash-hover-slow" aria-hidden="true">
                         <span aria-hidden="true">The Best-Case Scenario</span>
@@ -31,9 +22,7 @@ const SplashIndex = () => {
                         <span aria-hidden="true">The Best-Case Scenario</span>
                     </div>
                 </div>
-            </div>
-      
-
+               
         </div>
    
     )

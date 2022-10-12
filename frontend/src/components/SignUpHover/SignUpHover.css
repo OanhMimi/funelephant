@@ -1,8 +1,13 @@
+
+.signup-hover-container{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
 .signup-hover-slow{
     animation: marquee 25s linear;  
     color: #4a4a4a; 
 }
-
 
 @font-face {
     font-family: myFirstFont;
@@ -14,12 +19,12 @@
     to {transform: translateX(-100%); }
   }
 
-.signup-hover span{
+.signup-hover-container span{
     padding: 0 5rem;
     white-space: nowrap;
     animation: fadeInMarquee .4s cubic-bezier(.49,.025,.65,.65);
     overflow: hidden;
-    font-size: 9rem;
+    font-size: 8rem;
     font-weight: 300;
     letter-spacing: 0;
     background-color: #aafbff;

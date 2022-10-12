@@ -38,7 +38,7 @@ const LogInForm = () => {
       }
 
     return(
-        <div>
+        <div className="login-form-outer-container">
             <form className="log-in" onSubmit={handleSubmit}>
                 <label>
                     <h2 className="logging-in">Already one of Us?</h2>
@@ -46,7 +46,7 @@ const LogInForm = () => {
                     <div className="email-address">
                         <span>EMAIL ADDRESS</span>
                         <br/>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <br/>
                     </div>
                     <div className="pw">
@@ -58,10 +58,9 @@ const LogInForm = () => {
                     <span className="hidden" id="emailPasswordValidation">Email address/ Password combination not recognized</span>
                     <br/>
     
-                    <button className="input" type="Submit">Sign In</button>
-                    <br/>
-                    <br/>
-                    <button className="input" onClick={demoUser}>Demo User</button>
+                    <button id="input-button" type="Submit">Sign In</button>                    
+                    <button id="input-demo-button" onClick={demoUser}>Demo User</button>
+
                 </label>
             </form>
         </div>
