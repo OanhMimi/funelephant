@@ -35,7 +35,6 @@ export const login = ({ email, password }) => async dispatch => {
   if (response.status === 401){
     validateLogin.classList.remove("hidden")
   }else{
-    validateLogin.classList.add("hidden")
     return response;
   }
 };

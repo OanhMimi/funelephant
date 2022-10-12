@@ -23,7 +23,6 @@ const ReviewIndex  = ({product}) => {
     
     const reviews = useSelector(getReviews)
     useEffect(()=>{
-
         let eachReview = Object.values(reviews)
         if (eachReview.length === 0){
             setCreatedReview(false)
@@ -41,8 +40,6 @@ const ReviewIndex  = ({product}) => {
      const sessionUser = useSelector(state => state.session.user);
      
     
-    //selectedReview = the review we select
-
     const showStar = (rating)=>{
        if (rating===1){
             return (
@@ -109,13 +106,13 @@ const ReviewIndex  = ({product}) => {
         <>
             <div className="review-container">
                 <div className="reviewer-info">
-                    {reviews.map(review=> (
-                        <div className="reviewer-name">{review.userName}</div> 
+                    {reviews.map((review,i)=> (
+                        <div key={i} className="reviewer-name">{review.userName}</div> 
                     ))}
                 </div>
                 <div className="all-review-container">
-                    {reviews.map(review=> (
-                            <div className="display-reviews-info">
+                    {reviews.map((review,i)=> (
+                            <div key={i} className="display-reviews-info">
                                 <div id="review-rating">{showStar(review.rating)}</div>
                                 <div>
                                     <div id="review-title">{review.title}</div> 
@@ -147,9 +144,10 @@ const ReviewIndex  = ({product}) => {
                             </div>  
                     ))}
                 </div>
+                { createdReview ?  <h1 id="write-review">Thanks for your feedbacks!</h1> : <button id="write-review" onClick={handleClick}>Write a Review</button>}
+
             </div>
             <div id="div-write-review">
-                { createdReview ?  <h1></h1> : <button id="write-review" onClick={handleClick}>Write a Review</button>}
                 {showModal && <ReviewFormModal 
                 product={product}
                 setShowModal={setShowModal}

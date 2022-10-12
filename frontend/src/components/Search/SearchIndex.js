@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { fetchProducts, getProducts } from '../../store/product';
 import { useSelector, useDispatch } from 'react-redux';
 import ProductIndexItem from '../Product/ProductIndexItem';
-import { FaSadCry } from "react-icons/fa";
 
 const SearchIndex = ({setShowSearchBar}) => {
 
@@ -52,7 +51,7 @@ const SearchIndex = ({setShowSearchBar}) => {
             <div id="search-container">
                   { results.length !== 0? results.map(product => {
                     return<ProductIndexItem product={product} key={product.id}/>
-                }) : <div id="no-results"> Sorry, your search return no matching results <FaSadCry id="fa-cry"/></div>}
+                }) : <div id="no-results"> Please enter the name of the item you want to search</div>}
             </div>
             
         </div>

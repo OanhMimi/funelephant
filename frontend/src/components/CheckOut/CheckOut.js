@@ -5,7 +5,7 @@ import { fetchCartItems,getCartItems,deleteCartItem } from "../../store/cartItem
 import CheckOutCartItem from './CheckOutCartItem';
 import { Redirect, useHistory } from 'react-router-dom';
 import { __RouterContext } from 'react-router';
-
+import payPal from './paypalImage.png'
 const CheckOut = () => {
 
     const dispatch = useDispatch();
@@ -62,26 +62,10 @@ const CheckOut = () => {
                         <h1 id="checkout-msg">Thank you for taking one step closer to happy, healthier skin.</h1>
                     </div>
         
-                    {cartItems.map((cartItem) => (
-                            <CheckOutCartItem cartItem={cartItem}/>
+                    {cartItems.map((cartItem,i) => (
+                            <CheckOutCartItem key={i} cartItem={cartItem}/>
                     ))}
-    
-                    {/* <div id="my-wishlist-items">My Wishlist Items(QTY)</div>
-                    <div id="display-wishlist-items">
-                        <div id="wishlist-items">
-                            <div id="wishlist-img-info">
-                                <div>display wishlist img</div>
-                                <div id="display-wishlist-product-info">
-                                    <div>productname</div>
-                                    <div>product price</div>
-                                </div>
-                            </div>
-                            
-                            <div id="add-wishlist-to-bag">
-                                <button id="add-to-bag">add to bag</button>
-                            </div>
-                        </div>
-                    </div> */}
+
                 </div>
                 <div id="display-checkout-amt">
                     <div id="checkout-cart">
@@ -113,8 +97,8 @@ const CheckOut = () => {
                         <div id="shopping-border-bot"></div>
                     </div>
                     <div id="secure-checkout-container">
-                        <button id="secure-checkout" onClick={handleCheckOut}>SECURE CHECKOUT</button>
-                        <div>paypal</div>
+                        <button id="secure-checkout-btn" onClick={handleCheckOut}>SECURE CHECKOUT</button>
+                        <div><img id="paypal-img"  onClick={handleCheckOut} src={payPal}/></div>
                     </div>
                 </div>
             </div>

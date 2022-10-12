@@ -50,9 +50,11 @@ const ReviewFormModal = ({setShowModal,selectedReview, product}) => {
         e.preventDefault();
         if (e.target.value.length > 50){
             min50.classList.add("hidden")
-            return ""
-        }else
+        }else{
+            min50.classList.remove("hidden")
+        }
         setBody(e.target.value)
+
     }
    
 

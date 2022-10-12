@@ -22,9 +22,11 @@ const ProductIndex = () => {
 
     return(
         <div id="outer-index-div">
-            <img id="fun-elephant-banner" src={funElephantBanner}/>
-            <h1 id="all-collectionHeader1">shop all collections</h1>
-            <div id="banner2-bg">
+            <div className="fun-elephant-banner-header">
+                <img id="fun-elephant-banner" src={funElephantBanner}/>
+                <h1 id="all-collectionHeader1">shop all collections</h1>
+            </div>
+            <div className="banner2-bg">
                 <div className="press-to-slide-down" onClick={()=> setShowSlideDown(!showSlideDown)}>
                     <div id ="slide-down">
                             {showSlideDown ? <AiOutlineUp id="up-menu-icon"/>: <AiOutlineDown id="down-menu-icon"/>}

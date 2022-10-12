@@ -168,7 +168,7 @@ const SignUpForm = () => {
                         <span> CONFIRM PASSWORD</span>
                         <br/>
                         <input  type="password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} required/>
-                        <span  class = "hidden" id="confirmPasswordHidden">Passwords do not match</span>
+                        <span  className = "hidden" id="confirmPasswordHidden">Passwords do not match</span>
                         <br/>
                     </div>
                     <br/>

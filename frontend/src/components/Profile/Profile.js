@@ -44,41 +44,31 @@ a wish list, click around, and get rewards. Trust us: Getting personal is a good
                     <div id="your-reviews" >Your Reviews</div>
                 </div>
                 <div id="flex-first-profile">
-                    <div>
-                        <div id="aqua-greeting">
+                    <div id="aqua-greeting">
                         <h1 id="hello">Hello,</h1>
                         <h2 id="profile-firstname">{firstName}</h2>
                         <button className="logout-button" onClick={logOut}>LogOut</button>  
-
-                        </div>
-
                     </div>
-                    <div>
-                        <div className="img-profile-div"><img id="profileicon-1" src={pink1}/>
-                            <h2 id="awaits-wishlist">your wish lists awaits</h2>
-                            <h2 id="awaits-msg">All your Fun Elepehant favorites, catalogued in one place. Shop it, all to it, or not-sosubtly share it with your closest friends right around your birthday.M There;s not wrong way to manage your wish list!</h2>
-                        </div>
-                    </div>  
-                    <div>
-                    <img id="profileicon-2" src={icon1pink}/>
+                    <div className="img-profile-div"><img id="profileicon-1" src={pink1}/>
+                        <h2 id="awaits-wishlist">your wish lists awaits</h2>
+                        <h2 id="awaits-msg">All your Fun Elepehant favorites, catalogued in one place. Shop it, all to it, or not-sosubtly share it with your closest friends right around your birthday.M There;s not wrong way to manage your wish list!</h2>
                     </div>
-                </div>
-                <div>
-                        
-                </div>
-                <div>
-
+                    <div id="profileicon-2" >
+                        <img id="profileicon-2" src={icon1pink}/>
+                    </div>
                 </div>
                 <div className="profile-page">
-                    <img id="yellow-icon" src={yellow1}/>
+                    <div id="pink-icon">
+                        <img id="pink-icon" src={icon2pink}/>
+                    </div>
+                    <div id="yellow-icon">
+                        <img id="yellow-icon" src={yellow1}/>
+                    </div>
                     <div id="blue-div">
                         <img id="blue-icon" src={blue1}/>
                         <h1 id="snatch">Snatch it before its gone!</h1>
                         <h1 id="profile-msg-2">remember not to miss out on the new upcoming products! </h1>
                     </div>  
-                </div>
-                <div>
-                                 
                 </div>
             </div>
 

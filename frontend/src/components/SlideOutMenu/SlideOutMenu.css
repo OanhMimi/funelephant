@@ -83,6 +83,7 @@
     padding-bottom: 2vh;
 }
 
+
 #slide-skincare:hover{
     cursor: pointer;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
@@ -162,37 +163,42 @@
 }
 
 .close-container{
-    border: dotted 2px #615f5f;
-    padding-left: .2vw;
-    padding-top: .7vw;
-    padding-bottom: .7vw;
-    padding-right: .2vw;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+    position: relative
   }
 
 .leftright{
-    height: 2px;
+    left: 0;
+    height: 4px;
     width: 30px;
-    background-color: #4a4a4a;
+    position: absolute;
     transform: rotate(45deg);
     transition: all .3s ease-in;
+    background-color: #4a4a4a;
+
   }
   .rightleft{
-    height: 2px;
+    left: 0;
+    height: 4px;
     width: 30px;
-    background-color: #4a4a4a;
+    position: absolute;
     transform: rotate(-45deg);
     transition: all .3s ease-in;
+    background-color: #4a4a4a;
   }
 
-  
   .close-container:hover .leftright{
     transform: rotate(-45deg);
+    border: dotted 2px #615f5f;
+
   }
   .close-container:hover .rightleft{
     transform: rotate(45deg);
+    border: dotted 2px #615f5f;
   }
-  .close-container:hover .close{
-    opacity: 3;
-  }
+ 
   
  

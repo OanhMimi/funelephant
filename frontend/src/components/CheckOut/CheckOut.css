@@ -214,7 +214,6 @@
     transform: scale(.9);
 }
 
-
 #add-to-bag{
     align-items: center;
     background-color: #eee9fe;
@@ -311,12 +310,14 @@
 #promocode{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #secure-checkout-container{
     display: flex;
     flex-direction: column;
-    padding: 5vw;
+    padding: 3vw;
+    align-items: center;
 }
 
 
@@ -335,7 +336,7 @@
     padding-right: 2vw;
 }
 
-#secure-checkout{
+#secure-checkout-btn{
     align-items: center;
     background-color: transparent;
     border: 2px solid #000;
@@ -344,9 +345,9 @@
     cursor: pointer;
     display: inline-flex;
     font-family: zabal;
-    font-size: vh;
+    font-size: 1.4vh;
     font-weight: 600;
-    height: 4vh;
+    height: 3vw;
     justify-content: center;
     line-height: 2vh;
     outline: 0;
@@ -355,10 +356,19 @@
     text-decoration: none;
     transition: all .3s;
     touch-action: manipulation;
-    letter-spacing: .2vw;
+    letter-spacing: 1px;
 }
 
-#secure-checkout:hover{
+#secure-checkout-btn:hover{
     background-color: #4a4a4a;
     color: white; 
+}
+
+#paypal-img{
+    padding-top: 1vw;
+    height: 2.5vw;
+}
+
+#paypal-img:hover{
+    transform: scale(1.1);
 }

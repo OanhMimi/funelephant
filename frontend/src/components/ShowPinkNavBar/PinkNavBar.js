@@ -117,9 +117,7 @@ const PinkNavBar = ({ product }) => {
   };
 
   const [fullHeart, setFullHeart] = useState(false);
-  // const handleHeart = (e) => {
-  //   e.preventDefault();
-  // };
+
 
   return (
     <div className="pink-nav-sticky">
@@ -141,7 +139,7 @@ const PinkNavBar = ({ product }) => {
               >
                 {[...Array(10)].map((numItem, i) => {
                   const quantityValue = i + 1;
-                  return <option value={quantityValue}>{quantityValue}</option>;
+                  return <option key={i} value={quantityValue}>{quantityValue}</option>;
                 })}
               </select>
             </div>

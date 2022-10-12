@@ -46,8 +46,8 @@ const CartItemIndex = ({ setShowCartItems }) => {
             <h1 id="shopping-bag">Shopping Bag</h1>
             <div className="cart-items-contents">
               {cartItems.length === 0? <div id="shopping-empt"><h1 id="empty-cart">Shopping cart empty</h1></div> :
-              cartItems.map((cartItem) => (
-                <CartItem cartItem={cartItem}/>
+              cartItems.map((cartItem,i) => (
+                <CartItem key={i} cartItem={cartItem}/>
               ))}
             </div>
           
