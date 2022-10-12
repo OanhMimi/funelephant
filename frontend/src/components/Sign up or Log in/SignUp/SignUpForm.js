@@ -6,6 +6,9 @@ import * as sessionActions from "../../../store/session";
 import { Redirect } from "react-router-dom";
 // import SubmitButton from "../../Buttons/SubmitButton";
 import './SignUpForm.css';
+import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineCheckCircle} from "react-icons/ai";
+
 
 
 
@@ -20,6 +23,11 @@ const SignUpForm = () => {
     const [confirmEmail,setConfirmEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [clearValidation8,setClearValidation8] = useState(false);
+    const [clearValidationLetter,setClearValidationLetter] = useState(false);
+    const [clearValidationNum,setClearValidationNum] = useState(false);
+    const [clearValidationPunc,setClearValidationPunc] = useState(false);
+
 
 
     if (sessionUser) return <Redirect to="/profile" />;
@@ -82,36 +90,50 @@ const SignUpForm = () => {
         if (e.target.value.length >= 8){
             length.classList.remove("invalid")
             length.classList.add("valid");
+            setClearValidation8(true)
         }else{
             length.classList.remove("valid");
             length.classList.add("invalid");
+            setClearValidation8(false)
         }
 
         const mixLetters = /[A-Za-z]/g;
         if (e.target.value.match(mixLetters)){
             letter.classList.remove("invalid")
             letter.classList.add("valid");
+            setClearValidationLetter(true)
+
         }else{
             letter.classList.remove("valid");
             letter.classList.add("invalid");
+            setClearValidationLetter(false)
+
         }
 
         const numbers = /[0-9]/g;
         if (e.target.value.match(numbers)){
             number.classList.remove("invalid")
             number.classList.add("valid");
+            setClearValidationNum(true)
+
         }else{
             number.classList.remove("valid");
             number.classList.add("invalid");
+            setClearValidationNum(false)
+
         }
 
         const symbol = /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/
         if (e.target.value.match(symbol)){
             specialChars.classList.remove("invalid")
             specialChars.classList.add("valid");
+            setClearValidationPunc(true)
+
         }else{
             specialChars.classList.remove("valid");
             specialChars.classList.add("invalid");
+            setClearValidationPunc(false)
+
         }
 
         setPassword(e.target.value)
@@ -157,10 +179,10 @@ const SignUpForm = () => {
                         <input  type="password" value={password} onChange={handleChangePassword} required/>
                         <br/>
                         <div id="message">
-                                <p id="length" className="invalid">8 characters (minimum)</p>
-                                <p id="letter" className="invalid">1 letter from A to Z with a mixture of both uppercase and lowercase letters (at least)</p>
-                                <p id="number" className="invalid">1 number (at least)</p>
-                                <p id="special-chars" className="invalid">1 punctuation mark such as !, @, #, etc.</p>
+                                <p id="length" className="invalid"> {clearValidation8 ? <AiOutlineCheckCircle/> : <AiFillCloseCircle/>} 8 characters (minimum)</p>
+                                <p id="letter" className="invalid"> {clearValidationLetter ? <AiOutlineCheckCircle/> : <AiFillCloseCircle/>} 1 letter from A to Z with a mixture of both uppercase and lowercase letters (at least)</p>
+                                <p id="number" className="invalid"> {clearValidationNum ? <AiOutlineCheckCircle/> : <AiFillCloseCircle/>} 1 number (at least)</p>
+                                <p id="special-chars" className="invalid">{clearValidationPunc ? <AiOutlineCheckCircle/> : <AiFillCloseCircle/>} 1 punctuation mark such as !, @, #, etc.</p>
                         </div>
                         <br/>
                     </div>

@@ -9,8 +9,7 @@ import { deleteReview } from "../../store/review";
 import { FaStar } from 'react-icons/fa';
 import { GrEdit } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { Redirect } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 
 
 const ReviewIndex  = ({product}) => {
@@ -20,8 +19,9 @@ const ReviewIndex  = ({product}) => {
     const [showModal, setShowModal] = useState(false);
     const [selectedReview,setSelectedReview] = useState();
     const [createdReview,setCreatedReview] = useState(false);
-    
     const reviews = useSelector(getReviews)
+    const history = useHistory();
+
     useEffect(()=>{
         let eachReview = Object.values(reviews)
         if (eachReview.length === 0){
@@ -100,8 +100,9 @@ const ReviewIndex  = ({product}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        !sessionUser? <Redirect to="/SignUp" /> : setShowModal(true) 
+        !sessionUser?  history.push('/signup') : setShowModal(true) 
     }
+
     return(
         <>
             <div className="review-container">

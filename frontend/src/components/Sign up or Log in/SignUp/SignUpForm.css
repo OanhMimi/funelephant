@@ -50,7 +50,7 @@
 }
 
 .valid{
-    color: green
+    color: rgb(0, 170, 0)
 }
 
 #message{
@@ -63,7 +63,7 @@
 }
 
 .invalid{
-    color :red
+    color :#4a4a4a;
 }
 
 form input{

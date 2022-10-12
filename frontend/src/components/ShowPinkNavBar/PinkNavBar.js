@@ -2,7 +2,6 @@ import React from "react";
 import "./PinkNavBar.css";
 import { FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
-
 import { FaRegHeart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import CartItemIndex from "../CartItems/CartItemsIndex";
@@ -13,7 +12,7 @@ import {
   updateCartItem,
   fetchCartItems,
 } from "../../store/cartItems";
-import { RiContactsBookLine } from "react-icons/ri";
+import { useHistory } from "react-router-dom";
 
 const PinkNavBar = ({ product }) => {
   const dispatch = useDispatch();
@@ -21,6 +20,7 @@ const PinkNavBar = ({ product }) => {
   const [showCartItems, setShowCartItems] = useState(false);
   const cartItems = useSelector(getCartItems);
   const [itemQuantity, setItemQuantity] = useState(1);
+  const history = useHistory();
 
   const showStar = (rating)=>{
     if (rating === null || rating < 0){
@@ -97,6 +97,8 @@ const PinkNavBar = ({ product }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    !user ? history.push('/signup') : 
+    
     setShowCartItems(true);
 
     const item = {

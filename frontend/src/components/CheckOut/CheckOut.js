@@ -5,7 +5,6 @@ import { fetchCartItems,getCartItems,deleteCartItem } from "../../store/cartItem
 import CheckOutCartItem from './CheckOutCartItem';
 import { Redirect, useHistory } from 'react-router-dom';
 import { __RouterContext } from 'react-router';
-import payPal from './paypalImage.png'
 const CheckOut = () => {
 
     const dispatch = useDispatch();
@@ -98,7 +97,6 @@ const CheckOut = () => {
                     </div>
                     <div id="secure-checkout-container">
                         <button id="secure-checkout-btn" onClick={handleCheckOut}>SECURE CHECKOUT</button>
-                        <div><img id="paypal-img"  onClick={handleCheckOut} src={payPal}/></div>
                     </div>
                 </div>
             </div>
