@@ -148,35 +148,35 @@ const SignUpForm = () => {
                     <div className="firstName">
                         <span id="firstName-input" > FIRST NAME</span>               
                         <br/>
-                        <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value) } required/>
+                        <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value) } />
                         <span className="hidden" id="firstNameHidden">Please enter a valid first name</span>
                         <br/>
                     </div>
                     <div className="lastName">
                         <span> LAST NAME</span>              
                         <br/>
-                        <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/>
+                        <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} />
                         <span className="hidden" id="lastNameHidden">Please enter a valid last name</span>
                         <br/>
                     </div>
                     <div className="email">
                         <span> EMAIL</span>          
                         <br/>
-                        <input  type="text" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
+                        <input  type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
                         <span className="hidden" id="emailHidden">Error: email is required</span>
                         <br/>
                     </div>
                     <div className="confirm-email">
                         <span> CONFIRM EMAIL</span>          
                         <br/>
-                        <input  id="email" type="text" value={confirmEmail} onChange={(e)=>setConfirmEmail(e.target.value)} required/>
+                        <input  id="email" type="text" value={confirmEmail} onChange={(e)=>setConfirmEmail(e.target.value)} />
                         <span className="hidden" id="confirmEmailHidden">Email addresses do not match</span>
                         <br/>
                     </div>
                     <div className="password">
                     <span> PASSWORD</span>             
                         <br/>
-                        <input  type="password" value={password} onChange={handleChangePassword} required/>
+                        <input  type="password" value={password} onChange={handleChangePassword} />
                         <br/>
                         <div id="message">
                                 <p id="length" className="invalid"> {clearValidation8 ? <AiOutlineCheckCircle/> : <AiFillCloseCircle/>} 8 characters (minimum)</p>
