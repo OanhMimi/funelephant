@@ -9,7 +9,7 @@
 
 ## Quick Background
 
-FunElephant is a website clone of DrunkElephant, a skin-care dedicated brand based in Houston, Texas. Aside from many engaging animation, this e-commerce website allow users to purchase products and leave product reviews. 
+FunElephant is a website clone of DrunkElephant, a skin-care dedicated brand based in Houston, Texas. Aside from many engaging animations, this e-commerce website also allow users to purchase products and leave product reviews. 
 
 ## Technologies
 
@@ -53,7 +53,12 @@ FunElephant is a website clone of DrunkElephant, a skin-care dedicated brand bas
 
 <img width="500" alt="Screen Shot 2022-10-12 at 5 37 27 PM" src="https://user-images.githubusercontent.com/107105296/195472903-965aaf52-6a0b-4e9e-9246-0ae0aec0e93e.png"> <img width="500" alt="Screen Shot 2022-10-12 at 5 41 53 PM" src="https://user-images.githubusercontent.com/107105296/195473048-6ec7e06a-a317-491a-9b11-1b56edc326fc.png">
 
+### Search Bar
 
+* Render listings that matches the user's search query
+* Clicking on the product will navigate to the specific product's show page 
+
+<img width="800" alt="Screen Shot 2022-10-12 at 5 51 13 PM" src="https://user-images.githubusercontent.com/107105296/195474007-78333813-c2f7-40cc-95a6-5094f01edda9.png">
 
 
 
