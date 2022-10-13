@@ -33,7 +33,8 @@ FunElephant is a website clone of DrunkElephant, a skin-care dedicated brand bas
 * Error handling for incomplete entries
 * Demo User with full functionality
 * Users are able to browse items, but are automatically redirect to the login/signup page if they are attempting to purchase items or leave review without logged in for ease of access
-(![funelephants_signup](https://user-images.githubusercontent.com/107105296/195470302-81ba5d9a-b014-4736-8103-17d2e7d4ce1e.gif)
+
+![funelephants_signup](https://user-images.githubusercontent.com/107105296/195470302-81ba5d9a-b014-4736-8103-17d2e7d4ce1e.gif)
 
 ### Product Show Pages and Reviews
 * Each Product has a feature page where users can view its details, instructions, ingredients, and reviews
