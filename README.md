@@ -2,6 +2,11 @@
 
 [Click here to view live site!](https://funelephant.herokuapp.com/)
 
+## Splash Page
+
+![funelephant_splash](https://user-images.githubusercontent.com/107105296/195471403-3e7f0347-4504-409c-93c0-3f38dbb7b6ce.gif)
+
+
 ## Quick Background
 
 FunElephant is a website clone of DrunkElephant, a skin-care dedicated brand based in Houston, Texas. Aside from many engaging animation, this e-commerce website allow users to purchase products and leave product reviews. 
