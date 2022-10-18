@@ -78,6 +78,7 @@ body {
     border-width: 25px;
     border-color: white;
     background-color: white;
+    height: 100%;
 }
 
 #free-shipping{
@@ -122,13 +123,13 @@ body {
 } 
 
 .splash-hover{
-    z-index: 5;
+    z-index: 20;
 }
 
 .splash-hover-slow{
     animation: movingText 25s linear;  
     color: #4a4a4a; 
-    z-index: 5;
+    z-index: 20;
 }
 
 @keyframes movingText {
@@ -143,7 +144,7 @@ body {
     z-index: 4;
     overflow: hidden;
     font-family: zabal;
-    z-index: 5;
+    z-index: 20;
 }
 
 @media only screen and (max-width: 1055px){
@@ -254,36 +255,222 @@ body {
 
 }
 
-@media only screen and (min-height: 1030px ){
-    #free-shipping{
-        margin-right: 20px;
+@media only screen and (min-height: 1100px ){
+    .splashPage-outer-div{
+        overflow: hidden;
+        height: 100vh;
     }
-
-    .splash-hover span{
-        padding-top: 700px;
-        font-size: 250px;
-    }
-
-    #splash-1{
-        transform: scale(1.1);
-        z-index: 3;
-        margin-right: 300px;
-        padding-top: 40px;
-    }
-
-    #splash-2 {
-        transform: scale(1.1);
-        z-index: 4;          
-        padding-top: 40px;
-    }
-
+    
     .threeSplashImg{
         z-index: 2;
-        min-height: 700px;
+        height: 60vh;
         position: relative;
         display: flex;
         justify-content: center;
     }
+    
+    .pink-block{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #fac2d3;
+        width: .1vw;
+        height: 40vh;
+        transform-origin: left;
+        animation: pinkBlock-animate 4s ease-in, color-animate infinite;
+        animation-fill-mode: forwards;
+        z-index: -1;
+    }
+    
+    @keyframes pinkBlock-animate {
+        0% {transform: scaleX(0);background-color: #fde1b9; opacity: .7}
+        25% {transform: scaleX(1200);background-color: #fcd8c0; opacity: .8}
+        50% {transform: scaleX(2400);background-color: #fac5d0; opacity: .9}
+        75% {transform: scaleX(3600);background-color: #facbca; opacity: 1}
+        100% {transform: scaleX(6000);background-color: #f8bbd6; opacity: 1}
+    }
+    
+    #side-slogan{
+        position: fixed;
+        color: black;
+        font-size: 1.3vw;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        z-index: 19;
+        font-family: mustica;
+        color: #4a4a4a;
+        letter-spacing: 1px;
+        border-style: solid;
+        border-width: 2vw;
+        border-color: white;
+        background-color: white;
+    }
+    
+    #free-shipping{
+        position: absolute;
+        font-size: 1vw;
+        font-family: mustica;
+        top: 90px;
+        z-index: 10;
+        color: #4a4a4a;
+        letter-spacing: .2vw;
+        z-index: 10;
+        padding-top: 2vw;
+    }
+    
+    #splash-1{
+        position: absolute;
+        animation-fill-mode: forwards;
+        animation-name:splashImage1;
+        animation-duration:1.5s;
+        width: 45vw;
+        height: 30vw;
+        margin-right: 18vw;
+        z-index: 3;
+    }
+    @keyframes splashImage1{
+        from {margin-top:25vw; opacity: .1}
+        to {margin-top: 10vw; opacity: 1}
+    } 
+    
+    #splash-2 {
+        position: absolute;
+        animation-fill-mode: forwards;
+        animation-name:splashImage2;
+        animation-duration:1.5s;
+        width: 19vw;
+        height:19vw;
+        margin-top: 14vw;
+        z-index: 4;  
+    }
+    @keyframes splashImage2{
+        from {margin-left: 100vw; opacity: .1}
+        to {margin-left: 33vw; opacity: 1}
+    } 
+    
+    .splash-hover{
+        z-index: 20;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .splash-hover-slow{
+        animation: movingText 70s linear;  
+        color: #4a4a4a; 
+        z-index: 20;
+    }
+    
+    @keyframes movingText {
+        from {transform: translateX(0%); }
+        to {transform: translateX(-100%); }
+      }
+    
+    .splash-hover span{
+        padding: 0 5rem;
+        white-space: nowrap;
+        font-size: 10vw;
+        z-index: 20;
+        overflow: hidden;
+        font-family: zabal;
+    }
+
+    .outmost-nav-bar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: block;
+        z-index: 20;
+    }
+    
+    #main-nav-bar{
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: #6e6e6e ;
+        justify-content: space-between;
+    }
+    
+    .left-nav-bar{
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu-icon{
+        color: white;
+        padding: none;
+        transform: scale(1.5);
+    }
+    
+    .right-nav-bar{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+    
+    #search-icon{
+        transform: scale(1.2);
+        padding-right: 20px;
+        color: white;
+    }
+    #bag-icon{
+        transform: scale(1.2);
+        padding-right: 20px;
+        color: white;
+    }
+    #prof-icon{
+        transform: scale(1.2);
+        padding-right: 40px;
+        color: white;
+    }
+    
+    #search-icon:hover{
+        cursor: pointer;
+        transform: translateY(1px);
+        transition: transform .4s ease-in-out;
+    }
+    #bag-icon:hover{
+        cursor: pointer;
+        transform: translateY(1px);
+        transition: transform .4s ease-in-out;
+    
+    }
+    #prof-icon:hover{
+        cursor: pointer;
+        transform: translateY(1px);
+        transition: transform .4s ease-in-out;
+    }
+    
+    #menuButton {
+      background: none;
+        color: inherit;
+        border: none;
+        padding-left:40px;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+    
+    #fun-elephant-logo{
+        position: absolute;
+        display: flex;
+        top: 0;
+        width: 95px;
+        height: 60px;
+        right: 48%;
+        z-index: 101;
+    }
+    
+    #fun-elephant-logo:hover{
+        cursor: pointer;
+        transform: scale(.9);
+    }
+    
+    #display-slide-out{
+        z-index:100;
+    }
+    
 
 }
 

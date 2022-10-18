@@ -54,3 +54,10 @@
     }
     
 }
+@media only screen and (min-height: 1400px){
+    body{
+        height: 100vh;
+        background-color: #aafbff;
+    }
+
+}
