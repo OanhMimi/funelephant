@@ -55,7 +55,7 @@
     
 }
 @media only screen and (min-height: 1400px){
-    body{
+    .mashedForm-outer-container{
         height: 100vh;
         background-color: #aafbff;
     }
